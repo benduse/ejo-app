@@ -1,4 +1,3 @@
-js/script.js
 
 class QuizApp {
     constructor() {
