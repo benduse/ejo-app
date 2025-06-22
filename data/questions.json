@@ -1,0 +1,61 @@
+{
+  "french": {
+    "name": "French Quiz",
+    "questions": [
+      {
+        "id": 1,
+        "question": "How do you say 'Hello' in French?",
+        "choices": ["Bonjour", "Gracias", "Ciao", "Hola"],
+        "correctAnswer": "Bonjour",
+        "explanation": "Bonjour is the French word for Hello"
+      },
+      {
+        "id": 2,
+        "question": "What does 'Merci' mean?",
+        "choices": ["Please", "Thank you", "Goodbye", "Welcome"],
+        "correctAnswer": "Thank you",
+        "explanation": "Merci means Thank you in French"
+      },
+      {
+        "id": 3,
+        "question": "How do you say 'Good night' in French?",
+        "choices": ["Bonne nuit", "Au revoir", "S'il vous plaît", "Merci"],
+        "correctAnswer": "Bonne nuit",
+        "explanation": "Bonne nuit means Good night in French"
+      },
+      {
+        "id": 4,
+        "question": "What does 'Au revoir' mean?",
+        "choices": ["Hello", "Good morning", "Goodbye", "Good night"],
+        "correctAnswer": "Goodbye",
+        "explanation": "Au revoir means Goodbye in French"
+      },
+      {
+        "id": 5,
+        "question": "How do you say 'Please' in French?",
+        "choices": ["Merci", "S'il vous plaît", "De rien", "Bonjour"],
+        "correctAnswer": "S'il vous plaît",
+        "explanation": "S'il vous plaît means Please in French"
+      }
+    ]
+  },
+  "spanish": {
+    "name": "Spanish Quiz",
+    "questions": [
+      {
+        "id": 1,
+        "question": "How do you say 'Hello' in Spanish?",
+        "choices": ["Bonjour", "Gracias", "Ciao", "Hola"],
+        "correctAnswer": "Hola",
+        "explanation": "Hola is the Spanish word for Hello"
+      },
+      {
+        "id": 2,
+        "question": "What does 'Gracias' mean?",
+        "choices": ["Please", "Thank you", "Goodbye", "Welcome"],
+        "correctAnswer": "Thank you",
+        "explanation": "Gracias means Thank you in Spanish"
+      }
+    ]
+  }
+};

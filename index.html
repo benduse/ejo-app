@@ -1,0 +1,51 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyglot Boost - Language Learning App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Polyglot Boost</div>
+            <div class="score-container">
+                Score: <span id="score">0</span>
+            </div>
+        </nav>
+
+    </header>
+    <div class="language-selector">
+    <select id="languageSelect" class="language-select">
+        <option value="french">French</option>
+        <option value="spanish">Spanish</option>
+    </select>
+</div>
+
+    <main class="container">
+        <div id="quiz-container">
+            <div id="progress-bar"></div>
+            <div id="question-container">
+                <h2 id="question"></h2>
+                <div id="choices" class="choices-grid"></div>
+            </div>
+        </div>
+
+        <div id="result-container" class="hide">
+            <h2>Quiz Complete! 🎉</h2>
+            <p>Your final score: <span id="final-score">0</span></p>
+            <button id="restart-btn" class="btn">Try Again</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Polyglot Boost - Learn Languages the Fun Way</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
