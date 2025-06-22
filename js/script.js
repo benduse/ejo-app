@@ -18,6 +18,7 @@ class QuizApp {
         this.languageSelect = document.getElementById('languageSelect');
         
         // Load questions from JSON
+        await this.loadLanguages();
         await this.loadQuestions();
         
         // Add event listeners
@@ -31,6 +32,7 @@ class QuizApp {
          try {
         const languageId = this.languageSelect.value;
         const response = await fetch(`/api/questions/${languageId}`);
+        if(!response.ok) throw new Error('Cannot fetch questions from the server');
         const data = await response.json();
         this.questions = data.map(q => ({
             question: q.question_text,
@@ -39,8 +41,25 @@ class QuizApp {
             explanation: q.explanation
         }));
     } catch (error) {
-        console.error('Error loading questions:', error);
-        this.questions = [];
+        console.warn('API not available, loading from questions.json:', error);
+        // Fallback: fetch from local questions.json
+        try {
+            const response = await fetch('/questions.json');
+            const json = await response.json();
+            if (json[languageId] && json[languageId].questions) {
+                this.questions = json[languageId].questions.map(q => ({
+                    question: q.question,
+                    choices: q.choices,
+                    correctAnswer: q.correctAnswer,
+                    explanation: q.explanation
+                }));
+            } else {
+                this.questions = [];
+            }
+        } catch (jsonError) {
+            console.error('Failed to load questions from questions.json:', jsonError);
+            this.questions = [];
+        }
     }
     }
 
