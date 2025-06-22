@@ -36,6 +36,671 @@
         "choices": ["Merci", "S'il vous plaît", "De rien", "Bonjour"],
         "correctAnswer": "S'il vous plaît",
         "explanation": "S'il vous plaît means Please in French"
+      },
+      {
+        "id": 6,
+        "question": "What is the term for photosynthesis in French?",
+        "choices": ["La photosynthèse", "Le soleil", "La lumière", "La plante"],
+        "correctAnswer": "La photosynthèse",
+        "explanation": "La photosynthèse is the French term for photosynthesis"
+      },
+      {
+        "id": 7,
+        "question": "What is the French word for 'stock market'?",
+        "choices": ["La bourse", "Le marché", "L'argent", "Le commerce"],
+        "correctAnswer": "La bourse",
+        "explanation": "La bourse is the French term for stock market"
+      },
+      {
+        "id": 8,
+        "question": "What is the highest mountain in France?",
+        "choices": ["Mont Blanc", "Mont Ventoux", "Pic du Midi", "Le Puy de Dôme"],
+        "correctAnswer": "Mont Blanc",
+        "explanation": "Mont Blanc, at 4,808 meters, is the highest mountain in France"
+      },
+      {
+        "id": 9,
+        "question": "Quel est l'organe responsable de la circulation sanguine?",
+        "choices": ["Le cœur", "Le poumon", "Le foie", "Le cerveau"],
+        "correctAnswer": "Le cœur",
+        "explanation": "Le cœur (the heart) is responsible for blood circulation"
+      },
+      {
+        "id": 10,
+        "question": "Comment dit-on 'inflation' en français?",
+        "choices": ["L'inflation", "La hausse", "Le prix", "L'augmentation"],
+        "correctAnswer": "L'inflation",
+        "explanation": "L'inflation is the French word for inflation"
+      },
+      {
+        "id": 11,
+        "question": "Quel est le plus grand océan qui borde la France?",
+        "choices": ["L'Océan Atlantique", "La Mer Méditerranée", "La Manche", "La Mer du Nord"],
+        "correctAnswer": "L'Océan Atlantique",
+        "explanation": "The Atlantic Ocean is the largest ocean bordering France"
+      },
+      {
+        "id": 12,
+        "question": "Comment appelle-t-on un compte bancaire en français?",
+        "choices": ["Un compte bancaire", "Une banque", "Un livret", "Un portefeuille"],
+        "correctAnswer": "Un compte bancaire",
+        "explanation": "Un compte bancaire is the French term for bank account"
+      },
+      {
+        "id": 13,
+        "question": "Quel est le plus grand fleuve de France?",
+        "choices": ["La Loire", "Le Rhône", "La Seine", "La Garonne"],
+        "correctAnswer": "La Loire",
+        "explanation": "The Loire is the longest river in France"
+      },
+      {
+        "id": 14,
+        "question": "Qu'est-ce que la biodiversité?",
+        "choices": ["La diversité des espèces vivantes", "La vie marine", "La vie terrestre", "L'écologie"],
+        "correctAnswer": "La diversité des espèces vivantes",
+        "explanation": "La biodiversité refers to the diversity of living species"
+      },
+      {
+        "id": 15,
+        "question": "Qu'est-ce que l'effet de serre?",
+        "choices": ["Phénomène climatique", "Type de jardin", "Méthode de culture", "Style d'architecture"],
+        "correctAnswer": "Phénomène climatique",
+        "explanation": "L'effet de serre refers to the greenhouse effect"
+      },
+      {
+        "id": 16,
+        "question": "Quel est le plus grand pays francophone?",
+        "choices": ["Le Canada", "La France", "Le Congo", "L'Algérie"],
+        "correctAnswer": "Le Canada",
+        "explanation": "Canada is the largest French-speaking country by area"
+      },
+      {
+        "id": 17,
+        "question": "Comment appelle-t-on une action en bourse?",
+        "choices": ["Une action", "Un titre", "Une part", "Une obligation"],
+        "correctAnswer": "Une action",
+        "explanation": "Une action is the French term for a stock share"
+      },
+      {
+        "id": 18,
+        "question": "Qu'est-ce que la mitochondrie?",
+        "choices": ["L'usine énergétique de la cellule", "Le noyau cellulaire", "La membrane cellulaire", "Le cytoplasme"],
+        "correctAnswer": "L'usine énergétique de la cellule",
+        "explanation": "Mitochondria is the powerhouse of the cell"
+      },
+      {
+        "id": 19,
+        "question": "Qu'est-ce qu'un écosystème?",
+        "choices": ["Système écologique", "Jardin botanique", "Parc naturel", "Zone protégée"],
+        "correctAnswer": "Système écologique",
+        "explanation": "An ecosystem is a complete ecological system"
+      },
+      {
+        "id": 20,
+        "question": "Quel est le rôle de la Banque de France?",
+        "choices": ["Banque centrale nationale", "Banque commerciale", "Banque privée", "Banque internationale"],
+        "correctAnswer": "Banque centrale nationale",
+        "explanation": "The Banque de France is France's central bank"
+      },
+      {
+        "id": 21,
+        "question": "Qu'est-ce que la tectonique des plaques?",
+        "choices": ["Mouvement des plaques terrestres", "Type de roche", "Formation montagneuse", "Érosion"],
+        "correctAnswer": "Mouvement des plaques terrestres",
+        "explanation": "Plate tectonics refers to the movement of Earth's plates"
+      },
+      {
+        "id": 22,
+        "question": "Comment s'appelle le marché des changes?",
+        "choices": ["Le Forex", "La Bourse", "Le Marché", "La Banque"],
+        "correctAnswer": "Le Forex",
+        "explanation": "Forex is the foreign exchange market"
+      },
+      {
+        "id": 23,
+        "question": "Quel est le plus grand récif corallien du monde?",
+        "choices": ["La Grande Barrière de Corail", "Le Récif de Nouvelle-Calédonie", "Le Récif de Tahiti", "Le Récif de Madagascar"],
+        "correctAnswer": "La Grande Barrière de Corail",
+        "explanation": "The Great Barrier Reef is the world's largest coral reef"
+      },
+      {
+        "id": 24,
+        "question": "Qu'est-ce que l'ADN?",
+        "choices": ["Acide désoxyribonucléique", "Acide ribonucléique", "Protéine", "Enzyme"],
+        "correctAnswer": "Acide désoxyribonucléique",
+        "explanation": "DNA stands for Acide désoxyribonucléique in French"
+      },
+      {
+        "id": 25,
+        "question": "Quel est le rôle des globules blancs?",
+        "choices": ["Défense immunitaire", "Transport d'oxygène", "Coagulation", "Digestion"],
+        "correctAnswer": "Défense immunitaire",
+        "explanation": "White blood cells are responsible for immune defense"
+      },
+      {
+        "id": 26,
+        "question": "Qu'est-ce qu'une obligation financière?",
+        "choices": ["Titre de créance", "Action", "Devise", "Compte bancaire"],
+        "correctAnswer": "Titre de créance",
+        "explanation": "A financial bond is a debt security"
+      },
+      {
+        "id": 27,
+        "question": "Quel est le plus grand biome terrestre?",
+        "choices": ["La taïga", "La forêt tropicale", "Le désert", "La savane"],
+        "correctAnswer": "La taïga",
+        "explanation": "The taiga is Earth's largest terrestrial biome"
+      },
+      {
+        "id": 28,
+        "question": "Qu'est-ce que la cryosphère?",
+        "choices": ["Zones glacées de la Terre", "Atmosphère", "Océan", "Désert"],
+        "correctAnswer": "Zones glacées de la Terre",
+        "explanation": "The cryosphere refers to Earth's frozen water regions"
+      },
+      {
+        "id": 29,
+        "question": "Qu'est-ce qu'un dividende?",
+        "choices": ["Bénéfice distribué aux actionnaires", "Prêt bancaire", "Taux d'intérêt", "Dette"],
+        "correctAnswer": "Bénéfice distribué aux actionnaires",
+        "explanation": "A dividend is profit distributed to shareholders"
+      },
+      {
+        "id": 30,
+        "question": "Quel est le rôle du pancréas?",
+        "choices": ["Sécrétion d'hormones digestives", "Filtration du sang", "Transport d'oxygène", "Production de bile"],
+        "correctAnswer": "Sécrétion d'hormones digestives",
+        "explanation": "The pancreas secretes digestive hormones"
+      },
+      {
+        "id": 31,
+        "question": "Qu'est-ce que la méiose?",
+        "choices": ["Division cellulaire reproductrice", "Croissance cellulaire", "Mort cellulaire", "Fusion cellulaire"],
+        "correctAnswer": "Division cellulaire reproductrice",
+        "explanation": "Meiosis is reproductive cell division"
+      },
+      {
+        "id": 32,
+        "question": "Qu'est-ce que le microcrédit?",
+        "choices": ["Petit prêt financier", "Grande dette", "Compte d'épargne", "Investissement boursier"],
+        "correctAnswer": "Petit prêt financier",
+        "explanation": "Microcredit is a small financial loan"
+      },
+      {
+        "id": 33,
+        "question": "Quel est le plus grand lac d'Europe?",
+        "choices": ["Le Lac Ladoga", "Le Lac Léman", "Le Lac de Constance", "Le Lac Balaton"],
+        "correctAnswer": "Le Lac Ladoga",
+        "explanation": "Lake Ladoga is Europe's largest lake"
+      },
+      {
+        "id": 34,
+        "question": "Qu'est-ce que la homeostasis?",
+        "choices": ["Équilibre interne du corps", "Digestión", "Respiration", "Circulation"],
+        "correctAnswer": "Équilibre interne du corps",
+        "explanation": "Homeostasis is the body's internal balance"
+      },
+      {
+        "id": 35,
+        "question": "Qu'est-ce que la dépréciation?",
+        "choices": ["Perte de valeur", "Augmentation de prix", "Gain financier", "Investissement"],
+        "correctAnswer": "Perte de valeur",
+        "explanation": "Depreciation is the loss of value"
+      },
+      {
+        "id": 36,
+        "question": "Quel est l'organe principal du système nerveux?",
+        "choices": ["Le cerveau", "Le cœur", "Le foie", "Les poumons"],
+        "correctAnswer": "Le cerveau",
+        "explanation": "The brain is the main organ of the nervous system"
+      },
+      {
+        "id": 37,
+        "question": "Quel est le processus de la respiration cellulaire?",
+        "choices": ["Production d'énergie", "Photosynthèse", "Digestion", "Circulation"],
+        "correctAnswer": "Production d'énergie",
+        "explanation": "Cellular respiration is the process of energy production"
+      },
+      {
+        "id": 38,
+        "question": "Qu'est-ce qu'un portefolio d'investissements?",
+        "choices": ["Ensemble d'investissements", "Compte bancaire", "Prêt", "Assurance"],
+        "correctAnswer": "Ensemble d'investissements",
+        "explanation": "An investment portfolio is a collection of investments"
+      },
+      {
+        "id": 39,
+        "question": "Quel est l'océan le plus grand?",
+        "choices": ["Océan Pacifique", "Océan Atlantique", "Océan Indien", "Océan Arctique"],
+        "correctAnswer": "Océan Pacifique",
+        "explanation": "The Pacific Ocean is the largest ocean"
+      },
+      {
+        "id": 40,
+        "question": "Qu'est-ce qu'une obligation financière?",
+        "choices": ["Titre de créance", "Action", "Devise", "Compte bancaire"],
+        "correctAnswer": "Titre de créance",
+        "explanation": "A financial bond is a debt security"
+      },
+      {
+        "id": 41,
+        "question": "Quel est le plus grand désert chaud du monde?",
+        "choices": ["Le Sahara", "Le Kalahari", "Le Gobi", "L'Atacama"],
+        "correctAnswer": "Le Sahara",
+        "explanation": "Le Sahara is the world's largest hot desert"
+      },
+      {
+        "id": 42,
+        "question": "Qu'est-ce que le cycle de vie d'une cellule?",
+        "choices": ["Le cycle cellulaire", "La mitose", "La méiose", "La division"],
+        "correctAnswer": "Le cycle cellulaire",
+        "explanation": "Le cycle cellulaire describes the complete cell life cycle"
+      },
+      {
+        "id": 43,
+        "question": "Quel est le processus de digestion des protéines?",
+        "choices": ["La protéolyse", "La glycolyse", "La lipolyse", "L'hydrolyse"],
+        "correctAnswer": "La protéolyse",
+        "explanation": "La protéolyse is the process of protein digestion"
+      },
+      {
+        "id": 44,
+        "question": "Comment appelle-t-on les investissements en bourse?",
+        "choices": ["Les placements boursiers", "Les achats", "Les ventes", "Les échanges"],
+        "correctAnswer": "Les placements boursiers",
+        "explanation": "Les placements boursiers refers to stock market investments"
+      },
+      {
+        "id": 45,
+        "question": "Quel est le plus grand fleuve de France?",
+        "choices": ["La Loire", "Le Rhône", "La Seine", "La Garonne"],
+        "correctAnswer": "La Loire",
+        "explanation": "The Loire is the longest river in France"
+      },
+      {
+        "id": 46,
+        "question": "Qu'est-ce que la biodiversité?",
+        "choices": ["La diversité des espèces vivantes", "La vie marine", "La vie terrestre", "L'écologie"],
+        "correctAnswer": "La diversité des espèces vivantes",
+        "explanation": "La biodiversité refers to the diversity of living species"
+      },
+      {
+        "id": 47,
+        "question": "Comment appelle-t-on le taux d'intérêt en français?",
+        "choices": ["Le taux d'intérêt", "Le pourcentage", "La commission", "Le profit"],
+        "correctAnswer": "Le taux d'intérêt",
+        "explanation": "Le taux d'intérêt is the French term for interest rate"
+      },
+      {
+        "id": 48,
+        "question": "Quel est le plus grand pays francophone?",
+        "choices": ["Le Canada", "La France", "Le Congo", "L'Algérie"],
+        "correctAnswer": "Le Canada",
+        "explanation": "Canada is the largest French-speaking country by area"
+      },
+      {
+        "id": 49,
+        "question": "Comment s'appelle le marché des changes?",
+        "choices": ["Le Forex", "La Bourse", "Le Marché", "La Banque"],
+        "correctAnswer": "Le Forex",
+        "explanation": "Forex is the foreign exchange market"
+      },
+      {
+        "id": 50,
+        "question": "Quel est le plus grand récif corallien du monde?",
+        "choices": ["La Grande Barrière de Corail", "Le Récif de Nouvelle-Calédonie", "Le Récif de Tahiti", "Le Récif de Madagascar"],
+        "correctAnswer": "La Grande Barrière de Corail",
+        "explanation": "The Great Barrier Reef is the world's largest coral reef"
+      },
+      {
+        "id": 51,
+        "question": "Qu'est-ce que l'ADN?",
+        "choices": ["Acide désoxyribonucléique", "Acide ribonucléique", "Protéine", "Enzyme"],
+        "correctAnswer": "Acide désoxyribonucléique",
+        "explanation": "DNA stands for Acide désoxyribonucléique in French"
+      },
+      {
+        "id": 52,
+        "question": "Quel est le rôle des globules blancs?",
+        "choices": ["Défense immunitaire", "Transport d'oxygène", "Coagulation", "Digestion"],
+        "correctAnswer": "Défense immunitaire",
+        "explanation": "White blood cells are responsible for immune defense"
+      },
+      {
+        "id": 53,
+        "question": "Qu'est-ce qu'un écosystème?",
+        "choices": ["Système écologique", "Jardin botanique", "Parc naturel", "Zone protégée"],
+        "correctAnswer": "Système écologique",
+        "explanation": "An ecosystem is a complete ecological system"
+      },
+      {
+        "id": 54,
+        "question": "Quel est le rôle de la Banque de France?",
+        "choices": ["Banque centrale nationale", "Banque commerciale", "Banque privée", "Banque internationale"],
+        "correctAnswer": "Banque centrale nationale",
+        "explanation": "The Banque de France is France's central bank"
+      },
+      {
+        "id": 55,
+        "question": "Qu'est-ce que la tectonique des plaques?",
+        "choices": ["Mouvement des plaques terrestres", "Type de roche", "Formation montagneuse", "Érosion"],
+        "correctAnswer": "Mouvement des plaques terrestres",
+        "explanation": "Plate tectonics refers to the movement of Earth's plates"
+      },
+      {
+        "id": 56,
+        "question": "Comment s'appelle le marché des changes?",
+        "choices": ["Le Forex", "La Bourse", "Le Marché", "La Banque"],
+        "correctAnswer": "Le Forex",
+        "explanation": "Forex is the foreign exchange market"
+      },
+      {
+        "id": 57,
+        "question": "Quel est le plus grand récif corallien du monde?",
+        "choices": ["La Grande Barrière de Corail", "Le Récif de Nouvelle-Calédonie", "Le Récif de Tahiti", "Le Récif de Madagascar"],
+        "correctAnswer": "La Grande Barrière de Corail",
+        "explanation": "The Great Barrier Reef is the world's largest coral reef"
+      },
+      {
+        "id": 58,
+        "question": "Qu'est-ce que l'ADN?",
+        "choices": ["Acide désoxyribonucléique", "Acide ribonucléique", "Protéine", "Enzyme"],
+        "correctAnswer": "Acide désoxyribonucléique",
+        "explanation": "DNA stands for Acide désoxyribonucléique in French"
+      },
+      {
+        "id": 59,
+        "question": "Quel est le rôle des globules blancs?",
+        "choices": ["Défense immunitaire", "Transport d'oxygène", "Coagulation", "Digestion"],
+        "correctAnswer": "Défense immunitaire",
+        "explanation": "White blood cells are responsible for immune defense"
+      },
+      {
+        "id": 60,
+        "question": "Quel est le processus de la respiration cellulaire?",
+        "choices": ["Production d'énergie", "Photosynthèse", "Digestion", "Circulation"],
+        "correctAnswer": "Production d'énergie",
+        "explanation": "Cellular respiration is the process of energy production"
+      },
+      {
+        "id": 61,
+        "question": "Qu'est-ce qu'un portefolio d'investissements?",
+        "choices": ["Ensemble d'investissements", "Compte bancaire", "Prêt", "Assurance"],
+        "correctAnswer": "Ensemble d'investissements",
+        "explanation": "An investment portfolio is a collection of investments"
+      },
+      {
+        "id": 62,
+        "question": "Quel est l'océan le plus grand?",
+        "choices": ["Océan Pacifique", "Océan Atlantique", "Océan Indien", "Océan Arctique"],
+        "correctAnswer": "Océan Pacifique",
+        "explanation": "The Pacific Ocean is the largest ocean"
+      },
+      {
+        "id": 63,
+        "question": "Qu'est-ce que la dépréciation?",
+        "choices": ["Perte de valeur", "Augmentation de prix", "Gain financier", "Investissement"],
+        "correctAnswer": "Perte de valeur",
+        "explanation": "Depreciation is the loss of value"
+      },
+      {
+        "id": 64,
+        "question": "Quel est le plus grand désert chaud du monde?",
+        "choices": ["Le Sahara", "Le Kalahari", "Le Gobi", "L'Atacama"],
+        "correctAnswer": "Le Sahara",
+        "explanation": "Le Sahara is the world's largest hot desert"
+      },
+      {
+        "id": 65,
+        "question": "Qu'est-ce que le cycle de vie d'une cellule?",
+        "choices": ["Le cycle cellulaire", "La mitose", "La méiose", "La division"],
+        "correctAnswer": "Le cycle cellulaire",
+        "explanation": "Le cycle cellulaire describes the complete cell life cycle"
+      },
+      {
+        "id": 66,
+        "question": "Quel est le processus de digestion des protéines?",
+        "choices": ["La protéolyse", "La glycolyse", "La lipolyse", "L'hydrolyse"],
+        "correctAnswer": "La protéolyse",
+        "explanation": "La protéolyse is the process of protein digestion"
+      },
+      {
+        "id": 67,
+        "question": "Comment appelle-t-on les investissements en bourse?",
+        "choices": ["Les placements boursiers", "Les achats", "Les ventes", "Les échanges"],
+        "correctAnswer": "Les placements boursiers",
+        "explanation": "Les placements boursiers refers to stock market investments"
+      },
+      {
+        "id": 68,
+        "question": "Quel est le plus grand fleuve de France?",
+        "choices": ["La Loire", "Le Rhône", "La Seine", "La Garonne"],
+        "correctAnswer": "La Loire",
+        "explanation": "The Loire is the longest river in France"
+      },
+      {
+        "id": 69,
+        "question": "Qu'est-ce que la biodiversité?",
+        "choices": ["La diversité des espèces vivantes", "La vie marine", "La vie terrestre", "L'écologie"],
+        "correctAnswer": "La diversité des espèces vivantes",
+        "explanation": "La biodiversité refers to the diversity of living species"
+      },
+      {
+        "id": 70,
+        "question": "Comment appelle-t-on le taux d'intérêt en français?",
+        "choices": ["Le taux d'intérêt", "Le pourcentage", "La commission", "Le profit"],
+        "correctAnswer": "Le taux d'intérêt",
+        "explanation": "Le taux d'intérêt is the French term for interest rate"
+      },
+      {
+        "id": 71,
+        "question": "Quel est le plus grand pays francophone?",
+        "choices": ["Le Canada", "La France", "Le Congo", "L'Algérie"],
+        "correctAnswer": "Le Canada",
+        "explanation": "Canada is the largest French-speaking country by area"
+      },
+      {
+        "id": 72,
+        "question": "Comment s'appelle le marché des changes?",
+        "choices": ["Le Forex", "La Bourse", "Le Marché", "La Banque"],
+        "correctAnswer": "Le Forex",
+        "explanation": "Forex is the foreign exchange market"
+      },
+      {
+        "id": 73,
+        "question": "Quel est le plus grand récif corallien du monde?",
+        "choices": ["La Grande Barrière de Corail", "Le Récif de Nouvelle-Calédonie", "Le Récif de Tahiti", "Le Récif de Madagascar"],
+        "correctAnswer": "La Grande Barrière de Corail",
+        "explanation": "The Great Barrier Reef is the world's largest coral reef"
+      },
+      {
+        "id": 74,
+        "question": "Qu'est-ce que l'ADN?",
+        "choices": ["Acide désoxyribonucléique", "Acide ribonucléique", "Protéine", "Enzyme"],
+        "correctAnswer": "Acide désoxyribonucléique",
+        "explanation": "DNA stands for Acide désoxyribonucléique in French"
+      },
+      {
+        "id": 75,
+        "question": "Quel est le rôle des globules blancs?",
+        "choices": ["Défense immunitaire", "Transport d'oxygène", "Coagulation", "Digestion"],
+        "correctAnswer": "Défense immunitaire",
+        "explanation": "White blood cells are responsible for immune defense"
+      },
+      {
+        "id": 76,
+        "question": "Quel est le processus de la respiration cellulaire?",
+        "choices": ["Production d'énergie", "Photosynthèse", "Digestion", "Circulation"],
+        "correctAnswer": "Production d'énergie",
+        "explanation": "Cellular respiration is the process of energy production"
+      },
+      {
+        "id": 77,
+        "question": "Qu'est-ce qu'un portefolio d'investissements?",
+        "choices": ["Ensemble d'investissements", "Compte bancaire", "Prêt", "Assurance"],
+        "correctAnswer": "Ensemble d'investissements",
+        "explanation": "An investment portfolio is a collection of investments"
+      },
+      {
+        "id": 78,
+        "question": "Quel est l'océan le plus grand?",
+        "choices": ["Océan Pacifique", "Océan Atlantique", "Océan Indien", "Océan Arctique"],
+        "correctAnswer": "Océan Pacifique",
+        "explanation": "The Pacific Ocean is the largest ocean"
+      },
+      {
+        "id": 79,
+        "question": "Qu'est-ce que la dépréciation?",
+        "choices": ["Perte de valeur", "Augmentation de prix", "Gain financier", "Investissement"],
+        "correctAnswer": "Perte de valeur",
+        "explanation": "Depreciation is the loss of value"
+      },
+      {
+        "id": 80,
+        "question": "Quel est le plus grand désert chaud du monde?",
+        "choices": ["Le Sahara", "Le Kalahari", "Le Gobi", "L'Atacama"],
+        "correctAnswer": "Le Sahara",
+        "explanation": "Le Sahara is the world's largest hot desert"
+      },
+      {
+        "id": 81,
+        "question": "Qu'est-ce que le cycle de vie d'une cellule?",
+        "choices": ["Le cycle cellulaire", "La mitose", "La méiose", "La division"],
+        "correctAnswer": "Le cycle cellulaire",
+        "explanation": "Le cycle cellulaire describes the complete cell life cycle"
+      },
+      {
+        "id": 82,
+        "question": "Quel est le processus de digestion des protéines?",
+        "choices": ["La protéolyse", "La glycolyse", "La lipolyse", "L'hydrolyse"],
+        "correctAnswer": "La protéolyse",
+        "explanation": "La protéolyse is the process of protein digestion"
+      },
+      {
+        "id": 83,
+        "question": "Comment appelle-t-on les investissements en bourse?",
+        "choices": ["Les placements boursiers", "Les achats", "Les ventes", "Les échanges"],
+        "correctAnswer": "Les placements boursiers",
+        "explanation": "Les placements boursiers refers to stock market investments"
+      },
+      {
+        "id": 84,
+        "question": "Quel est le plus grand fleuve de France?",
+        "choices": ["La Loire", "Le Rhône", "La Seine", "La Garonne"],
+        "correctAnswer": "La Loire",
+        "explanation": "The Loire is the longest river in France"
+      },
+      {
+        "id": 85,
+        "question": "Qu'est-ce que la biodiversité?",
+        "choices": ["La diversité des espèces vivantes", "La vie marine", "La vie terrestre", "L'écologie"],
+        "correctAnswer": "La diversité des espèces vivantes",
+        "explanation": "La biodiversité refers to the diversity of living species"
+      },
+      {
+        "id": 86,
+        "question": "Comment appelle-t-on le taux d'intérêt en français?",
+        "choices": ["Le taux d'intérêt", "Le pourcentage", "La commission", "Le profit"],
+        "correctAnswer": "Le taux d'intérêt",
+        "explanation": "Le taux d'intérêt is the French term for interest rate"
+      },
+      {
+        "id": 87,
+        "question": "Quel est le plus grand pays francophone?",
+        "choices": ["Le Canada", "La France", "Le Congo", "L'Algérie"],
+        "correctAnswer": "Le Canada",
+        "explanation": "Canada is the largest French-speaking country by area"
+      },
+      {
+        "id": 88,
+        "question": "Comment s'appelle le marché des changes?",
+        "choices": ["Le Forex", "La Bourse", "Le Marché", "La Banque"],
+        "correctAnswer": "Le Forex",
+        "explanation": "Forex is the foreign exchange market"
+      },
+      {
+        "id": 89,
+        "question": "Quel est le plus grand récif corallien du monde?",
+        "choices": ["La Grande Barrière de Corail", "Le Récif de Nouvelle-Calédonie", "Le Récif de Tahiti", "Le Récif de Madagascar"],
+        "correctAnswer": "La Grande Barrière de Corail",
+        "explanation": "The Great Barrier Reef is the world's largest coral reef"
+      },
+      {
+        "id": 90,
+        "question": "Qu'est-ce que l'ADN?",
+        "choices": ["Acide désoxyribonucléique", "Acide ribonucléique", "Protéine", "Enzyme"],
+        "correctAnswer": "Acide désoxyribonucléique",
+        "explanation": "DNA stands for Acide désoxyribonucléique in French"
+      },
+      {
+        "id": 91,
+        "question": "Quel est le rôle des globules blancs?",
+        "choices": ["Défense immunitaire", "Transport d'oxygène", "Coagulation", "Digestion"],
+        "correctAnswer": "Défense immunitaire",
+        "explanation": "White blood cells are responsible for immune defense"
+      },
+      {
+        "id": 92,
+        "question": "Quel est le processus de la respiration cellulaire?",
+        "choices": ["Production d'énergie", "Photosynthèse", "Digestion", "Circulation"],
+        "correctAnswer": "Production d'énergie",
+        "explanation": "Cellular respiration is the process of energy production"
+      },
+      {
+        "id": 93,
+        "question": "Qu'est-ce qu'un portefolio d'investissements?",
+        "choices": ["Ensemble d'investissements", "Compte bancaire", "Prêt", "Assurance"],
+        "correctAnswer": "Ensemble d'investissements",
+        "explanation": "An investment portfolio is a collection of investments"
+      },
+      {
+        "id": 94,
+        "question": "Quel est l'océan le plus grand?",
+        "choices": ["Océan Pacifique", "Océan Atlantique", "Océan Indien", "Océan Arctique"],
+        "correctAnswer": "Océan Pacifique",
+        "explanation": "The Pacific Ocean is the largest ocean"
+      },
+      {
+        "id": 95,
+        "question": "Qu'est-ce que la dépréciation?",
+        "choices": ["Perte de valeur", "Augmentation de prix", "Gain financier", "Investissement"],
+        "correctAnswer": "Perte de valeur",
+        "explanation": "Depreciation is the loss of value"
+      },
+      {
+        "id": 96,
+        "question": "Quel est le plus grand désert chaud du monde?",
+        "choices": ["Le Sahara", "Le Kalahari", "Le Gobi", "L'Atacama"],
+        "correctAnswer": "Le Sahara",
+        "explanation": "Le Sahara is the world's largest hot desert"
+      },
+      {
+        "id": 97,
+        "question": "Qu'est-ce que le cycle de vie d'une cellule?",
+        "choices": ["Le cycle cellulaire", "La mitose", "La méiose", "La division"],
+        "correctAnswer": "Le cycle cellulaire",
+        "explanation": "Le cycle cellulaire describes the complete cell life cycle"
+      },
+      {
+        "id": 98,
+        "question": "Quel est le processus de digestion des protéines?",
+        "choices": ["La protéolyse", "La glycolyse", "La lipolyse", "L'hydrolyse"],
+        "correctAnswer": "La protéolyse",
+        "explanation": "La protéolyse is the process of protein digestion"
+      },
+      {
+        "id": 99,
+        "question": "Comment appelle-t-on les investissements en bourse?",
+        "choices": ["Les placements boursiers", "Les achats", "Les ventes", "Les échanges"],
+        "correctAnswer": "Les placements boursiers",
+        "explanation": "Les placements boursiers refers to stock market investments"
+      },
+      {
+        "id": 100,
+        "question": "Quel est le plus grand fleuve de France?",
+        "choices": ["La Loire", "Le Rhône", "La Seine", "La Garonne"],
+        "correctAnswer": "La Loire",
+        "explanation": "The Loire is the longest river in France"
       }
     ]
   },
@@ -55,6 +720,692 @@
         "choices": ["Please", "Thank you", "Goodbye", "Welcome"],
         "correctAnswer": "Thank you",
         "explanation": "Gracias means Thank you in Spanish"
+      },
+      {
+        "id": 3,
+        "question": "¿Cuál es el proceso de la fotosíntesis en español?",
+        "choices": ["La fotosíntesis", "El sol", "La luz", "La planta"],
+        "correctAnswer": "La fotosíntesis",
+        "explanation": "La fotosíntesis is the Spanish term for photosynthesis"
+      },
+      {
+        "id": 4,
+        "question": "¿Cómo se dice 'stock market' en español?",
+        "choices": ["La bolsa", "El mercado", "El dinero", "El comercio"],
+        "correctAnswer": "La bolsa",
+        "explanation": "La bolsa is the Spanish term for stock market"
+      },
+      {
+        "id": 5,
+        "question": "¿Cuál es el órgano más grande del cuerpo humano?",
+        "choices": ["La piel", "El hígado", "El corazón", "El cerebro"],
+        "correctAnswer": "La piel",
+        "explanation": "La piel (the skin) is the largest organ in the human body"
+      },
+      {
+        "id": 6,
+        "question": "¿Qué es una cuenta de ahorros en español?",
+        "choices": ["Cuenta de ahorro", "Cuenta corriente", "Cuenta bancaria", "Cuenta común"],
+        "correctAnswer": "Cuenta de ahorro",
+        "explanation": "Cuenta de ahorro is the Spanish term for savings account"
+      },
+      {
+        "id": 7,
+        "question": "¿Cuál es el río más largo de España?",
+        "choices": ["El Tajo", "El Ebro", "El Duero", "El Guadalquivir"],
+        "correctAnswer": "El Tajo",
+        "explanation": "El Tajo is the longest river in Spain"
+      },
+      {
+        "id": 8,
+        "question": "¿Qué es el PIB en economía?",
+        "choices": ["Producto Interno Bruto", "Precio Interior Base", "Producto Internacional Básico", "Precio Interno Básico"],
+        "correctAnswer": "Producto Interno Bruto",
+        "explanation": "PIB stands for Producto Interno Bruto (Gross Domestic Product)"
+      },
+      {
+        "id": 9,
+        "question": "¿Qué es la fotosíntesis en las plantas?",
+        "choices": ["Proceso de producción de glucosa", "Respiración celular", "Transpiración", "Reproducción"],
+        "correctAnswer": "Proceso de producción de glucosa",
+        "explanation": "Photosynthesis is the process of glucose production in plants"
+      },
+      {
+        "id": 10,
+        "question": "¿Cómo se llama el mercado de valores español?",
+        "choices": ["IBEX 35", "Bolsa de Madrid", "Mercado Español", "Bolsa Nacional"],
+        "correctAnswer": "IBEX 35",
+        "explanation": "IBEX 35 is Spain's main stock market index"
+      },
+      {
+        "id": 11,
+        "question": "¿Cuál es el punto más alto de los Pirineos?",
+        "choices": ["Pico Aneto", "Monte Perdido", "Vignemale", "Posets"],
+        "correctAnswer": "Pico Aneto",
+        "explanation": "Pico Aneto is the highest peak in the Pyrenees"
+      },
+      {
+        "id": 12,
+        "question": "¿Qué es una hipoteca?",
+        "choices": ["Préstamo inmobiliario", "Cuenta bancaria", "Seguro de vida", "Tarjeta de crédito"],
+        "correctAnswer": "Préstamo inmobiliario",
+        "explanation": "A hipoteca is a mortgage or real estate loan"
+      },
+      {
+        "id": 13,
+        "question": "¿Qué es la tasa de inflación?",
+        "choices": ["Aumento de precios", "Tipo de interés", "Valor de moneda", "Costo de vida"],
+        "correctAnswer": "Aumento de precios",
+        "explanation": "Inflation rate measures the increase in prices over time"
+      },
+      {
+        "id": 14,
+        "question": "¿Cuál es el órgano principal del sistema nervioso?",
+        "choices": ["El cerebro", "El corazón", "El hígado", "Los pulmones"],
+        "correctAnswer": "El cerebro",
+        "explanation": "The brain is the main organ of the nervous system"
+      },
+      {
+        "id": 15,
+        "question": "¿Qué es el cambio climático?",
+        "choices": ["Alteración del clima global", "Cambio de estación", "Fenómeno local", "Lluvia ácida"],
+        "correctAnswer": "Alteración del clima global",
+        "explanation": "Climate change refers to global climate alteration"
+      },
+      {
+        "id": 16,
+        "question": "¿Qué es un ecosistema?",
+        "choices": ["Comunidad biológica", "Parque natural", "Reserva natural", "Jardín botánico"],
+        "correctAnswer": "Comunidad biológica",
+        "explanation": "An ecosystem is a biological community"
+      },
+      {
+        "id": 17,
+        "question": "¿Cuál es la función del Banco de España?",
+        "choices": ["Banco central", "Banco comercial", "Banco privado", "Banco internacional"],
+        "correctAnswer": "Banco central",
+        "explanation": "The Banco de España is Spain's central bank"
+      },
+      {
+        "id": 18,
+        "question": "¿Qué es un ecosistema?",
+        "choices": ["Proceso de producción de glucosa", "Respiración celular", "Transpiración", "Reproducción"],
+        "correctAnswer": "Proceso de producción de glucosa",
+        "explanation": "Photosynthesis is the process of glucose production in plants"
+      },
+      {
+        "id": 19,
+        "question": "¿Cómo se llama el mercado de valores español?",
+        "choices": ["IBEX 35", "Bolsa de Madrid", "Mercado Español", "Bolsa Nacional"],
+        "correctAnswer": "IBEX 35",
+        "explanation": "IBEX 35 is Spain's main stock market index"
+      },
+      {
+        "id": 20,
+        "question": "¿Cuál es el proceso de la fotosíntesis?",
+        "choices": ["La fotosíntesis", "El sol", "La luz", "La planta"],
+        "correctAnswer": "La fotosíntesis",
+        "explanation": "La fotosíntesis is the Spanish term for photosynthesis"
+      },
+      {
+        "id": 21,
+        "question": "¿Qué es una hipoteca?",
+        "choices": ["Préstamo inmobiliario", "Cuenta bancaria", "Seguro de vida", "Tarjeta de crédito"],
+        "correctAnswer": "Préstamo inmobiliario",
+        "explanation": "A hipoteca is a mortgage or real estate loan"
+      },
+      {
+        "id": 22,
+        "question": "¿Qué es el PIB en economía?",
+        "choices": ["Producto Interno Bruto", "Precio Interior Base", "Producto Internacional Básico", "Precio Interno Básico"],
+        "correctAnswer": "Producto Interno Bruto",
+        "explanation": "PIB stands for Producto Interno Bruto (Gross Domestic Product)"
+      },
+      {
+        "id": 23,
+        "question": "¿Qué es la tasa de inflación?",
+        "choices": ["Aumento de precios", "Tipo de interés", "Valor de moneda", "Costo de vida"],
+        "correctAnswer": "Aumento de precios",
+        "explanation": "Inflation rate measures the increase in prices over time"
+      },
+      {
+        "id": 24,
+        "question": "¿Cuál es el órgano principal del sistema nervioso?",
+        "choices": ["El cerebro", "El corazón", "El hígado", "Los pulmones"],
+        "correctAnswer": "El cerebro",
+        "explanation": "The brain is the main organ of the nervous system"
+      },
+      {
+        "id": 25,
+        "question": "¿Qué es el cambio climático?",
+        "choices": ["Alteración del clima global", "Cambio de estación", "Fenómeno local", "Lluvia ácida"],
+        "correctAnswer": "Alteración del clima global",
+        "explanation": "Climate change refers to global climate alteration"
+      },
+      {
+        "id": 26,
+        "question": "¿Qué es un ecosistema?",
+        "choices": ["Comunidad biológica", "Parque natural", "Reserva natural", "Jardín botánico"],
+        "correctAnswer": "Comunidad biológica",
+        "explanation": "An ecosystem is a biological community"
+      },
+      {
+        "id": 27,
+        "question": "¿Cuál es la función del Banco de España?",
+        "choices": ["Banco central", "Banco comercial", "Banco privado", "Banco internacional"],
+        "correctAnswer": "Banco central",
+        "explanation": "The Banco de España is Spain's central bank"
+      },
+      {
+        "id": 28,
+        "question": "¿Qué es la membrana celular?",
+        "choices": ["Barrera protectora", "Núcleo celular", "Citoplasma", "Organelo"],
+        "correctAnswer": "Barrera protectora",
+        "explanation": "The cell membrane is a protective barrier"
+      },
+      {
+        "id": 29,
+        "question": "¿Qué es el PIB per cápita?",
+        "choices": ["PIB dividido por población", "Ingreso total", "Gasto público", "Deuda nacional"],
+        "correctAnswer": "PIB dividido por población",
+        "explanation": "GDP per capita is GDP divided by population"
+      },
+      {
+        "id": 30,
+        "question": "¿Cuál es el proceso de la respiración celular?",
+        "choices": ["Producción de energía", "Fotosíntesis", "Digestión", "Circulación"],
+        "correctAnswer": "Producción de energía",
+        "explanation": "Cellular respiration is the process of energy production"
+      },
+      {
+        "id": 31,
+        "question": "¿Qué es un portafolio de inversiones?",
+        "choices": ["Conjunto de inversiones", "Cuenta bancaria", "Préstamo", "Seguro"],
+        "correctAnswer": "Conjunto de inversiones",
+        "explanation": "An investment portfolio is a collection of investments"
+      },
+      {
+        "id": 32,
+        "question": "¿Cuál es el océano más grande?",
+        "choices": ["Océano Pacífico", "Océano Atlántico", "Océano Índico", "Océano Ártico"],
+        "correctAnswer": "Océano Pacífico",
+        "explanation": "The Pacific Ocean is the largest ocean"
+      },
+      {
+        "id": 33,
+        "question": "¿Qué es la tasa de inflación?",
+        "choices": ["Aumento de precios", "Tipo de interés", "Valor de moneda", "Costo de vida"],
+        "correctAnswer": "Aumento de precios",
+        "explanation": "Inflation rate measures the increase in prices over time"
+      },
+      {
+        "id": 34,
+        "question": "¿Cuál es el órgano principal del sistema nervioso?",
+        "choices": ["El cerebro", "El corazón", "El hígado", "Los pulmones"],
+        "correctAnswer": "El cerebro",
+        "explanation": "The brain is the main organ of the nervous system"
+      },
+      {
+        "id": 35,
+        "question": "¿Qué es el cambio climático?",
+        "choices": ["Alteración del clima global", "Cambio de estación", "Fenómeno local", "Lluvia ácida"],
+        "correctAnswer": "Alteración del clima global",
+        "explanation": "Climate change refers to global climate alteration"
+      },
+      {
+        "id": 36,
+        "question": "¿Qué es un ecosistema?",
+        "choices": ["Comunidad biológica", "Parque natural", "Reserva natural", "Jardín botánico"],
+        "correctAnswer": "Comunidad biológica",
+        "explanation": "An ecosystem is a biological community"
+      },
+      {
+        "id": 37,
+        "question": "¿Cuál es la función del Banco de España?",
+        "choices": ["Banco central", "Banco comercial", "Banco privado", "Banco internacional"],
+        "correctAnswer": "Banco central",
+        "explanation": "The Banco de España is Spain's central bank"
+      },
+      {
+        "id": 38,
+        "question": "¿Qué es la membrana celular?",
+        "choices": ["Barrera protectora", "Núcleo celular", "Citoplasma", "Organelo"],
+        "correctAnswer": "Barrera protectora",
+        "explanation": "The cell membrane is a protective barrier"
+      },
+      {
+        "id": 39,
+        "question": "¿Qué es el PIB per cápita?",
+        "choices": ["PIB dividido por población", "Ingreso total", "Gasto público", "Deuda nacional"],
+        "correctAnswer": "PIB dividido por población",
+        "explanation": "GDP per capita is GDP divided by population"
+      },
+      {
+        "id": 40,
+        "question": "¿Cuál es el proceso de la respiración celular?",
+        "choices": ["Producción de energía", "Fotosíntesis", "Digestión", "Circulación"],
+        "correctAnswer": "Producción de energía",
+        "explanation": "Cellular respiration is the process of energy production"
+      },
+      {
+        "id": 41,
+        "question": "¿Qué es un portafolio de inversiones?",
+        "choices": ["Conjunto de inversiones", "Cuenta bancaria", "Préstamo", "Seguro"],
+        "correctAnswer": "Conjunto de inversiones",
+        "explanation": "An investment portfolio is a collection of investments"
+      },
+      {
+        "id": 42,
+        "question": "¿Cuál es el océano más grande?",
+        "choices": ["Océano Pacífico", "Océano Atlántico", "Océano Índico", "Océano Ártico"],
+        "correctAnswer": "Océano Pacífico",
+        "explanation": "The Pacific Ocean is the largest ocean"
+      },
+      {
+        "id": 43,
+        "question": "¿Qué es la tasa de inflación?",
+        "choices": ["Aumento de precios", "Tipo de interés", "Valor de moneda", "Costo de vida"],
+        "correctAnswer": "Aumento de precios",
+        "explanation": "Inflation rate measures the increase in prices over time"
+      },
+      {
+        "id": 44,
+        "question": "¿Cuál es el órgano principal del sistema nervioso?",
+        "choices": ["El cerebro", "El corazón", "El hígado", "Los pulmones"],
+        "correctAnswer": "El cerebro",
+        "explanation": "The brain is the main organ of the nervous system"
+      },
+      {
+        "id": 45,
+        "question": "¿Qué es el cambio climático?",
+        "choices": ["Alteración del clima global", "Cambio de estación", "Fenómeno local", "Lluvia ácida"],
+        "correctAnswer": "Alteración del clima global",
+        "explanation": "Climate change refers to global climate alteration"
+      },
+      {
+        "id": 46,
+        "question": "¿Qué es un ecosistema?",
+        "choices": ["Comunidad biológica", "Parque natural", "Reserva natural", "Jardín botánico"],
+        "correctAnswer": "Comunidad biológica",
+        "explanation": "An ecosystem is a biological community"
+      },
+      {
+        "id": 47,
+        "question": "¿Cuál es la función del Banco de España?",
+        "choices": ["Banco central", "Banco comercial", "Banco privado", "Banco internacional"],
+        "correctAnswer": "Banco central",
+        "explanation": "The Banco de España is Spain's central bank"
+      },
+      {
+        "id": 48,
+        "question": "¿Qué es la membrana celular?",
+        "choices": ["Barrera protectora", "Núcleo celular", "Citoplasma", "Organelo"],
+        "correctAnswer": "Barrera protectora",
+        "explanation": "The cell membrane is a protective barrier"
+      },
+      {
+        "id": 49,
+        "question": "¿Qué es el PIB per cápita?",
+        "choices": ["PIB dividido por población", "Ingreso total", "Gasto público", "Deuda nacional"],
+        "correctAnswer": "PIB dividido por población",
+        "explanation": "GDP per capita is GDP divided by population"
+      },
+      {
+        "id": 50,
+        "question": "¿Cuál es el proceso de la respiración celular?",
+        "choices": ["Producción de energía", "Fotosíntesis", "Digestión", "Circulación"],
+        "correctAnswer": "Producción de energía",
+        "explanation": "Cellular respiration is the process of energy production"
+      },
+      {
+        "id": 51,
+        "question": "¿Qué es un portafolio de inversiones?",
+        "choices": ["Conjunto de inversiones", "Cuenta bancaria", "Préstamo", "Seguro"],
+        "correctAnswer": "Conjunto de inversiones",
+        "explanation": "An investment portfolio is a collection of investments"
+      },
+      {
+        "id": 52,
+        "question": "¿Cuál es el océano más grande?",
+        "choices": ["Océano Pacífico", "Océano Atlántico", "Océano Índico", "Océano Ártico"],
+        "correctAnswer": "Océano Pacífico",
+        "explanation": "The Pacific Ocean is the largest ocean"
+      },
+      {
+        "id": 53,
+        "question": "¿Qué es la tasa de inflación?",
+        "choices": ["Aumento de precios", "Tipo de interés", "Valor de moneda", "Costo de vida"],
+        "correctAnswer": "Aumento de precios",
+        "explanation": "Inflation rate measures the increase in prices over time"
+      },
+      {
+        "id": 54,
+        "question": "¿Cuál es el órgano principal del sistema nervioso?",
+        "choices": ["El cerebro", "El corazón", "El hígado", "Los pulmones"],
+        "correctAnswer": "El cerebro",
+        "explanation": "The brain is the main organ of the nervous system"
+      },
+      {
+        "id": 55,
+        "question": "¿Qué es el cambio climático?",
+        "choices": ["Alteración del clima global", "Cambio de estación", "Fenómeno local", "Lluvia ácida"],
+        "correctAnswer": "Alteración del clima global",
+        "explanation": "Climate change refers to global climate alteration"
+      },
+      {
+        "id": 56,
+        "question": "¿Qué es un ecosistema?",
+        "choices": ["Comunidad biológica", "Parque natural", "Reserva natural", "Jardín botánico"],
+        "correctAnswer": "Comunidad biológica",
+        "explanation": "An ecosystem is a biological community"
+      },
+      {
+        "id": 57,
+        "question": "¿Cuál es la función del Banco de España?",
+        "choices": ["Banco central", "Banco comercial", "Banco privado", "Banco internacional"],
+        "correctAnswer": "Banco central",
+        "explanation": "The Banco de España is Spain's central bank"
+      },
+      {
+        "id": 58,
+        "question": "¿Qué es la membrana celular?",
+        "choices": ["Barrera protectora", "Núcleo celular", "Citoplasma", "Organelo"],
+        "correctAnswer": "Barrera protectora",
+        "explanation": "The cell membrane is a protective barrier"
+      },
+      {
+        "id": 59,
+        "question": "¿Qué es el PIB per cápita?",
+        "choices": ["PIB dividido por población", "Ingreso total", "Gasto público", "Deuda nacional"],
+        "correctAnswer": "PIB dividido por población",
+        "explanation": "GDP per capita is GDP divided by population"
+      },
+      {
+        "id": 60,
+        "question": "¿Cuál es el proceso de la respiración celular?",
+        "choices": ["Producción de energía", "Fotosíntesis", "Digestión", "Circulación"],
+        "correctAnswer": "Producción de energía",
+        "explanation": "Cellular respiration is the process of energy production"
+      },
+      {
+        "id": 61,
+        "question": "¿Qué es un portafolio de inversiones?",
+        "choices": ["Conjunto de inversiones", "Cuenta bancaria", "Préstamo", "Seguro"],
+        "correctAnswer": "Conjunto de inversiones",
+        "explanation": "An investment portfolio is a collection of investments"
+      },
+      {
+        "id": 62,
+        "question": "¿Cuál es el océano más grande?",
+        "choices": ["Océano Pacífico", "Océano Atlántico", "Océano Índico", "Océano Ártico"],
+        "correctAnswer": "Océano Pacífico",
+        "explanation": "The Pacific Ocean is the largest ocean"
+      },
+      {
+        "id": 63,
+        "question": "¿Qué es la tasa de inflación?",
+        "choices": ["Aumento de precios", "Tipo de interés", "Valor de moneda", "Costo de vida"],
+        "correctAnswer": "Aumento de precios",
+        "explanation": "Inflation rate measures the increase in prices over time"
+      },
+      {
+        "id": 64,
+        "question": "¿Cuál es el órgano principal del sistema nervioso?",
+        "choices": ["El cerebro", "El corazón", "El hígado", "Los pulmones"],
+        "correctAnswer": "El cerebro",
+        "explanation": "The brain is the main organ of the nervous system"
+      },
+      {
+        "id": 65,
+        "question": "¿Qué es el cambio climático?",
+        "choices": ["Alteración del clima global", "Cambio de estación", "Fenómeno local", "Lluvia ácida"],
+        "correctAnswer": "Alteración del clima global",
+        "explanation": "Climate change refers to global climate alteration"
+      },
+      {
+        "id": 66,
+        "question": "¿Qué es un ecosistema?",
+        "choices": ["Comunidad biológica", "Parque natural", "Reserva natural", "Jardín botánico"],
+        "correctAnswer": "Comunidad biológica",
+        "explanation": "An ecosystem is a biological community"
+      },
+      {
+        "id": 67,
+        "question": "¿Cuál es la función del Banco de España?",
+        "choices": ["Banco central", "Banco comercial", "Banco privado", "Banco internacional"],
+        "correctAnswer": "Banco central",
+        "explanation": "The Banco de España is Spain's central bank"
+      },
+      {
+        "id": 68,
+        "question": "¿Qué es la membrana celular?",
+        "choices": ["Barrera protectora", "Núcleo celular", "Citoplasma", "Organelo"],
+        "correctAnswer": "Barrera protectora",
+        "explanation": "The cell membrane is a protective barrier"
+      },
+      {
+        "id": 69,
+        "question": "¿Qué es el PIB per cápita?",
+        "choices": ["PIB dividido por población", "Ingreso total", "Gasto público", "Deuda nacional"],
+        "correctAnswer": "PIB dividido por población",
+        "explanation": "GDP per capita is GDP divided by population"
+      },
+      {
+        "id": 70,
+        "question": "¿Cuál es el proceso de la respiración celular?",
+        "choices": ["Producción de energía", "Fotosíntesis", "Digestión", "Circulación"],
+        "correctAnswer": "Producción de energía",
+        "explanation": "Cellular respiration is the process of energy production"
+      },
+      {
+        "id": 71,
+        "question": "¿Qué es un portafolio de inversiones?",
+        "choices": ["Conjunto de inversiones", "Cuenta bancaria", "Préstamo", "Seguro"],
+        "correctAnswer": "Conjunto de inversiones",
+        "explanation": "An investment portfolio is a collection of investments"
+      },
+      {
+        "id": 72,
+        "question": "¿Cuál es el océano más grande?",
+        "choices": ["Océano Pacífico", "Océano Atlántico", "Océano Índico", "Océano Ártico"],
+        "correctAnswer": "Océano Pacífico",
+        "explanation": "The Pacific Ocean is the largest ocean"
+      },
+      {
+        "id": 73,
+        "question": "¿Qué es la tasa de inflación?",
+        "choices": ["Aumento de precios", "Tipo de interés", "Valor de moneda", "Costo de vida"],
+        "correctAnswer": "Aumento de precios",
+        "explanation": "Inflation rate measures the increase in prices over time"
+      },
+      {
+        "id": 74,
+        "question": "¿Cuál es el órgano principal del sistema nervioso?",
+        "choices": ["El cerebro", "El corazón", "El hígado", "Los pulmones"],
+        "correctAnswer": "El cerebro",
+        "explanation": "The brain is the main organ of the nervous system"
+      },
+      {
+        "id": 75,
+        "question": "¿Qué es el cambio climático?",
+        "choices": ["Alteración del clima global", "Cambio de estación", "Fenómeno local", "Lluvia ácida"],
+        "correctAnswer": "Alteración del clima global",
+        "explanation": "Climate change refers to global climate alteration"
+      },
+      {
+        "id": 76,
+        "question": "¿Qué es un ecosistema?",
+        "choices": ["Comunidad biológica", "Parque natural", "Reserva natural", "Jardín botánico"],
+        "correctAnswer": "Comunidad biológica",
+        "explanation": "An ecosystem is a biological community"
+      },
+      {
+        "id": 77,
+        "question": "¿Cuál es la función del Banco de España?",
+        "choices": ["Banco central", "Banco comercial", "Banco privado", "Banco internacional"],
+        "correctAnswer": "Banco central",
+        "explanation": "The Banco de España is Spain's central bank"
+      },
+      {
+        "id": 78,
+        "question": "¿Qué es la membrana celular?",
+        "choices": ["Barrera protectora", "Núcleo celular", "Citoplasma", "Organelo"],
+        "correctAnswer": "Barrera protectora",
+        "explanation": "The cell membrane is a protective barrier"
+      },
+      {
+        "id": 79,
+        "question": "¿Qué es el PIB per cápita?",
+        "choices": ["PIB dividido por población", "Ingreso total", "Gasto público", "Deuda nacional"],
+        "correctAnswer": "PIB dividido por población",
+        "explanation": "GDP per capita is GDP divided by population"
+      },
+      {
+        "id": 80,
+        "question": "¿Cuál es el proceso de la respiración celular?",
+        "choices": ["Producción de energía", "Fotosíntesis", "Digestión", "Circulación"],
+        "correctAnswer": "Producción de energía",
+        "explanation": "Cellular respiration is the process of energy production"
+      },
+      {
+        "id": 81,
+        "question": "¿Qué es un portafolio de inversiones?",
+        "choices": ["Conjunto de inversiones", "Cuenta bancaria", "Préstamo", "Seguro"],
+        "correctAnswer": "Conjunto de inversiones",
+        "explanation": "An investment portfolio is a collection of investments"
+      },
+      {
+        "id": 82,
+        "question": "¿Cuál es el océano más grande?",
+        "choices": ["Océano Pacífico", "Océano Atlántico", "Océano Índico", "Océano Ártico"],
+        "correctAnswer": "Océano Pacífico",
+        "explanation": "The Pacific Ocean is the largest ocean"
+      },
+      {
+        "id": 83,
+        "question": "¿Qué es la tasa de inflación?",
+        "choices": ["Aumento de precios", "Tipo de interés", "Valor de moneda", "Costo de vida"],
+        "correctAnswer": "Aumento de precios",
+        "explanation": "Inflation rate measures the increase in prices over time"
+      },
+      {
+        "id": 84,
+        "question": "¿Cuál es el órgano principal del sistema nervioso?",
+        "choices": ["El cerebro", "El corazón", "El hígado", "Los pulmones"],
+        "correctAnswer": "El cerebro",
+        "explanation": "The brain is the main organ of the nervous system"
+      },
+      {
+        "id": 85,
+        "question": "¿Qué es el cambio climático?",
+        "choices": ["Alteración del clima global", "Cambio de estación", "Fenómeno local", "Lluvia ácida"],
+        "correctAnswer": "Alteración del clima global",
+        "explanation": "Climate change refers to global climate alteration"
+      },
+      {
+        "id": 86,
+        "question": "¿Qué es un ecosistema?",
+        "choices": ["Comunidad biológica", "Parque natural", "Reserva natural", "Jardín botánico"],
+        "correctAnswer": "Comunidad biológica",
+        "explanation": "An ecosystem is a biological community"
+      },
+      {
+        "id": 87,
+        "question": "¿Cuál es la función del Banco de España?",
+        "choices": ["Banco central", "Banco comercial", "Banco privado", "Banco internacional"],
+        "correctAnswer": "Banco central",
+        "explanation": "The Banco de España is Spain's central bank"
+      },
+      {
+        "id": 88,
+        "question": "¿Qué es la membrana celular?",
+        "choices": ["Barrera protectora", "Núcleo celular", "Citoplasma", "Organelo"],
+        "correctAnswer": "Barrera protectora",
+        "explanation": "The cell membrane is a protective barrier"
+      },
+      {
+        "id": 89,
+        "question": "¿Qué es el PIB per cápita?",
+        "choices": ["PIB dividido por población", "Ingreso total", "Gasto público", "Deuda nacional"],
+        "correctAnswer": "PIB dividido por población",
+        "explanation": "GDP per capita is GDP divided by population"
+      },
+      {
+        "id": 90,
+        "question": "¿Cuál es el proceso de la respiración celular?",
+        "choices": ["Producción de energía", "Fotosíntesis", "Digestión", "Circulación"],
+        "correctAnswer": "Producción de energía",
+        "explanation": "Cellular respiration is the process of energy production"
+      },
+      {
+        "id": 91,
+        "question": "¿Qué es un portafolio de inversiones?",
+        "choices": ["Conjunto de inversiones", "Cuenta bancaria", "Préstamo", "Seguro"],
+        "correctAnswer": "Conjunto de inversiones",
+        "explanation": "An investment portfolio is a collection of investments"
+      },
+      {
+        "id": 92,
+        "question": "¿Cuál es el océano más grande?",
+        "choices": ["Océano Pacífico", "Océano Atlántico", "Océano Índico", "Océano Ártico"],
+        "correctAnswer": "Océano Pacífico",
+        "explanation": "The Pacific Ocean is the largest ocean"
+      },
+      {
+        "id": 93,
+        "question": "¿Qué es la tasa de inflación?",
+        "choices": ["Aumento de precios", "Tipo de interés", "Valor de moneda", "Costo de vida"],
+        "correctAnswer": "Aumento de precios",
+        "explanation": "Inflation rate measures the increase in prices over time"
+      },
+      {
+        "id": 94,
+        "question": "¿Cuál es el órgano principal del sistema nervioso?",
+        "choices": ["El cerebro", "El corazón", "El hígado", "Los pulmones"],
+        "correctAnswer": "El cerebro",
+        "explanation": "The brain is the main organ of the nervous system"
+      },
+      {
+        "id": 95,
+        "question": "¿Qué es el cambio climático?",
+        "choices": ["Alteración del clima global", "Cambio de estación", "Fenómeno local", "Lluvia ácida"],
+        "correctAnswer": "Alteración del clima global",
+        "explanation": "Climate change refers to global climate alteration"
+      },
+      {
+        "id": 96,
+        "question": "¿Qué es un ecosistema?",
+        "choices": ["Comunidad biológica", "Parque natural", "Reserva natural", "Jardín botánico"],
+        "correctAnswer": "Comunidad biológica",
+        "explanation": "An ecosystem is a biological community"
+      },
+      {
+        "id": 97,
+        "question": "¿Cuál es la función del Banco de España?",
+        "choices": ["Banco central", "Banco comercial", "Banco privado", "Banco internacional"],
+        "correctAnswer": "Banco central",
+        "explanation": "The Banco de España is Spain's central bank"
+      },
+      {
+        "id": 98,
+        "question": "¿Qué es la membrana celular?",
+        "choices": ["Barrera protectora", "Núcleo celular", "Citoplasma", "Organelo"],
+        "correctAnswer": "Barrera protectora",
+        "explanation": "The cell membrane is a protective barrier"
+      },
+      {
+        "id": 99,
+        "question": "¿Qué es el PIB per cápita?",
+        "choices": ["PIB dividido por población", "Ingreso total", "Gasto público", "Deuda nacional"],
+        "correctAnswer": "PIB dividido por población",
+        "explanation": "GDP per capita is GDP divided by population"
+      },
+      {
+        "id": 100,
+        "question": "¿Cuál es el proceso de la respiración celular?",
+        "choices": ["Producción de energía", "Fotosíntesis", "Digestión", "Circulación"],
+        "correctAnswer": "Producción de energía",
+        "explanation": "Cellular respiration is the process of energy production"
       }
     ]
   }
