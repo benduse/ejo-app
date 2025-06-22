@@ -148,15 +148,20 @@ class QuizApp {
     }
 
     async loadQuestions() {
-        try {
-            const response = await fetch('data/questions.json');
-            const data = await response.json();
-            const selectedLanguage = this.languageSelect.value;
-            this.questions = data[selectedLanguage].questions;
-        } catch (error) {
-            console.error('Error loading questions:', error);
-            this.questions = [];
-        }
+         try {
+        const languageId = this.languageSelect.value;
+        const response = await fetch(`/api/questions/${languageId}`);
+        const data = await response.json();
+        this.questions = data.map(q => ({
+            question: q.question_text,
+            choices: q.choices,
+            correctAnswer: q.correct_answer,
+            explanation: q.explanation
+        }));
+    } catch (error) {
+        console.error('Error loading questions:', error);
+        this.questions = [];
+    }
     }
 
     async handleLanguageChange() {
@@ -184,6 +189,19 @@ class QuizApp {
             this.showResult();
         }
     }
+
+    async loadLanguages() {
+    try {
+        const response = await fetch('/api/languages');
+        const languages = await response.json();
+        
+        this.languageSelect.innerHTML = languages.map(lang => 
+            `<option value="${lang.id}">${lang.name}</option>`
+        ).join('');
+    } catch (error) {
+        console.error('Error loading languages:', error);
+    }
+}
 
     checkAnswer(choice) {
         const correct = choice === this.questions[this.currentQuestion].correctAnswer;
