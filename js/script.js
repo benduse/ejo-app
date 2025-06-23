@@ -28,7 +28,7 @@ class QuizApp {
         this.showQuestion();
     }
 
-    async loadQuestions() {
+    async loadQuestions(language_id) {
          try {
         const languageId = this.languageSelect.value;
         const response = await fetch(`/api/questions/${languageId}`);
@@ -44,7 +44,7 @@ class QuizApp {
         console.warn('API not available, loading from questions.json:', error);
         // Fallback: fetch from local questions.json
         try {
-            const response = await fetch('/questions.json');
+            const response = await fetch('public/questions.json');
             const json = await response.json();
             if (json[languageId] && json[languageId].questions) {
                 this.questions = json[languageId].questions.map(q => ({

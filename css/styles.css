@@ -191,7 +191,7 @@ footer {
 /* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #121212;
+        background-color: #3d6981;
         color: #e0e0e0;
     }
 }
