@@ -5,6 +5,9 @@ A simple web-based quiz app for learning French and Spanish. The app fetches que
 ## Features
 - Choose between French and Spanish quizzes
 - Multiple-choice questions
+- Progressive difficulty (Easy, Medium, Hard) with color badges
+- Leaderboard: stores and displays top 10 high scores
+- Celebratory confetti animation for high scores or finishing 25+ questions
 - Progress bar and score tracking
 - Responsive and modern UI
 - No backend required (all data is local)
@@ -21,7 +24,8 @@ A simple web-based quiz app for learning French and Spanish. The app fetches que
    - Use the language dropdown at the top to choose either French or Spanish.
 
 4. **Take the Quiz**
-   - Answer the questions. Your progress and score will be displayed.
+   - Answer the questions. Your progress, score, and question difficulty will be displayed.
+   - Use the leaderboard to see top scores and celebrate with confetti for high achievements!
    - At the end, see your final score and restart if you wish.
 
 ## Folder Structure

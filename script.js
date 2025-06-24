@@ -23,11 +23,13 @@ class QuizApp {
         this.difficultyBadge = document.getElementById('difficulty-badge');
         this.leaderboardContainer = document.getElementById('leaderboard-container');
         this.leaderboardList = document.getElementById('leaderboard-list');
+        this.difficultySelect = document.getElementById('difficultySelect');
         document.getElementById('restart-btn').addEventListener('click', () => this.restartQuiz());
         this.languageSelect.addEventListener('change', () => this.handleLanguageChange());
         this.downloadBtn.addEventListener('click', () => this.downloadResults());
         this.endQuizBtn.addEventListener('click', () => this.endQuiz());
         this.printPdfBtn.addEventListener('click', () => this.printResultsPDF());
+        this.difficultySelect.addEventListener('change', () => this.restartQuiz());
         await this.loadQuestions();
         this.loadLeaderboard();
         this.showQuestion();
@@ -41,7 +43,19 @@ class QuizApp {
         try {
             const response = await fetch(file);
             const data = await response.json();
-            this.questions = this.shuffleArray(data.questions);
+            // Assign difficulty based on index: 1-10 easy, 11-35 medium, 36+ hard
+            this.questions = data.questions.map((q, idx) => {
+                let difficulty = 'easy';
+                if (idx >= 10 && idx < 35) difficulty = 'medium';
+                else if (idx >= 35) difficulty = 'hard';
+                return { ...q, difficulty };
+            });
+            // Filter by user-selected difficulty
+            const selected = this.difficultySelect ? this.difficultySelect.value : 'all';
+            if (selected !== 'all') {
+                this.questions = this.questions.filter(q => q.difficulty === selected);
+            }
+            this.questions = this.shuffleArray(this.questions);
         } catch (error) {
             alert('Failed to load questions.');
             this.questions = [];
@@ -65,10 +79,8 @@ class QuizApp {
     showQuestion() {
         if (this.currentQuestion < this.questions.length) {
             const question = this.questions[this.currentQuestion];
-            // Progressive difficulty: easy (first 1/3), medium (next 1/3), hard (last 1/3)
-            let difficulty = 'easy';
-            if (this.currentQuestion >= Math.floor(this.questions.length * 2 / 3)) difficulty = 'hard';
-            else if (this.currentQuestion >= Math.floor(this.questions.length / 3)) difficulty = 'medium';
+            // Use question.difficulty for badge
+            let difficulty = question.difficulty || 'easy';
             this.difficultyBadge.textContent = difficulty.charAt(0).toUpperCase() + difficulty.slice(1);
             this.difficultyBadge.className = 'difficulty-badge difficulty-' + difficulty;
             const progress = (this.currentQuestion / this.questions.length) * 100;

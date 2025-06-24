@@ -15,6 +15,13 @@
                 <option value="french">French</option>
                 <option value="spanish">Spanish</option>
             </select>
+            <label for="difficultySelect" style="margin-left:1rem;">Difficulty:</label>
+            <select id="difficultySelect">
+                <option value="all">All</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
         </div>
         <div class="score-container">Score: <span id="score">0</span></div>
     </header>
@@ -28,7 +35,7 @@
             </div>
             <div id="end-quiz-container">
                 <button id="end-quiz-btn">End Quiz</button>
-                <button id="print-pdf-btn" class="hide">Print Results as PDF</button>
+                <button id="print-pdf-btn" class="hide">Print Results</button>
             </div>
         </div>
         <div id="result-container" class="hide">
