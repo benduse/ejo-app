@@ -23,6 +23,7 @@
             <div id="progress-bar"></div>
             <div id="question-container">
                 <h2 id="question"></h2>
+                <div id="difficulty-badge" class="difficulty-badge"></div>
                 <div id="choices" class="choices-grid"></div>
             </div>
             <div id="end-quiz-container">
@@ -36,8 +37,13 @@
             <button id="restart-btn">Restart Quiz</button>
             <button id="download-btn" class="hide">Download Results</button>
         </div>
+        <div id="leaderboard-container" class="hide">
+            <h3>Leaderboard</h3>
+            <ol id="leaderboard-list"></ol>
+        </div>
     </main>
     <script src="script.js"></script>
+    <script src="confetti.js"></script>
     <footer>
         <div class="footer">&copy; 2025 Benjamin All Rights Reserved</div>
     </footer>

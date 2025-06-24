@@ -20,12 +20,16 @@ class QuizApp {
         this.downloadBtn = document.getElementById('download-btn');
         this.endQuizBtn = document.getElementById('end-quiz-btn');
         this.printPdfBtn = document.getElementById('print-pdf-btn');
+        this.difficultyBadge = document.getElementById('difficulty-badge');
+        this.leaderboardContainer = document.getElementById('leaderboard-container');
+        this.leaderboardList = document.getElementById('leaderboard-list');
         document.getElementById('restart-btn').addEventListener('click', () => this.restartQuiz());
         this.languageSelect.addEventListener('change', () => this.handleLanguageChange());
         this.downloadBtn.addEventListener('click', () => this.downloadResults());
         this.endQuizBtn.addEventListener('click', () => this.endQuiz());
         this.printPdfBtn.addEventListener('click', () => this.printResultsPDF());
         await this.loadQuestions();
+        this.loadLeaderboard();
         this.showQuestion();
     }
 
@@ -61,6 +65,12 @@ class QuizApp {
     showQuestion() {
         if (this.currentQuestion < this.questions.length) {
             const question = this.questions[this.currentQuestion];
+            // Progressive difficulty: easy (first 1/3), medium (next 1/3), hard (last 1/3)
+            let difficulty = 'easy';
+            if (this.currentQuestion >= Math.floor(this.questions.length * 2 / 3)) difficulty = 'hard';
+            else if (this.currentQuestion >= Math.floor(this.questions.length / 3)) difficulty = 'medium';
+            this.difficultyBadge.textContent = difficulty.charAt(0).toUpperCase() + difficulty.slice(1);
+            this.difficultyBadge.className = 'difficulty-badge difficulty-' + difficulty;
             const progress = (this.currentQuestion / this.questions.length) * 100;
             this.progressBar.style.width = `${progress}%`;
             this.questionElement.textContent = question.question;
@@ -116,6 +126,12 @@ class QuizApp {
             this.downloadBtn.classList.add('hide');
             this.printPdfBtn.classList.add('hide');
         }
+        this.saveScoreToLeaderboard();
+        this.displayLeaderboard();
+        // Confetti for 25+ questions or high score
+        if (this.questions.length >= 25 || this.isHighScore()) {
+            if (window.launchConfetti) window.launchConfetti();
+        }
     }
 
     downloadResults() {
@@ -163,6 +179,31 @@ class QuizApp {
         this.scoreElement.textContent = this.score;
         await this.loadQuestions();
         this.showQuestion();
+    }
+
+    // Leaderboard logic
+    loadLeaderboard() {
+        this.leaderboard = JSON.parse(localStorage.getItem('polyglot_leaderboard') || '[]');
+    }
+    saveScoreToLeaderboard() {
+        const name = prompt('Enter your name for the leaderboard:', 'Player') || 'Player';
+        this.leaderboard.push({ name, score: this.score, date: new Date().toLocaleDateString() });
+        this.leaderboard.sort((a, b) => b.score - a.score);
+        this.leaderboard = this.leaderboard.slice(0, 10); // Top 10
+        localStorage.setItem('polyglot_leaderboard', JSON.stringify(this.leaderboard));
+    }
+    displayLeaderboard() {
+        this.leaderboardContainer.classList.remove('hide');
+        this.leaderboardList.innerHTML = '';
+        this.leaderboard.forEach(entry => {
+            const li = document.createElement('li');
+            li.textContent = `${entry.name} - ${entry.score} (${entry.date})`;
+            this.leaderboardList.appendChild(li);
+        });
+    }
+    isHighScore() {
+        if (!this.leaderboard || this.leaderboard.length === 0) return true;
+        return this.score > this.leaderboard[this.leaderboard.length - 1].score;
     }
 }
 

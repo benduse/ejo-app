@@ -130,3 +130,52 @@ main {
 #print-pdf-btn.hide {
     display: none;
 }
+.difficulty-badge {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 0.5rem;
+}
+.difficulty-easy {
+    background: #43a047;
+}
+.difficulty-medium {
+    background: #ffd600;
+    color: #333;
+}
+.difficulty-hard {
+    background: #e53935;
+}
+#leaderboard-container {
+    margin: 2rem auto 0 auto;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 1rem 2rem;
+    text-align: center;
+}
+#leaderboard-list {
+    list-style: decimal inside;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    text-align: left;
+}
+#leaderboard-list li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #2d3e50;
+}
+.confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+}
