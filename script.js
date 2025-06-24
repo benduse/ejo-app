@@ -3,6 +3,7 @@ class QuizApp {
         this.currentQuestion = 0;
         this.score = 0;
         this.questions = [];
+        this.wrongCount = 0;
         this.init();
     }
 
@@ -86,18 +87,23 @@ class QuizApp {
             this.score += 5;
         } else {
             this.score -= 1;
+            this.wrongCount++;
         }
         this.scoreElement.textContent = this.score;
         setTimeout(() => {
-            this.currentQuestion++;
-            this.showQuestion();
+            if (this.wrongCount >= 10) {
+                this.showResult(true);
+            } else {
+                this.currentQuestion++;
+                this.showQuestion();
+            }
         }, 1200);
     }
 
-    showResult() {
+    showResult(earlyEnd = false) {
         this.quizContainer.classList.add('hide');
         this.resultContainer.classList.remove('hide');
-        this.finalScoreElement.textContent = `${this.score} out of ${this.questions.length * 5}`;
+        this.finalScoreElement.textContent = `${this.score} out of ${this.questions.length * 5}` + (earlyEnd ? ' (Quiz ended: 10 wrong answers)' : '');
         if (this.questions.length >= 25) {
             this.downloadBtn.classList.remove('hide');
         } else {
@@ -125,6 +131,7 @@ class QuizApp {
     async restartQuiz() {
         this.currentQuestion = 0;
         this.score = 0;
+        this.wrongCount = 0;
         this.quizContainer.classList.remove('hide');
         this.resultContainer.classList.add('hide');
         this.scoreElement.textContent = this.score;
