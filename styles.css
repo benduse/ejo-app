@@ -9,6 +9,7 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    position: relative;
 }
 .language-selector {
     margin: 1rem 0;
@@ -75,4 +76,22 @@ main {
 }
 #restart-btn:hover {
     background: #4caf50;
+}
+.footer {
+    text-align: center;
+    color: #888;
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding: 1rem 0 0 0;
+}
+.score-container {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #2d3e50;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }

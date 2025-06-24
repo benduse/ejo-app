@@ -14,6 +14,7 @@ class QuizApp {
         this.quizContainer = document.getElementById('quiz-container');
         this.finalScoreElement = document.getElementById('final-score');
         this.languageSelect = document.getElementById('languageSelect');
+        this.scoreElement = document.getElementById('score');
         document.getElementById('restart-btn').addEventListener('click', () => this.restartQuiz());
         this.languageSelect.addEventListener('change', () => this.handleLanguageChange());
         await this.loadQuestions();
@@ -70,7 +71,12 @@ class QuizApp {
                 button.classList.add('incorrect');
             }
         });
-        if (correct) this.score++;
+        if (correct) {
+            this.score += 5;
+        } else {
+            this.score -= 1;
+        }
+        this.scoreElement.textContent = this.score;
         setTimeout(() => {
             this.currentQuestion++;
             this.showQuestion();
@@ -80,7 +86,7 @@ class QuizApp {
     showResult() {
         this.quizContainer.classList.add('hide');
         this.resultContainer.classList.remove('hide');
-        this.finalScoreElement.textContent = `${this.score} out of ${this.questions.length}`;
+        this.finalScoreElement.textContent = `${this.score} out of ${this.questions.length * 5}`;
     }
 
     async restartQuiz() {
@@ -88,6 +94,7 @@ class QuizApp {
         this.score = 0;
         this.quizContainer.classList.remove('hide');
         this.resultContainer.classList.add('hide');
+        this.scoreElement.textContent = this.score;
         await this.loadQuestions();
         this.showQuestion();
     }
