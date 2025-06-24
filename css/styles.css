@@ -188,10 +188,3 @@ footer {
     outline: none;
     box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
 }
-/* Dark Mode Styles */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #3d6981;
-        color: #e0e0e0;
-    }
-}
