@@ -4,6 +4,7 @@ class QuizApp {
         this.score = 0;
         this.questions = [];
         this.wrongCount = 0;
+        this.endedEarly = false;
         this.init();
     }
 
@@ -17,9 +18,13 @@ class QuizApp {
         this.languageSelect = document.getElementById('languageSelect');
         this.scoreElement = document.getElementById('score');
         this.downloadBtn = document.getElementById('download-btn');
+        this.endQuizBtn = document.getElementById('end-quiz-btn');
+        this.printPdfBtn = document.getElementById('print-pdf-btn');
         document.getElementById('restart-btn').addEventListener('click', () => this.restartQuiz());
         this.languageSelect.addEventListener('change', () => this.handleLanguageChange());
         this.downloadBtn.addEventListener('click', () => this.downloadResults());
+        this.endQuizBtn.addEventListener('click', () => this.endQuiz());
+        this.printPdfBtn.addEventListener('click', () => this.printResultsPDF());
         await this.loadQuestions();
         this.showQuestion();
     }
@@ -103,11 +108,13 @@ class QuizApp {
     showResult(earlyEnd = false) {
         this.quizContainer.classList.add('hide');
         this.resultContainer.classList.remove('hide');
-        this.finalScoreElement.textContent = `${this.score} out of ${this.questions.length * 5}` + (earlyEnd ? ' (Quiz ended: 10 wrong answers)' : '');
-        if (this.questions.length >= 25) {
+        this.finalScoreElement.textContent = `${this.score} out of ${this.questions.length * 5}` + (earlyEnd ? ' (Quiz ended: 10 wrong answers)' : this.endedEarly ? ' (Quiz ended by user)' : '');
+        if (this.questions.length >= 25 || this.endedEarly) {
             this.downloadBtn.classList.remove('hide');
+            this.printPdfBtn.classList.remove('hide');
         } else {
             this.downloadBtn.classList.add('hide');
+            this.printPdfBtn.classList.add('hide');
         }
     }
 
@@ -126,6 +133,25 @@ class QuizApp {
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
+    }
+
+    endQuiz() {
+        this.endedEarly = true;
+        this.showResult(false);
+    }
+
+    printResultsPDF() {
+        const language = this.languageSelect.options[this.languageSelect.selectedIndex].text;
+        const total = this.questions.length;
+        const correct = Math.max(0, Math.floor(this.score / 5));
+        const wrong = total - correct;
+        const content = `Polyglot Quiz Results\n\nLanguage: ${language}\nTotal Questions: ${total}\nCorrect Answers: ${correct}\nWrong Answers: ${wrong}\nFinal Score: ${this.score} out of ${total * 5}`;
+        const win = window.open('', '', 'width=600,height=700');
+        win.document.write('<html><head><title>Quiz Results PDF</title></head><body>');
+        win.document.write(`<pre style="font-size:1.2rem;">${content}</pre>`);
+        win.document.write('</body></html>');
+        win.document.close();
+        win.print();
     }
 
     async restartQuiz() {
