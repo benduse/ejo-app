@@ -31,11 +31,20 @@ class QuizApp {
         try {
             const response = await fetch(file);
             const data = await response.json();
-            this.questions = data.questions;
+            this.questions = this.shuffleArray(data.questions);
         } catch (error) {
             alert('Failed to load questions.');
             this.questions = [];
         }
+    }
+
+    shuffleArray(array) {
+        // Fisher-Yates shuffle
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
     }
 
     async handleLanguageChange() {
