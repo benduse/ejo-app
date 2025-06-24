@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const pool = require('./config/db.config');
+const fs = require('fs').promises;
 const cors = require('cors');
 
 
@@ -14,8 +14,11 @@ app.use(express.static(path.join(__dirname, '../')));
 // Routes
 app.get('/api/languages', async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM languages');
-        res.json(result.rows);
+        const languages = [
+            { id: 1, name: 'French', code: 'fr' },
+            { id: 2, name: 'Spanish', code: 'es' }
+        ];
+        res.json(languages);
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Server error' });
@@ -25,20 +28,19 @@ app.get('/api/languages', async (req, res) => {
 app.get('/api/questions/:languageId', async (req, res) => {
     try {
         const { languageId } = req.params;
-        const query = `
-            SELECT 
-                q.id,
-                q.question_text,
-                q.correct_answer,
-                q.explanation,
-                json_agg(c.choice_text) as choices
-            FROM questions q
-            JOIN choices c ON c.question_id = q.id
-            WHERE q.language_id = $1
-            GROUP BY q.id
-        `;
-        const result = await pool.query(query, [languageId]);
-        res.json(result.rows);
+        let fileName;
+        if (languageId === '1') {
+            fileName = 'french.json';
+        } else if (languageId === '2') {
+            fileName = 'spanish.json';
+        } else {
+            return res.status(404).json({ error: 'Language not found' });
+        }
+        
+        const filePath = path.join(__dirname, '..', 'questions', fileName);
+        const fileContent = await fs.readFile(filePath, 'utf8');
+        const data = JSON.parse(fileContent);
+        res.json(data.questions);
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Server error' });

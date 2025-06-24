@@ -1,4 +1,3 @@
-
 class QuizApp {
     constructor() {
         this.currentQuestion = 0;
@@ -28,43 +27,27 @@ class QuizApp {
         this.showQuestion();
     }
 
-    async loadQuestions(language_id) {
-         try {
-        const languageId = this.languageSelect.value;
-        const response = await fetch(`/api/questions/${languageId}`);
-        if(!response.ok) throw new Error('Cannot fetch questions from the server');
-        const data = await response.json();
-        this.questions = data.map(q => ({
-            question: q.question_text,
-            choices: q.choices,
-            correctAnswer: q.correct_answer,
-            explanation: q.explanation
-        }));
-    } catch (error) {
-        console.warn('API not available, loading from questions.json:', error);
-        // Fallback: fetch from local questions.json
+    async loadQuestions() {
         try {
-            const response = await fetch('public/questions.json');
-            const json = await response.json();
-            if (json[languageId] && json[languageId].questions) {
-                this.questions = json[languageId].questions.map(q => ({
-                    question: q.question,
-                    choices: q.choices,
-                    correctAnswer: q.correctAnswer,
-                    explanation: q.explanation
-                }));
-            } else {
-                this.questions = [];
-            }
-        } catch (jsonError) {
-            console.error('Failed to load questions from questions.json:', jsonError);
+            const languageId = this.languageSelect.value;
+            console.log('Fetching questions for languageId:', languageId);
+            const response = await fetch(`/api/questions/${languageId}`);
+            if(!response.ok) throw new Error('Cannot fetch questions from the server');
+            const data = await response.json();
+            console.log('Questions response:', data);
+            this.questions = data.map(q => ({
+                question: q.question || q.question_text,
+                choices: q.choices,
+                correctAnswer: q.correctAnswer || q.correct_answer,
+                explanation: q.explanation
+            }));
+        } catch (error) {
+            console.error('Failed to load questions:', error);
             this.questions = [];
         }
     }
-    }
 
     async handleLanguageChange() {
-        await this.loadQuestions();
         this.restartQuiz();
     }
 
@@ -90,17 +73,18 @@ class QuizApp {
     }
 
     async loadLanguages() {
-    try {
-        const response = await fetch('/api/languages');
-        const languages = await response.json();
-        
-        this.languageSelect.innerHTML = languages.map(lang => 
-            `<option value="${lang.id}">${lang.name}</option>`
-        ).join('');
-    } catch (error) {
-        console.error('Error loading languages:', error);
+        try {
+            console.log('Fetching languages...');
+            const response = await fetch('/api/languages');
+            const languages = await response.json();
+            console.log('Languages response:', languages);
+            this.languageSelect.innerHTML = languages.map(lang => 
+                `<option value="${lang.id}">${lang.name}</option>`
+            ).join('');
+        } catch (error) {
+            console.error('Error loading languages:', error);
+        }
     }
-}
 
     checkAnswer(choice) {
         const correct = choice === this.questions[this.currentQuestion].correctAnswer;
