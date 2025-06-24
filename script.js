@@ -15,8 +15,10 @@ class QuizApp {
         this.finalScoreElement = document.getElementById('final-score');
         this.languageSelect = document.getElementById('languageSelect');
         this.scoreElement = document.getElementById('score');
+        this.downloadBtn = document.getElementById('download-btn');
         document.getElementById('restart-btn').addEventListener('click', () => this.restartQuiz());
         this.languageSelect.addEventListener('change', () => this.handleLanguageChange());
+        this.downloadBtn.addEventListener('click', () => this.downloadResults());
         await this.loadQuestions();
         this.showQuestion();
     }
@@ -87,6 +89,28 @@ class QuizApp {
         this.quizContainer.classList.add('hide');
         this.resultContainer.classList.remove('hide');
         this.finalScoreElement.textContent = `${this.score} out of ${this.questions.length * 5}`;
+        if (this.questions.length >= 25) {
+            this.downloadBtn.classList.remove('hide');
+        } else {
+            this.downloadBtn.classList.add('hide');
+        }
+    }
+
+    downloadResults() {
+        const language = this.languageSelect.options[this.languageSelect.selectedIndex].text;
+        const total = this.questions.length;
+        const correct = Math.max(0, Math.floor(this.score / 5));
+        const wrong = total - correct;
+        const content = `Polyglot Quiz Results\n\nLanguage: ${language}\nTotal Questions: ${total}\nCorrect Answers: ${correct}\nWrong Answers: ${wrong}\nFinal Score: ${this.score} out of ${total * 5}`;
+        const blob = new Blob([content], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `quiz_results_${language.toLowerCase()}_${new Date().getFullYear()}.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
     }
 
     async restartQuiz() {
