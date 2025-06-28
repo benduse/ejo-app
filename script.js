@@ -64,7 +64,11 @@ class QuizApp {
                 this.questions = this.questions.filter(q => q.difficulty === selected);
             }
 
-            this.questions = this.shuffleArray(this.questions);
+            this.questions = this.shuffleArray(this.questions).slice(0, 10);
+            this.currentQuestion = 0;
+        this.score = 0;
+        this.correctCount = 0;
+        this.wrongCount = 0;
         } catch (error) {
             alert('Failed to load questions.');
             this.questions = [];
