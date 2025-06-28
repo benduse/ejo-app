@@ -181,7 +181,7 @@ class QuizApp {
         this.scoreElement.textContent = this.score;
 
         setTimeout(() => {
-            if (this.wrongCount >= 10) {
+            if (this.wrongCount >= 5) {
                 this.showResult(true);
             } else {
                 this.currentQuestion++;
@@ -196,7 +196,7 @@ class QuizApp {
 
         let endMsg = '';
         if (earlyEnd) {
-            endMsg = ' (Quiz ended: 10 wrong answers)';
+            endMsg = ' (Quiz ended: 5 wrong answers)';
         } else if (this.endedEarly) {
             endMsg = ' (Quiz ended by user)';
         }
