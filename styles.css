@@ -83,6 +83,9 @@ main {
     font-size: 1rem;
     margin-top: 2rem;
     padding: 1rem 0 0 0;
+    background: #2d3e50;
+    color: #fff;
+    border-top: 100px solid var(--border-light);
 }
 .score-container {
     position: absolute;
@@ -122,7 +125,7 @@ main {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background-color 0.2s;
 }
 #end-quiz-btn:hover, #print-pdf-btn:hover {
     background: #4caf50;
