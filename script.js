@@ -86,6 +86,11 @@ class QuizApp {
     async handleLanguageChange() {
         await this.loadQuestions();
         this.restartQuiz();
+
+        const container = document.body
+        container.classList.remove('lang-french', 'lang-spanish', 'lang-kinyarwanda');
+        container.classList.add(`lang-${this.languageSelect.value}`);
+        this.difficultyBadge.className = 'difficulty-badge difficulty-easy'; // Reset badge
     }
 
     showQuestion() {

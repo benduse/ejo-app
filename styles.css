@@ -17,7 +17,7 @@ header {
 main {
     max-width: 500px;
     margin: 2rem auto;
-    background: #856a6a;
+    background: #eff1f2;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     padding: 2rem;
@@ -188,4 +188,31 @@ main {
 #timer {
     font-weight: bold;
     color: #d84315;
+}
+
+/* ikinyarwanda theme */
+.lang-ikinyarwanda {
+    background-color: #f6f8fa;
+    color: #004080;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.lang-ikinyarwanda #difficulty-badge {
+    background-color: #0a66c2;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+}
+
+.lang-ikinyarwanda button.choice-btn {
+    border: 2px solid #d4dbe3;
+    background-color: #ede9ed;
+    color: #73c80a;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+.lang-ikinyarwanda button.choice-btn:hover {
+    background-color: #b70d8a;
+    color: #00214d;;
 }
