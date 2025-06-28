@@ -1,0 +1,1502 @@
+{
+    "id": 3,
+    "name": "ikinyarwanda Quiz",
+    "questions": [
+      {
+"id": 1,
+"question": "What is the most common way to say 'hello' in Kinyarwanda?",
+"choices": ["Mwirirwe", "Muraho!", "Ijoro ryiza", "Urakoze"],
+"correctAnswer": "Muraho!",
+"explanation": "Muraho is the standard greeting in Kinyarwanda, used throughout the day",
+"category": "greetings"
+},
+{
+"id": 2,
+"question": "How do you say 'thank you' in Kinyarwanda?",
+"choices": ["Ntacyo", "Yego", "Urakoze", "Nuko"],
+"correctAnswer": "Urakoze",
+"explanation": "Urakoze is the common way to express gratitude in Kinyarwanda",
+"category": "courtesy"
+},
+{
+"id": 3,
+"question": "What does 'Amakuru?' mean in English?",
+"choices": ["How are you?", "What's the news?", "Good morning", "Thank you"],
+"correctAnswer": "How are you?",
+"explanation": "Amakuru is commonly used to ask how are you",
+"category": "greetings"
+},
+{
+"id": 4,
+"question": "How do you say 'I love you' in Kinyarwanda?",
+"choices": ["Urakoze", "Murakoze", "Ndagukunda", "Ni meza"],
+"correctAnswer": "Ndagukunda",
+"explanation": "Ndagukunda is the direct way to express love to someone",
+"category": "expressions"
+},
+{
+"id": 5,
+"question": "What's the phrase for 'good night' in Kinyarwanda?",
+"choices": ["Mwaramutse", "Mwirirwe", "Urakoze", "Ijoro ryiza"],
+"correctAnswer": "Ijoro ryiza",
+"explanation": "Ijoro ryiza is used when saying goodnight",
+"category": "greetings"
+},
+{
+"id": 6,
+"question": "How do you say 'I'm working' in Kinyarwanda?",
+"choices": ["Naje", "Sinzi", "Ndi gukora", "Ntacyo"],
+"correctAnswer": "Ndi gukora",
+"explanation": "Ndi gukora indicates present continuous work action",
+"category": "activities"
+},
+{
+"id": 7,
+"question": "What does 'Ntacyo' mean when someone thanks you?",
+"choices": ["Thank you", "Please", "Sorry", "You're welcome"],
+"correctAnswer": "You're welcome",
+"explanation": "Ntacyo is used as 'you're welcome' in response to thanks",
+"category": "courtesy"
+},
+{
+"id": 8,
+"question": "How do you say 'no' in Kinyarwanda?",
+"choices": ["Yego", "Sawa", "Oya", "Kare"],
+"correctAnswer": "Oya",
+"explanation": "Oya is the simple negative response",
+"category": "basic responses"
+},
+{
+"id": 9,
+"question": "What does 'Umugabo' mean in Kinyarwanda?",
+"choices": ["Woman", "Child", "Family", "Man/Husband"],
+"correctAnswer": "Man/Husband",
+"explanation": "Umugabo refers to a man or husband",
+"category": "family terms"
+},
+{
+"id": 10,
+"question": "How do you say 'city' in Kinyarwanda?",
+"choices": ["Umudugudu", "Umujyi", "Umurenge", "Akarere"],
+"correctAnswer": "Umujyi",
+"explanation": "Umujyi means city",
+"category": "places"
+},
+{
+"id": 11,
+"question": "What's the word for 'book' in Kinyarwanda?",
+"choices": ["Ibaruwa", "Ikinyamakuru", "Igitabo", "Ishuri"],
+"correctAnswer": "Igitabo",
+"explanation": "Igitabo means book",
+"category": "objects"
+},
+{
+"id": 12,
+"question": "How do you say 'wait' in Kinyarwanda?",
+"choices": ["Komeza", "Tegereza", "Genda", "Ngwino"],
+"correctAnswer": "Tegereza",
+"explanation": "Tegereza means to wait",
+"category": "commands"
+},
+{
+"id": 13,
+"question": "What does 'Ndagusabye' mean?",
+"choices": ["Thank you", "You're welcome", "Please", "Sorry"],
+"correctAnswer": "Please",
+"explanation": "Ndagusabye means 'please' or 'I beg you'",
+"category": "courtesy"
+},
+{
+"id": 14,
+"question": "How do you say 'family' in Kinyarwanda?",
+"choices": ["Inshuti", "Umwana", "Umuryango", "Umugabo"],
+"correctAnswer": "Umuryango",
+"explanation": "Umuryango means family",
+"category": "family terms"
+},
+{
+"id": 15,
+"question": "What's the word for 'friend' in Kinyarwanda?",
+"choices": ["Umugabo", "Inshuti", "Umwana", "Umuryango"],
+"correctAnswer": "Inshuti",
+"explanation": "Inshuti means friend",
+"category": "relationships"
+},
+{
+"id": 16,
+"question": "How do you say 'I understand' in Kinyarwanda?",
+"choices": ["Sinzi", "Ndumva", "Ndakora", "Naje"],
+"correctAnswer": "Ndumva",
+"explanation": "Ndumva means 'I understand' or 'I feel'",
+"category": "verbs"
+},
+{
+"id": 17,
+"question": "What does 'Ni byiza' mean?",
+"choices": ["It's bad", "It's okay", "It's good", "It's difficult"],
+"correctAnswer": "It's good",
+"explanation": "Ni byiza means 'it's good'",
+"category": "expressions"
+},
+{
+"id": 18,
+"question": "How do you say 'today' in Kinyarwanda?",
+"choices": ["Ejo", "Uyu munsi", "None", "Ejobundi"],
+"correctAnswer": "Uyu munsi",
+"explanation": "Uyu munsi means today",
+"category": "time"
+},
+{
+"id": 19,
+"question": "What's the word for 'God' in Kinyarwanda?",
+"choices": ["Umugisha", "Imana", "Ijuru", "Umwuka"],
+"correctAnswer": "Imana",
+"explanation": "Imana means God",
+"category": "spiritual terms"
+},
+{
+"id": 20,
+"question": "How do you say 'come here' in Kinyarwanda?",
+"choices": ["Genda", "Hagarara", "Ngwino", "Icara"],
+"correctAnswer": "Ngwino",
+"explanation": "Ngwino is the command form meaning 'come here'",
+"category": "commands"
+},
+{
+"id": 21,
+"question": "What does 'Warakoze cyane' mean?",
+"choices": ["Hello", "Thank you very much", "Goodbye", "You're welcome"],
+"correctAnswer": "Thank you very much",
+"explanation": "Warakoze cyane expresses deep gratitude",
+"category": "courtesy"
+},
+{
+"id": 22,
+"question": "How do you say 'road/street' in Kinyarwanda?",
+"choices": ["Inzira", "Umujyi", "Umuhanda", "Umudugudu"],
+"correctAnswer": "Umuhanda",
+"explanation": "Umuhanda means road or street",
+"category": "places"
+},
+{
+"id": 23,
+"question": "What's the word for 'woman/wife' in Kinyarwanda?",
+"choices": ["Umugabo", "Umwana", "Umugore", "Umuryango"],
+"correctAnswer": "Umugore",
+"explanation": "Umugore refers to a woman or wife",
+"category": "family terms"
+},
+{
+"id": 24,
+"question": "How do you say 'blessing' in Kinyarwanda?",
+"choices": ["Urukundo", "Umugisha", "Amahoro", "Ibyishimo"],
+"correctAnswer": "Umugisha",
+"explanation": "Umugisha means blessing",
+"category": "spiritual terms"
+},
+{
+"id": 25,
+"question": "What does 'Ni sawa' mean?",
+"choices": ["It's bad", "It's difficult", "It's okay", "It's good"],
+"correctAnswer": "It's okay",
+"explanation": "Ni sawa means 'it's okay' or 'it's fine'",
+"category": "expressions"
+},
+{
+"id": 26,
+"question": "How do you say 'newspaper' in Kinyarwanda?",
+"choices": ["Igitabo", "Ibaruwa", "Ikinyamakuru", "Ishuri"],
+"correctAnswer": "Ikinyamakuru",
+"explanation": "Ikinyamakuru means newspaper",
+"category": "objects"
+},
+{
+"id": 27,
+"question": "What's the phrase for 'no problem' in Kinyarwanda?",
+"choices": ["Ni byiza", "Nta kibazo", "Ni sawa", "Ntacyo"],
+"correctAnswer": "Nta kibazo",
+"explanation": "Nta kibazo means there's no problem",
+"category": "expressions"
+},
+{
+"id": 28,
+"question": "How do you say 'child' in Kinyarwanda?",
+"choices": ["Umugabo", "Umugore", "Umwana", "Umuryango"],
+"correctAnswer": "Umwana",
+"explanation": "Umwana means child",
+"category": "family terms"
+},
+{
+"id": 29,
+"question": "What does 'Ndabizi' mean?",
+"choices": ["I don't know", "I want", "I know", "I need"],
+"correctAnswer": "I know",
+"explanation": "Ndabizi means 'I know'",
+"category": "expressions"
+},
+{
+"id": 30,
+"question": "How do you say 'welcome' in Kinyarwanda?",
+"choices": ["Urakoze", "Ikaze", "Murabeho", "Muraho"],
+"correctAnswer": "Ikaze",
+"explanation": "Ikaze means welcome",
+"category": "greetings"
+},
+{
+"id": 31,
+"question": "How do you say 'happiness' in Kinyarwanda?",
+"choices": ["Agahinda", "Urukundo", "Ibyishimo", "Amahoro"],
+"correctAnswer": "Ibyishimo",
+"explanation": "Ibyishimo means happiness",
+"category": "emotions"
+},
+{
+"id": 32,
+"question": "What does 'Ndicaye' mean?",
+"choices": ["I am walking", "I am sitting", "I am running", "I am standing"],
+"correctAnswer": "I am sitting",
+"explanation": "Ndicaye means 'I am sitting'",
+"category": "actions"
+},
+{
+"id": 33,
+"question": "How do you say 'tomorrow' in Kinyarwanda?",
+"choices": ["Uyu munsi", "None", "Ejo", "Ejobundi"],
+"correctAnswer": "Ejo",
+"explanation": "Ejo means tomorrow",
+"category": "time"
+},
+{
+"id": 34,
+"question": "What's the word for 'love' (noun) in Kinyarwanda?",
+"choices": ["Amahoro", "Urukundo", "Ibyishimo", "Umugisha"],
+"correctAnswer": "Urukundo",
+"explanation": "Urukundo is the noun form of love",
+"category": "emotions"
+},
+{
+"id": 35,
+"question": "How do you say 'phone' in Kinyarwanda?",
+"choices": ["Radio", "Televiziyo", "Telefone", "Mudasobwa"],
+"correctAnswer": "Telefone",
+"explanation": "Telefone means telephone or phone",
+"category": "technology"
+},
+{
+"id": 36,
+"question": "What does 'Komeza' mean?",
+"choices": ["Stop", "Wait", "Continue", "Go back"],
+"correctAnswer": "Continue",
+"explanation": "Komeza means to continue or keep going",
+"category": "commands"
+},
+{
+"id": 37,
+"question": "How do you say 'we are together' in Kinyarwanda?",
+"choices": ["Tuzabonana", "Turi kumwe", "Turagenda", "Turaza"],
+"correctAnswer": "Turi kumwe",
+"explanation": "Turi kumwe means 'we are together'",
+"category": "expressions"
+},
+{
+"id": 38,
+"question": "What does 'Ndategereje' mean?",
+"choices": ["I am going", "I am waiting", "I am coming", "I am working"],
+"correctAnswer": "I am waiting",
+"explanation": "Ndategereje means 'I am waiting'",
+"category": "verbs"
+},
+{
+"id": 39,
+"question": "How do you say 'let's go' in Kinyarwanda?",
+"choices": ["Ngwino", "Genda", "Reka tugenda", "Reka"],
+"correctAnswer": "Reka tugende",
+"explanation": "Reka tugende means 'let's go'",
+"category": "commands"
+},
+{
+"id": 40,
+"question": "What's the word for 'school' in Kinyarwanda?",
+"choices": ["Igitabo", "Ishuri", "Ibyigisho", "Ikigo"],
+"correctAnswer": "Ishuri",
+"explanation": "Ishuri means school",
+"category": "education"
+},
+{
+"id": 41,
+"question": "How do you say 'good morning' in Kinyarwanda?",
+"choices": ["Ijoro ryiza", "Mwirirwe", "Mwaramutse", "Muraho"],
+"correctAnswer": "Mwaramutse",
+"explanation": "Mwaramutse is the morning greeting",
+"category": "greetings"
+},
+{
+"id": 42,
+"question": "What does 'Ariko' mean?",
+"choices": ["And", "Or", "But", "If"],
+"correctAnswer": "But",
+"explanation": "Ariko means 'but' and is used as a conjunction",
+"category": "conjunctions"
+},
+{
+"id": 43,
+"question": "How do you say 'I am learning' in Kinyarwanda?",
+"choices": ["Ndi kwiga", "Ndakora", "Ndavuga", "Ndashaka"],
+"correctAnswer": "Ndi kwiga",
+"explanation": "Ndi kwiga means 'I am learning'",
+"category": "verbs"
+},
+{
+"id": 44,
+"question": "What's the phrase for 'forgive me' in Kinyarwanda?",
+"choices": ["Urakoze", "Mbabarira", "Ntacyo", "Yego"],
+"correctAnswer": "Mbabarira",
+"explanation": "Mbabarira means 'forgive me' ",
+"category": "courtesy"
+},
+{
+"id": 45,
+"question": "How do you say 'water' in Kinyarwanda?",
+"choices": ["Icyokurya", "Amata", "Amazi", "Umutobe"],
+"correctAnswer": "Amazi",
+"explanation": "Amazi means water",
+"category": "basic words"
+},
+{
+"id": 46,
+"question": "What does 'Uraho' mean as a greeting?",
+"choices": ["Goodbye", "How are you", "Welcome", "Thank you"],
+"correctAnswer": "How are you",
+"explanation": "Uraho is used to ask how someone is",
+"category": "greetings"
+},
+{
+"id": 47,
+"question": "How do you say 'food' in Kinyarwanda?",
+"choices": ["Amazi", "Ibiryo", "Imbuto", "Ibiti"],
+"correctAnswer": "Ibiryo",
+"explanation": "Ibiryo means food",
+"category": "basic words"
+},
+{
+"id": 48,
+"question": "What does 'Nziza' mean?",
+"choices": ["Bad", "Good", "Difficult", "Easy"],
+"correctAnswer": "Good",
+"explanation": "Nziza means good or beautiful",
+"category": "adjectives"
+},
+{
+"id": 49,
+"question": "How do you say 'I'm sad' in Kinyarwanda?",
+"choices": ["Urakoze", "ndarakaye", "Yego", "Ntacyo"],
+"correctAnswer": "ndarakaye",
+"explanation": "ndarakaye means 'I'm sad'",
+"category": "courtesy"
+},
+{
+"id": 50,
+"question": "What's the word for 'house' in Kinyarwanda?",
+"choices": ["Umuhanda", "Inzu", "Ishuri", "Umujyi"],
+"correctAnswer": "Inzu",
+"explanation": "Inzu means house",
+"category": "places"
+},
+{
+"id": 51,
+"question": "How do you say 'to eat' in Kinyarwanda?",
+"choices": ["Kunywa", "Kurya", "Kuvuga", "Kugenda"],
+"correctAnswer": "Kurya",
+"explanation": "Kurya means 'to eat'",
+"category": "verbs"
+},
+{
+"id": 52,
+"question": "What does 'Ndashaka' mean?",
+"choices": ["I need", "I have", "I want", "I like"],
+"correctAnswer": "I want",
+"explanation": "Ndashaka means 'I want'",
+"category": "verbs"
+},
+{
+"id": 53,
+"question": "How do you say 'to drink' in Kinyarwanda?",
+"choices": ["Kurya", "Kuvuga", "Kunywa", "Kugenda"],
+"correctAnswer": "Kunywa",
+"explanation": "Kunywa means 'to drink'",
+"category": "verbs"
+},
+{
+"id": 54,
+"question": "What's the word for 'money' in Kinyarwanda?",
+"choices": ["Ifaranga", "Amafaranga", "Ibintu", "Ibiryo"],
+"correctAnswer": "Amafaranga",
+"explanation": "Amafaranga means money",
+"category": "basic words"
+},
+{
+"id": 55,
+"question": "How do you say 'time' in Kinyarwanda?",
+"choices": ["Igihe", "Umunsi", "Ijoro", "Isaha"],
+"correctAnswer": "Igihe",
+"explanation": "Igihe means time",
+"category": "time"
+},
+{
+"id": 56,
+"question": "What does 'Murakaza neza' mean?",
+"choices": ["Goodbye", "Thank you", "Welcome", "How are you"],
+"correctAnswer": "Welcome",
+"explanation": "Murakaza neza is a formal welcome",
+"category": "greetings"
+},
+{
+"id": 57,
+"question": "How do you say 'to speak' in Kinyarwanda?",
+"choices": ["Kumva", "Kuvuga", "Kwandika", "Gusoma"],
+"correctAnswer": "Kuvuga",
+"explanation": "Kuvuga means 'to speak'",
+"category": "verbs"
+},
+{
+"id": 58,
+"question": "What's the word for 'mother' in Kinyarwanda?",
+"choices": ["Data", "Mama", "Mushiki", "Musaza"],
+"correctAnswer": "Mama",
+"explanation": "Mama means mother",
+"category": "family terms"
+},
+{
+"id": 59,
+"question": "How do you say 'father' in Kinyarwanda?",
+"choices": ["Mama", "Musaza", "Data/papa", "Mushiki"],
+"correctAnswer": "Data/papa",
+"explanation": "Data/papa means father",
+"category": "family terms"
+},
+{
+"id": 60,
+"question": "What does 'Ndagukumbuye' mean?",
+"choices": ["I hate you", "I love you", "I miss you", "I need you"],
+"correctAnswer": "I miss you",
+"explanation": "Ndagukumbuye means 'I miss you'",
+"category": "expressions"
+},
+{
+"id": 61,
+"question": "How do you say 'to write' in Kinyarwanda?",
+"choices": ["Gusoma", "Kuvuga", "Kwandika", "Kumva"],
+"correctAnswer": "Kwandika",
+"explanation": "Kwandika means 'to write'",
+"category": "verbs"
+},
+{
+"id": 62,
+"question": "What does 'Ibintu' mean?",
+"choices": ["Food", "Money", "Things", "Books"],
+"correctAnswer": "Things",
+"explanation": "Ibintu means 'things' or 'items'",
+"category": "basic words"
+},
+{
+"id": 63,
+"question": "How do you say 'brother' in Kinyarwanda?",
+"choices": ["Mushiki", "Musaza", "Data", "Mama"],
+"correctAnswer": "Musaza",
+"explanation": "Musaza means brother",
+"category": "family terms"
+},
+{
+"id": 64,
+"question": "What's the word for 'sister' in Kinyarwanda?",
+"choices": ["Mama", "Data", "Musaza", "Mushiki"],
+"correctAnswer": "Mushiki",
+"explanation": "Mushiki means sister",
+"category": "family terms"
+},
+{
+"id": 65,
+"question": "How do you say 'to read' in Kinyarwanda?",
+"choices": ["Kwandika", "Kuvuga", "Gusoma", "Kumva"],
+"correctAnswer": "Gusoma",
+"explanation": "Gusoma means 'to read'",
+"category": "verbs"
+},
+{
+"id": 66,
+"question": "What does 'Ndagushaka' mean?",
+"choices": ["I need them", "I want you", "I like them", "I miss them"],
+"correctAnswer": "I want you",
+"explanation": "Ndagushaka means 'I want you'",
+"category": "verbs"
+},
+{
+"id": 67,
+"question": "How do you say 'quickly' in Kinyarwanda?",
+"choices": ["Buhoro", "Vuba", "Neza", "Cyane"],
+"correctAnswer": "Vuba",
+"explanation": "Vuba means quickly or fast",
+"category": "adverbs"
+},
+{
+"id": 68,
+"question": "What's the word for 'slowly' in Kinyarwanda?",
+"choices": ["Vuba", "Cyane", "Buhoro", "Neza"],
+"correctAnswer": "Buhoro",
+"explanation": "Buhoro means slowly",
+"category": "adverbs"
+},
+{
+"id": 69,
+"question": "How do you say 'very' in Kinyarwanda?",
+"choices": ["Neza", "Buhoro", "Vuba", "Cyane"],
+"correctAnswer": "Cyane",
+"explanation": "Cyane means 'very' or 'much'",
+"category": "adverbs"
+},
+{
+"id": 70,
+"question": "What does 'Neza' mean?",
+"choices": ["Badly", "Quickly", "Well", "Slowly"],
+"correctAnswer": "Well",
+"explanation": "Neza means 'well' or 'good'",
+"category": "adverbs"
+},
+{
+"id": 71,
+"question": "How do you say 'to sleep' in Kinyarwanda?",
+"choices": ["Kugenda", "Kuryama", "Guhagarara", "Kwicara"],
+"correctAnswer": "Kuryama",
+"explanation": "Kuryama means 'to sleep' or 'to lie down'",
+"category": "verbs"
+},
+{
+"id": 72,
+"question": "What's the word for 'work/job' in Kinyarwanda?",
+"choices": ["Ishuri", "Inzu", "Akazi", "Umwuga"],
+"correctAnswer": "Akazi",
+"explanation": "Akazi means work or job",
+"category": "work"
+},
+{
+"id": 73,
+"question": "How do you say 'to stand' in Kinyarwanda?",
+"choices": ["Kwicara", "Kugenda", "Guhagarara", "Kuryama"],
+"correctAnswer": "Guhagarara",
+"explanation": "Guhagarara means 'to stand'",
+"category": "verbs"
+},
+{
+"id": 74,
+"question": "What does 'Ndagusaba' mean?",
+"choices": ["I thank you", "I want you", "I ask you", "I need you"],
+"correctAnswer": "I ask you",
+"explanation": "Ndagusaba means 'I ask you' or 'I request from you'",
+"category": "verbs"
+},
+{
+"id": 75,
+"question": "How do you say 'now' in Kinyarwanda?",
+"choices": ["Ejo", "None", "Ubu", "Hashize"],
+"correctAnswer": "Ubu",
+"explanation": "Ubu means 'now'",
+"category": "time"
+},
+{
+"id": 76,
+"question": "What's the word for 'evening' in Kinyarwanda?",
+"choices": ["Mugitondo", "Nimugoroba", "Saa sita", "Ijoro"],
+"correctAnswer": "Nimugoroba",
+"explanation": "Nimugoroba means evening",
+"category": "time"
+},
+{
+"id": 77,
+"question": "How do you say 'to dance' in Kinyarwanda?",
+"choices": ["Kuririmba", "Kuvuga", "Kubyina", "Gukina"],
+"correctAnswer": "Kubyina",
+"explanation": "Kubyina means 'to dance'",
+"category": "verbs"
+},
+{
+"id": 78,
+"question": "What does 'Ndifuza' mean?",
+"choices": ["I need", "I wish", "I want", "I hope"],
+"correctAnswer": "I wish",
+"explanation": "Ndifuza means 'I wish' or 'I desire'",
+"category": "verbs"
+},
+{
+"id": 79,
+"question": "How do you say 'to sing' in Kinyarwanda?",
+"choices": ["Kubyina", "Kuvuga", "Kuririmba", "Gukina"],
+"correctAnswer": "Kuririmba",
+"explanation": "Kuririmba means 'to sing'",
+"category": "verbs"
+},
+{
+"id": 80,
+"question": "What's the word for 'morning' in Kinyarwanda?",
+"choices": ["Ijoro", "Nimugoroba", "Mugitondo", "Saa sita"],
+"correctAnswer": "Mugitondo",
+"explanation": "Mugitondo means morning",
+"category": "time"
+},
+{
+"id": 81,
+"question": "How do you say 'to help' in Kinyarwanda?",
+"choices": ["Gukora", "Kuvuga", "Gufasha", "Gutanga"],
+"correctAnswer": "Gufasha",
+"explanation": "Gufasha means 'to help'",
+"category": "verbs"
+},
+{
+"id": 82,
+"question": "What does 'Ndagukeneye' mean?",
+"choices": ["I want you", "I miss you", "I need you", "I love you"],
+"correctAnswer": "I need you",
+"explanation": "Ndagukeneye means 'I need you'",
+"category": "expressions"
+},
+{
+"id": 83,
+"question": "How do you say 'to give' in Kinyarwanda?",
+"choices": ["Kwakira", "Gutanga", "Gufata", "Guta"],
+"correctAnswer": "Gutanga",
+"explanation": "Gutanga means 'to give'",
+"category": "verbs"
+},
+{
+"id": 84,
+"question": "What's the word for 'night' in Kinyarwanda?",
+"choices": ["Mugitondo", "Nimugoroba", "Ijoro", "Saa sita"],
+"correctAnswer": "Ijoro",
+"explanation": "Ijoro means night",
+"category": "time"
+},
+{
+"id": 85,
+"question": "How do you say 'to receive' in Kinyarwanda?",
+"choices": ["Gutanga", "Guha", "Kwakira", "Gufata"],
+"correctAnswer": "Kwakira",
+"explanation": "Kwakira means 'to receive'",
+"category": "verbs"
+},
+{
+"id": 86,
+"question": "What does 'Ndaje' mean?",
+"choices": ["I went", "I'm going", "I'm coming", "I came"],
+"correctAnswer": "I'm coming",
+"explanation": "Ndaje means 'I'm coming'",
+"category": "verbs"
+},
+{
+"id": 87,
+"question": "How do you say 'to stay' in Kinyarwanda?",
+"choices": ["Kugenda", "Kuza", "Kuba", "Gusigara"],
+"correctAnswer": "Gusigara",
+"explanation": "Gusigara means 'to stay'",
+"category": "verbs"
+},
+{
+"id": 88,
+"question": "What's the word for 'to play' in Kinyarwanda?",
+"choices": ["Kuririmba", "Kubyina", "Gukina", "Kuvuga"],
+"correctAnswer": "Gukina",
+"explanation": "Gukina means 'to play'",
+"category": "verbs"
+},
+{
+"id": 89,
+"question": "How do you say 'again' in Kinyarwanda?",
+"choices": ["Cyane", "Nanone", "Vuba", "Buhoro"],
+"correctAnswer": "Nanone",
+"explanation": "Nanone means 'again'",
+"category": "adverbs"
+},
+{
+"id": 90,
+"question": "What does 'Ndagiye' mean?",
+"choices": ["I came", "I'm staying", "I'm going", "I went"],
+"correctAnswer": "I'm going",
+"explanation": "Ndagiye means 'I'm going'",
+"category": "verbs"
+},
+{
+"id": 91,
+"question": "How do you say 'to buy' in Kinyarwanda?",
+"choices": ["Kugurisha", "Kugura", "Gutanga", "Kwakira"],
+"correctAnswer": "Kugura",
+"explanation": "Kugura means 'to buy'",
+"category": "verbs"
+},
+{
+"id": 92,
+"question": "What's the word for 'to sell' in Kinyarwanda?",
+"choices": ["Kugura", "Gutanga", "Kugurisha", "Kwakira"],
+"correctAnswer": "Kugurisha",
+"explanation": "Kugurisha means 'to sell'",
+"category": "verbs"
+},
+{
+"id": 93,
+"question": "How do you say 'to forget' in Kinyarwanda?",
+"choices": ["Kwibuka", "Kwibagirwa", "Kumenya", "Gutekereza"],
+"correctAnswer": "Kwibagirwa",
+"explanation": "Kwibagirwa means 'to forget'",
+"category": "verbs"
+},
+{
+"id": 94,
+"question": "What does 'Ndibuka' mean?",
+"choices": ["I forgot", "I think", "I remember", "I know"],
+"correctAnswer": "I remember",
+"explanation": "Ndibuka means 'I remember'",
+"category": "verbs"
+},
+{
+"id": 95,
+"question": "How do you say 'to think' in Kinyarwanda?",
+"choices": ["Kwibuka", "Kumenya", "Gutekereza", "Kwibagirwa"],
+"correctAnswer": "Gutekereza",
+"explanation": "Gutekereza means 'to think'",
+"category": "verbs"
+},
+{
+"id": 96,
+"question": "What's the word for 'to know' in Kinyarwanda?",
+"choices": ["Gutekereza", "Kwibuka", "Kumenya", "Kwibagirwa"],
+"correctAnswer": "Kumenya",
+"explanation": "Kumenya means 'to know'",
+"category": "verbs"
+},
+{
+"id": 97,
+"question": "How do you say 'to walk' in Kinyarwanda?",
+"choices": ["Kwiruka", "Guhagarara", "Kugenda", "Kuza"],
+"correctAnswer": "Kugenda",
+"explanation": "Kugenda means 'to walk' or 'to go'",
+"category": "verbs"
+},
+{
+"id": 98,
+"question": "What does 'Ndiruka' mean?",
+"choices": ["I walk", "I stand", "I run", "I sit"],
+"correctAnswer": "I run",
+"explanation": "Ndiruka means 'I run'",
+"category": "verbs"
+},
+{
+"id": 99,
+"question": "How do you say 'to sit' in Kinyarwanda?",
+"choices": ["Guhagarara", "Kugenda", "Kwicara", "Kuryama"],
+"correctAnswer": "Kwicara",
+"explanation": "Kwicara means 'to sit'",
+"category": "verbs"
+},
+{
+"id": 100,
+"question": "What's the phrase for 'see you tomorrow' in Kinyarwanda?",
+"choices": ["Murabeho", "Tuzabonana ejo", "Urabeho", "Waramutse"],
+"correctAnswer": "Tuzabonana ejo",
+"explanation": "Tuzabonana ejo means 'see you tomorrow'",
+"category": "greetings"
+},
+{
+"id": 101,
+"question": "How do you say 'Monday' in Kinyarwanda?",
+"choices": ["Kuwa mbere", "Kuwa kabiri", "Kuwa gatatu", "Kuwa kane"],
+"correctAnswer": "Kuwa mbere",
+"explanation": "Kuwa mbere means Monday, literally 'day one'",
+"category": "days_of_week"
+},
+{
+"id": 102,
+"question": "What's the word for 'Tuesday' in Kinyarwanda?",
+"choices": ["Kuwa gatanu", "Kuwa mbere", "Kuwa kabiri", "Kuwa gatatu"],
+"correctAnswer": "Kuwa kabiri",
+"explanation": "Kuwa kabiri means Tuesday, literally 'day two'",
+"category": "days_of_week"
+},
+{
+"id": 103,
+"question": "How do you say 'Wednesday' in Kinyarwanda?",
+"choices": ["Kuwa kabiri", "Kuwa gatatu", "Kuwa kane", "Kuwa gatanu"],
+"correctAnswer": "Kuwa gatatu",
+"explanation": "Kuwa gatatu means Wednesday, literally 'day three'",
+"category": "days_of_week"
+},
+{
+"id": 104,
+"question": "What's the word for 'Thursday' in Kinyarwanda?",
+"choices": ["Kuwa gatatu", "Kuwa kane", "Kuwa gatanu", "Kuwa gatandatu"],
+"correctAnswer": "Kuwa kane",
+"explanation": "Kuwa kane means Thursday, literally 'day four'",
+"category": "days_of_week"
+},
+{
+"id": 105,
+"question": "How do you say 'Friday' in Kinyarwanda?",
+"choices": ["Kuwa kane", "Kuwa gatandatu", "Kuwa gatanu", "Ku cyumweru"],
+"correctAnswer": "Kuwa gatanu",
+"explanation": "Kuwa gatanu means Friday, literally 'day five'",
+"category": "days_of_week"
+},
+{
+"id": 106,
+"question": "What's the word for 'Saturday' in Kinyarwanda?",
+"choices": ["Kuwa gatanu", "Ku cyumweru", "Kuwa gatandatu", "Kuwa mbere"],
+"correctAnswer": "Kuwa gatandatu",
+"explanation": "Kuwa gatandatu means Saturday, literally 'day six'",
+"category": "days_of_week"
+},
+{
+"id": 107,
+"question": "How do you say 'Sunday' in Kinyarwanda?",
+"choices": ["Kuwa gatandatu", "Ku cyumweru", "Kuwa mbere", "Kuwa kabiri"],
+"correctAnswer": "Ku cyumweru",
+"explanation": "Ku cyumweru means Sunday",
+"category": "days_of_week"
+},
+{
+"id": 108,
+"question": "What's the word for 'head' in Kinyarwanda?",
+"choices": ["Ukuguru", "Amaso", "Ukuboko", "Umutwe"],
+"correctAnswer": "Umutwe",
+"explanation": "Umutwe means head",
+"category": "body_parts"
+},
+{
+"id": 109,
+"question": "How do you say 'arm' in Kinyarwanda?",
+"choices": ["Ijisho", "Ukuboko", "Umutwe", "Ukuguru"],
+"correctAnswer": "Ukuboko",
+"explanation": "Ukuboko means arm",
+"category": "body_parts"
+},
+{
+"id": 110,
+"question": "What's the word for 'leg' in Kinyarwanda?",
+"choices": ["Ukuboko", "Ukuguru", "Izuru", "Umutwe"],
+"correctAnswer": "Ukuguru",
+"explanation": "Ukuguru means leg",
+"category": "body_parts"
+},
+{
+"id": 111,
+"question": "How do you say 'eye' in Kinyarwanda?",
+"choices": ["Amatwi", "Umunwa", "Ijisho", "Izuru"],
+"correctAnswer": "Ijisho",
+"explanation": "Ijisho means eye (Amaso is the plural form, meaning eyes)",
+"category": "body_parts"
+},
+{
+"id": 112,
+"question": "What's the word for 'nose' in Kinyarwanda?",
+"choices": ["Ijisho", "Izuru", "Umunwa", "Amatwi"],
+"correctAnswer": "Izuru",
+"explanation": "Izuru means nose",
+"category": "body_parts"
+},
+{
+"id": 113,
+"question": "How do you say 'mouth' in Kinyarwanda?",
+"choices": ["Amatwi", "Umunwa", "Inda", "Izuru"],
+"correctAnswer": "Umunwa",
+"explanation": "Umunwa means mouth",
+"category": "body_parts"
+},
+{
+"id": 114,
+"question": "What's the word for 'ear' in Kinyarwanda?",
+"choices": ["Izuru", "Ijisho", "Ugutwi", "Umunwa"],
+"correctAnswer": "Ugutwi",
+"explanation": "Ugutwi means ear (Amatwi is the plural form, meaning ears)",
+"category": "body_parts"
+},
+{
+"id": 115,
+"question": "How do you say 'stomach' in Kinyarwanda?",
+"choices": ["Amaguru", "Inda", "Umutima", "Umugongo"],
+"correctAnswer": "Inda",
+"explanation": "Inda means stomach",
+"category": "body_parts"
+},
+{
+"id": 116,
+"question": "What's the word for 'heart' in Kinyarwanda?",
+"choices": ["Ukuboko", "Umugongo", "Umutima", "Inda"],
+"correctAnswer": "Umutima",
+"explanation": "Umutima means heart",
+"category": "body_parts"
+},
+{
+"id": 117,
+"question": "How do you say 'back' in Kinyarwanda?",
+"choices": ["Inda", "Umugongo", "Ukuguru", "Umutima"],
+"correctAnswer": "Umugongo",
+"explanation": "Umugongo means back",
+"category": "body_parts"
+},
+{
+"id": 118,
+"question": "What's the word for 'finger' in Kinyarwanda?",
+"choices": ["Ikanuwa", "Urutoki", "Ukwaha", "Ikiganza"],
+"correctAnswer": "Urutoki",
+"explanation": "Urutoki means finger (Intoki is the plural form)",
+"category": "body_parts"
+},
+{
+"id": 119,
+"question": "How do you say 'hand' in Kinyarwanda?",
+"choices": ["Ikinonko", "Ukuboko", "Ikiganza", "Urutoki"],
+"correctAnswer": "Ikiganza",
+"explanation": "Ikiganza means hand",
+"category": "body_parts"
+},
+{
+"id": 120,
+"question": "What's the word for 'armpit' in Kinyarwanda?",
+"choices": ["Urutoki", "Igisura", "Ukwaha", "Ikiganza"],
+"correctAnswer": "Ukwaha",
+"explanation": "Ukwaha means armpit",
+"category": "body_parts"
+},
+{
+"id": 121,
+"question": "How do you say 'chin' in Kinyarwanda?",
+"choices": ["Urushyi", "Akananwa", "Agatoki", "Igisura"],
+"correctAnswer": "Akananwa",
+"explanation": "Akananwa means chin",
+"category": "body_parts"
+},
+{
+"id": 122,
+"question": "What's the word for 'cheek' in Kinyarwanda?",
+"choices": ["Ijosi", "Akananwa", "Urushyi", "Igisura"],
+"correctAnswer": "Urushyi",
+"explanation": "Urushyi means cheek",
+"category": "body_parts"
+},
+{
+"id": 123,
+"question": "How do you say 'neck' in Kinyarwanda?",
+"choices": ["Urushyi", "Ijosi", "Ukuguru", "Igihimba"],
+"correctAnswer": "Ijosi",
+"explanation": "Ijosi means neck",
+"category": "body_parts"
+},
+{
+"id": 124,
+"question": "What's the word for 'chest' in Kinyarwanda?",
+"choices": ["Inda", "Ijosi", "Igituza", "Igihimba"],
+"correctAnswer": "Igituza",
+"explanation": "Igituza means chest",
+"category": "body_parts"
+},
+{
+"id": 125,
+"question": "How do you say 'shoulder' in Kinyarwanda?",
+"choices": ["Ikiganza", "Urutugu", "Igituza", "Ijosi"],
+"correctAnswer": "Urutugu",
+"explanation": "Urutugu means shoulder",
+"category": "body_parts"
+},
+{
+"id": 126,
+"question": "What's the word for 'knee' in Kinyarwanda?",
+"choices": ["Igisura", "Ukuguru", "Ivi", "Ikirenge"],
+"correctAnswer": "Ivi",
+"explanation": "Ivi means knee (Amavi is the plural form)",
+"category": "body_parts"
+},
+{
+"id": 127,
+"question": "How do you say 'foot' in Kinyarwanda?",
+"choices": ["Ivi", "Ikirenge", "Urutoki", "Ukuguru"],
+"correctAnswer": "Ikirenge",
+"explanation": "Ikirenge means foot",
+"category": "body_parts"
+},
+{
+"id": 128,
+"question": "What's the word for 'elbow' in Kinyarwanda?",
+"choices": ["Ivi", "Urutugu", "Inkokora", "Ijosi"],
+"correctAnswer": "Inkokora",
+"explanation": "Inkokora means elbow",
+"category": "body_parts"
+},
+{
+"id": 129,
+"question": "How do you say 'skin' in Kinyarwanda?",
+"choices": ["Igituza", "Uruhu", "Ijosi", "Umutwe"],
+"correctAnswer": "Uruhu",
+"explanation": "Uruhu means skin",
+"category": "body_parts"
+},
+{
+"id": 130,
+"question": "What's the word for 'bone' in Kinyarwanda?",
+"choices": ["Umunoko", "Amaraso", "Igufwa", "Uruhu"],
+"correctAnswer": "Igufwa",
+"explanation": "Igufwa means bone",
+"category": "body_parts"
+},
+{
+"id": 131,
+"question": "How do you say 'blood' in Kinyarwanda?",
+"choices": ["Uruhu", "Amaraso", "Umutsi", "Igufwa"],
+"correctAnswer": "Amaraso",
+"explanation": "Amaraso means blood",
+"category": "body_parts"
+},
+{
+"id": 132,
+"question": "What's the word for 'vein' in Kinyarwanda?",
+"choices": ["Igufwa", "Amaraso", "Umutsi", "Uruhu"],
+"correctAnswer": "Umutsi",
+"explanation": "Umutsi means vein",
+"category": "body_parts"
+},
+{
+"id": 133,
+"question": "How do you say 'tongue' in Kinyarwanda?",
+"choices": ["Akananwa", "Ururimi", "Ijosi", "Umunwa"],
+"correctAnswer": "Ururimi",
+"explanation": "Ururimi means tongue",
+"category": "body_parts"
+},
+{
+"id": 134,
+"question": "What's the word for 'tooth' in Kinyarwanda?",
+"choices": ["Urushyi", "Ururimi", "Iryinyo", "Umunwa"],
+"correctAnswer": "Iryinyo",
+"explanation": "Iryinyo means tooth (Amenyo is the plural form)",
+"category": "body_parts"
+},
+{
+"id": 135,
+"question": "How do you say 'hair' in Kinyarwanda?",
+"choices": ["Ijosi", "Uruhu", "Umusatsi", "Umutwe"],
+"correctAnswer": "Umusatsi",
+"explanation": "Umusatsi means hair",
+"category": "body_parts"
+},
+{
+"id": 136,
+"question": "What's the word for 'ankle' in Kinyarwanda?",
+"choices": ["Inkokora", "Akagorora", "Ikirenge", "Ivi"],
+"correctAnswer": "Akagorora",
+"explanation": "Akagorora means ankle",
+"category": "body_parts"
+},
+{
+"id": 137,
+"question": "How do you say 'nail' in Kinyarwanda?",
+"choices": ["Ikirenge", "Ikiganza", "Urwara", "Urutoki"],
+"correctAnswer": "Urwara",
+"explanation": "Urwara means nail (Inzara is the plural form)",
+"category": "body_parts"
+},
+{
+"id": 138,
+"question": "What's the word for 'lion' in Kinyarwanda?",
+"choices": ["Ingwe", "Inzovu", "Intare", "Impyisi"],
+"correctAnswer": "Intare",
+"explanation": "Intare means lion",
+"category": "animals"
+},
+{
+"id": 139,
+"question": "How do you say 'elephant' in Kinyarwanda?",
+"choices": ["Imbogo", "Inzovu", "Ingwe", "Intare"],
+"correctAnswer": "Inzovu",
+"explanation": "Inzovu means elephant",
+"category": "animals"
+},
+{
+"id": 140,
+"question": "What's the word for 'leopard' in Kinyarwanda?",
+"choices": ["Impyisi", "Intare", "Ingwe", "Imbogo"],
+"correctAnswer": "Ingwe",
+"explanation": "Ingwe means leopard",
+"category": "animals"
+},
+{
+"id": 141,
+"question": "How do you say 'buffalo' in Kinyarwanda?",
+"choices": ["Impyisi", "Inzovu", "Imbogo", "Ingwe"],
+"correctAnswer": "Imbogo",
+"explanation": "Imbogo means buffalo",
+"category": "animals"
+},
+{
+"id": 142,
+"question": "What's the word for 'hyena' in Kinyarwanda?",
+"choices": ["Imbogo", "Impyisi", "Ingwe", "Intare"],
+"correctAnswer": "Impyisi",
+"explanation": "Impyisi means hyena",
+"category": "animals"
+},
+{
+"id": 143,
+"question": "How do you say 'dog' in Kinyarwanda?",
+"choices": ["Intama", "Ihene", "Imbwa", "Injangwe"],
+"correctAnswer": "Imbwa",
+"explanation": "Imbwa means dog",
+"category": "animals"
+},
+{
+"id": 144,
+"question": "What's the word for 'cat' in Kinyarwanda?",
+"choices": ["Inkoko", "Injangwe", "Imbwa", "Ihene"],
+"correctAnswer": "Injangwe",
+"explanation": "Injangwe means cat",
+"category": "animals"
+},
+{
+"id": 145,
+"question": "How do you say 'goat' in Kinyarwanda?",
+"choices": ["Inkoko", "Inka", "Intama", "Ihene"],
+"correctAnswer": "Ihene",
+"explanation": "Ihene means goat",
+"category": "animals"
+},
+{
+"id": 146,
+"question": "What's the word for 'sheep' in Kinyarwanda?",
+"choices": ["Ingurube", "Inka", "Intama", "Ihene"],
+"correctAnswer": "Intama",
+"explanation": "Intama means sheep",
+"category": "animals"
+},
+{
+"id": 147,
+"question": "How do you say 'cow' in Kinyarwanda?",
+"choices": ["Inkoko", "Inka", "Ihene", "Intama"],
+"correctAnswer": "Inka",
+"explanation": "Inka means cow",
+"category": "animals"
+},
+{
+"id": 148,
+"question": "What's the word for 'chicken' in Kinyarwanda?",
+"choices": ["Injangwe", "Inkoko", "Ihene", "Inka"],
+"correctAnswer": "Inkoko",
+"explanation": "Inkoko means chicken",
+"category": "animals"
+},
+{
+"id": 149,
+"question": "How do you say 'pig' in Kinyarwanda?",
+"choices": ["Ihene", "Intama", "Ingurube", "Inka"],
+"correctAnswer": "Ingurube",
+"explanation": "Ingurube means pig",
+"category": "animals"
+},
+{
+"id": 150,
+"question": "What's the word for 'monkey' in Kinyarwanda?",
+"choices": ["Imbogo", "Inkende", "Ingwe", "Inzovu"],
+"correctAnswer": "Inkende",
+"explanation": "Inkende means monkey",
+"category": "animals"
+},
+{
+"id": 151,
+"question": "How do you say 'snake' in Kinyarwanda?",
+"choices": ["Inkende", "Injangwe", "Inzoka", "Imbwa"],
+"correctAnswer": "Inzoka",
+"explanation": "Inzoka means snake",
+"category": "animals"
+},
+{
+"id": 152,
+"question": "What's the word for 'bird' in Kinyarwanda?",
+"choices": ["Igisiga", "Inuma", "Inyoni", "Inkoko"],
+"correctAnswer": "Inyoni",
+"explanation": "Inyoni means bird",
+"category": "animals"
+},
+{
+"id": 153,
+"question": "How do you say 'dove' in Kinyarwanda?",
+"choices": ["Igisiga", "Inkoko", "Inuma", "Inyoni"],
+"correctAnswer": "Inuma",
+"explanation": "Inuma means dove",
+"category": "animals"
+},
+{
+"id": 154,
+"question": "What's the word for 'eagle' in Kinyarwanda?",
+"choices": ["Inkoko", "Igisiga", "Inyoni", "Inuma"],
+"correctAnswer": "Igisiga",
+"explanation": "Igisiga means eagle",
+"category": "animals"
+},
+{
+"id": 155,
+"question": "How do you say 'fish' in Kinyarwanda?",
+"choices": ["Inkende", "Ifi", "Inzoka", "Inyoni"],
+"correctAnswer": "Ifi",
+"explanation": "Ifi means fish",
+"category": "animals"
+},
+{
+"id": 156,
+"question": "What's the word for 'crocodile' in Kinyarwanda?",
+"choices": ["Igisiga", "Ingona", "Ifi", "Inzoka"],
+"correctAnswer": "Ingona",
+"explanation": "Ingona means crocodile",
+"category": "animals"
+},
+{
+"id": 157,
+"question": "How do you say 'hippopotamus' in Kinyarwanda?",
+"choices": ["Ingona", "Imbogo", "Imvubu", "Inzovu"],
+"correctAnswer": "Imvubu",
+"explanation": "Imvubu means hippopotamus",
+"category": "animals"
+},
+{
+"id": 158,
+"question": "What's the word for 'giraffe' in Kinyarwanda?",
+"choices": ["Imbogo", "Twiga", "Inzovu", "Intare"],
+"correctAnswer": "Twiga",
+"explanation": "Twiga means giraffe",
+"category": "animals"
+},
+{
+"id": 159,
+"question": "How do you say 'zebra' in Kinyarwanda?",
+"choices": ["Twiga", "Mbogo", "Imparage", "Imbogo"],
+"correctAnswer": "Imparage",
+"explanation": "Imparage means zebra",
+"category": "animals"
+},
+{
+"id": 160,
+"question": "What's the word for 'rabbit' in Kinyarwanda?",
+"choices": ["Ihene", "Injangwe", "Urukwavu", "Imbwa"],
+"correctAnswer": "Urukwavu",
+"explanation": "Urukwavu means rabbit",
+"category": "animals"
+},
+{
+"id": 161,
+"question": "How do you say 'rat' in Kinyarwanda?",
+"choices": ["Ifi", "Imbeba", "Inzoka", "Urukwavu"],
+"correctAnswer": "Imbeba",
+"explanation": "Imbeba means rat",
+"category": "animals"
+},
+{
+"id": 162,
+"question": "What's the word for 'gorilla' in Kinyarwanda?",
+"choices": ["Imbogo", "Intare", "Ingagi", "Inkende"],
+"correctAnswer": "Ingagi",
+"explanation": "Ingagi means gorilla",
+"category": "animals"
+},
+{
+"id": 163,
+"question": "What's the word for 'rice' in Kinyarwanda?",
+"choices": ["Ibishyimbo", "Ubugali", "Umuceri", "Ibigori"],
+"correctAnswer": "Umuceri",
+"explanation": "Umuceri means rice",
+"category": "food"
+},
+{
+"id": 164,
+"question": "How do you say 'beans' in Kinyarwanda?",
+"choices": ["Imboga", "Umuceri", "Ibishyimbo", "Ibigori"],
+"correctAnswer": "Ibishyimbo",
+"explanation": "Ibishyimbo means beans",
+"category": "food"
+},
+{
+"id": 165,
+"question": "What's the word for 'corn/maize' in Kinyarwanda?",
+"choices": ["Ubugali", "Ibigori", "Umuceri", "Ibishyimbo"],
+"correctAnswer": "Ibigori",
+"explanation": "Ibigori means corn or maize",
+"category": "food"
+},
+{
+"id": 166,
+"question": "How do you say 'cassava paste' in Kinyarwanda?",
+"choices": ["Imboga", "Umuceri", "Ubugali", "Ibigori"],
+"correctAnswer": "Ubugali",
+"explanation": "Ubugali means cassava paste",
+"category": "food"
+},
+{
+"id": 167,
+"question": "What's the word for 'vegetables' in Kinyarwanda?",
+"choices": ["Umuceri", "Ibirayi", "Imboga", "Ibishyimbo"],
+"correctAnswer": "Imboga",
+"explanation": "Imboga means vegetables",
+"category": "food"
+},
+{
+"id": 168,
+"question": "How do you say 'potatoes' in Kinyarwanda?",
+"choices": ["Imboga", "Ibirayi", "Ibitoki", "Ibigori"],
+"correctAnswer": "Ibirayi",
+"explanation": "Ibirayi means potatoes",
+"category": "food"
+},
+{
+"id": 169,
+"question": "What's the word for 'plantains/cooking bananas' in Kinyarwanda?",
+"choices": ["Umuceri", "Ibishyimbo", "Ibitoki", "Ibirayi"],
+"correctAnswer": "Ibitoki",
+"explanation": "Ibitoki means plantains or cooking bananas",
+"category": "food"
+},
+{
+"id": 170,
+"question": "How do you say 'sweet potatoes' in Kinyarwanda?",
+"choices": ["Imboga", "Ibitoki", "Ibirayi", "Ibijumba"],
+"correctAnswer": "Ibijumba",
+"explanation": "Ibijumba means sweet potatoes",
+"category": "food"
+},
+{
+"id": 171,
+"question": "What's the word for 'meat' in Kinyarwanda?",
+"choices": ["Umunyu", "Inyama", "Amafi", "Amata"],
+"correctAnswer": "Inyama",
+"explanation": "Inyama means meat",
+"category": "food"
+},
+{
+"id": 172,
+"question": "How do you say 'fish' (as food) in Kinyarwanda?",
+"choices": ["Ibirayi", "Ibishyimbo", "Amafi", "Inyama"],
+"correctAnswer": "Amafi",
+"explanation": "Amafi means fish (as food)",
+"category": "food"
+},
+{
+"id": 173,
+"question": "What's the word for 'milk' in Kinyarwanda?",
+"choices": ["Icyayi", "Ikawa", "Amazi", "Amata"],
+"correctAnswer": "Amata",
+"explanation": "Amata means milk",
+"category": "food"
+},
+{
+"id": 174,
+"question": "How do you say 'salt' in Kinyarwanda?",
+"choices": ["Amata", "Umunyu", "Isukari", "Ipparika"],
+"correctAnswer": "Umunyu",
+"explanation": "Umunyu means salt",
+"category": "food"
+},
+{
+"id": 175,
+"question": "What's the word for 'sugar' in Kinyarwanda?",
+"choices": ["Ipparika", "Amata", "Isukari", "Umunyu"],
+"correctAnswer": "Isukari",
+"explanation": "Isukari means sugar",
+"category": "food"
+},
+{
+"id": 176,
+"question": "How do you say 'bread' in Kinyarwanda?",
+"choices": ["Ubugali", "Umugati", "Ibishyimbo", "Keke"],
+"correctAnswer": "Umugati",
+"explanation": "Umugati means bread",
+"category": "food"
+},
+{
+"id": 177,
+"question": "What's the word for 'cake' in Kinyarwanda?",
+"choices": ["Ibirayi", "Isukari", "Keke", "Umugati"],
+"correctAnswer": "Keke",
+"explanation": "Keke means cake",
+"category": "food"
+},
+{
+"id": 178,
+"question": "How do you say 'coffee' in Kinyarwanda?",
+"choices": ["Amata", "Ikawa", "Amazi", "Icyayi"],
+"correctAnswer": "Ikawa",
+"explanation": "Ikawa means coffee",
+"category": "food"
+},
+{
+"id": 179,
+"question": "What's the word for 'tea' in Kinyarwanda?",
+"choices": ["Amazi", "Amata", "Icyayi", "Ikawa"],
+"correctAnswer": "Icyayi",
+"explanation": "Icyayi means tea",
+"category": "food"
+},
+{
+"id": 180,
+"question": "How do you say 'fruit' in Kinyarwanda?",
+"choices": ["Ibirayi", "Imbuto", "Ibitoki", "Imboga"],
+"correctAnswer": "Imbuto",
+"explanation": "Imbuto means fruit",
+"category": "food"
+},
+{
+"id": 181,
+"question": "What's the word for 'egg' in Kinyarwanda?",
+"choices": ["Amafi", "Amata", "Igi", "Inyama"],
+"correctAnswer": "Igi",
+"explanation": "Igi means egg (Amagi is the plural form)",
+"category": "food"
+},
+{
+"id": 182,
+"question": "How do you say 'peanuts' in Kinyarwanda?",
+"choices": ["Imbuto", "Ubunyobwa", "Ibigori", "Ibishyimbo"],
+"correctAnswer": "Ubunyobwa",
+"explanation": "Ubunyobwa means peanuts",
+"category": "food"
+},
+{
+"id": 183,
+"question": "What's the word for 'sorghum' in Kinyarwanda?",
+"choices": ["Ubugali", "Amasaka", "Umuceri", "Ibigori"],
+"correctAnswer": "Amasaka",
+"explanation": "Amasaka means sorghum",
+"category": "food"
+},
+{
+"id": 184,
+"question": "How do you say 'porridge' in Kinyarwanda?",
+"choices": ["Keke", "Ubugali", "Igikoma", "Umugati"],
+"correctAnswer": "Igikoma",
+"explanation": "Igikoma means porridge",
+"category": "food"
+},
+{
+"id": 185,
+"question": "What's the word for 'honey' in Kinyarwanda?",
+"choices": ["Isukari", "Umunyu", "Ubuki", "Amata"],
+"correctAnswer": "Ubuki",
+"explanation": "Ubuki means honey",
+"category": "food"
+},
+{
+"id": 186,
+"question": "How do you say 'oil' in Kinyarwanda?",
+"choices": ["Ikawa", "Amavuta", "Amazi", "Amata"],
+"correctAnswer": "Amavuta",
+"explanation": "Amavuta means oil",
+"category": "food"
+},
+{
+"id": 187,
+"question": "What's the word for 'pepper' in Kinyarwanda?",
+"choices": ["Ubuki", "Isukari", "Ipparika", "Umunyu"],
+"correctAnswer": "Ipparika",
+"explanation": "Ipparika means pepper",
+"category": "food"
+}
+    ]
+  }

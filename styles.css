@@ -179,3 +179,13 @@ main {
     pointer-events: none;
     z-index: 9999;
 }
+#timer-container {
+    text-align: center;
+    margin: 0.5rem 0 1rem 0;
+    font-size: 1.1rem;
+    color: #2d3e50;
+}
+#timer {
+    font-weight: bold;
+    color: #d84315;
+}

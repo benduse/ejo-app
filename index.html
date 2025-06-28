@@ -1,58 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polyglot Quiz App</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Polyglot Quiz App</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Polyglot Quiz App</h1>
-        <div class="language-selector">
-            <label for="languageSelect">Choose Language:</label>
-            <select id="languageSelect">
-                <option value="french">French</option>
-                <option value="spanish">Spanish</option>
-            </select>
-            <label for="difficultySelect" style="margin-left:1rem;">Difficulty:</label>
-            <select id="difficultySelect">
-                <option value="all">All</option>
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-            </select>
+  <header>
+    <h1>Polyglot Quiz App</h1>
+    <div class="language-selector">
+      <label for="languageSelect">Choose Language:</label>
+      <select id="languageSelect" aria-label="Select Language">
+        <option value="french">French</option>
+        <option value="spanish">Spanish</option>
+        <option value="ikinyarwanda">Ikinyarwanda</option>
+      </select>
+
+      <label for="difficultySelect" style="margin-left:1rem;">Difficulty:</label>
+      <select id="difficultySelect" aria-label="Select Difficulty">
+        <option value="all">All</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+    <div class="score-container" aria-live="polite" aria-atomic="true">
+      Score: <span id="score">0</span>
+    </div>
+  </header>
+
+  <main>
+    <div id="quiz-container">
+      <div id="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Quiz Progress"></div>
+
+      <div id="question-container">
+        <h2 id="question" aria-live="polite" aria-atomic="true">Loading question...</h2>
+        <div id="difficulty-badge" class="difficulty-badge" aria-label="Question difficulty"></div>
+
+        <!-- Timer container with label and timer span -->
+        <div id="timer-container" style="display: none;">
+          <span id="timer-label">Time left:</span> <span id="timer">3</span>s
         </div>
-        <div class="score-container">Score: <span id="score">0</span></div>
-    </header>
-    <main>
-        <div id="quiz-container">
-            <div id="progress-bar"></div>
-            <div id="question-container">
-                <h2 id="question"></h2>
-                <div id="difficulty-badge" class="difficulty-badge"></div>
-                <div id="choices" class="choices-grid"></div>
-            </div>
-            <div id="end-quiz-container">
-                <button id="end-quiz-btn">End Quiz</button>
-                <button id="print-pdf-btn" class="hide">Print Results</button>
-            </div>
-        </div>
-        <div id="result-container" class="hide">
-            <h2>Quiz Complete!</h2>
-            <p>Your final score: <span id="final-score">0</span></p>
-            <button id="restart-btn">Restart Quiz</button>
-            <button id="download-btn" class="hide">Download Results</button>
-        </div>
-        <div id="leaderboard-container" class="hide">
-            <h3>Leaderboard</h3>
-            <ol id="leaderboard-list"></ol>
-        </div>
-    </main>
-    <script src="script.js"></script>
-    <script src="confetti.js"></script>
-    <footer>
-        <div class="footer">&copy; 2025 Benjamin All Rights Reserved</div>
-    </footer>
+
+        <div id="choices" class="choices-grid" role="list"></div>
+      </div>
+
+      <div id="end-quiz-container">
+        <button id="end-quiz-btn" type="button">End Quiz</button>
+        <button id="print-pdf-btn" type="button" class="hide">Print Results</button>
+      </div>
+    </div>
+
+    <div id="result-container" class="hide" aria-live="polite" aria-atomic="true">
+      <h2>Quiz Complete!</h2>
+      <p>Your final score: <span id="final-score">0</span></p>
+      <button id="restart-btn" type="button">Restart Quiz</button>
+      <button id="download-btn" type="button" class="hide">Download Results</button>
+    </div>
+
+    <div id="leaderboard-container" class="hide" aria-label="Leaderboard">
+      <h3>Leaderboard</h3>
+      <ol id="leaderboard-list"></ol>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="confetti.js"></script>
+
+  <footer>
+    <div class="footer">&copy; 2025 Benjamin All Rights Reserved</div>
+  </footer>
 </body>
 </html>
