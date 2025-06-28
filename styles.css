@@ -183,7 +183,7 @@ main {
     z-index: 9999;
 }
 #timer-container {
-    text-align: center;
+    text-align: flex;
     margin: 0.5rem 0 1rem 0;
     font-size: 1.1rem;
     color: #2d3e50;
