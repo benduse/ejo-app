@@ -80,11 +80,11 @@ main {
 .footer { 
     background: #2d3e50;
     color: #fff;
+    border: 3px solid #2d3e50;
     text-align: center;
     padding: 1rem 0;
-    position: relative;
-    
-}
+    position: static;
+    }
 .score-container {
     position: absolute;
     top: 1.5rem;
