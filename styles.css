@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
 }
-header {
+header{
     background: #2d3e50;
     color: #fff;
     padding: 1rem 0;
@@ -77,15 +77,13 @@ main {
 #restart-btn:hover {
     background: #4caf50;
 }
-.footer {
-    text-align: center;
-    color: #888;
-    font-size: 1rem;
-    margin-top: 2rem;
-    padding: 1rem 0 0 0;
+.footer { 
     background: #2d3e50;
     color: #fff;
-    border-top: 100px solid var(--border-light);
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    
 }
 .score-container {
     position: absolute;
@@ -218,4 +216,26 @@ main {
 .lang-ikinyarwanda button.choice-btn:hover {
     background-color: #b70d8a;
     color: #00214d;;
+}
+
+@media (max-width: 600px) {
+    .choices-grid {
+        grid-template-columns: 1fr;
+    }
+    main {
+        padding: 1rem;
+    }
+    #progress-bar {
+        height: 6px;
+    }
+    .choice-btn {
+        font-size: 0.9rem;
+    }
+    .score-container {
+        position: static;
+        font-size: 20px;
+    }
+    #timer-container {
+        font-size: 1rem;
+    }
 }
