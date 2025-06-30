@@ -61,6 +61,14 @@ main {
 .hide {
     display: none;
 }
+.board{
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 1rem;
+    margin-top: 1rem;
+    position: relative;
+}
 #result-container {
     text-align: center;
 }
@@ -80,7 +88,6 @@ main {
 .footer { 
     background: #2d3e50;
     color: #fff;
-    border: 3px solid #2d3e50;
     text-align: center;
     padding: 1rem 0;
     position: static;
@@ -213,8 +220,15 @@ main {
     font-size: 1.1rem;
     transition: background-color 0.3s;
 }
+.lang-ikinyarwanda button.choice-btn.correct {
+    background-color: #4caf50;
+    color: #fff;
+}
+.lang-ikinyarwanda button.choice-btn.incorrect {
+    background-color: #f80707;
+    color: #fff;
 .lang-ikinyarwanda button.choice-btn:hover {
-    background-color: #b70d8a;
+    background-color: #2aaf5b;
     color: #00214d;;
 }
 

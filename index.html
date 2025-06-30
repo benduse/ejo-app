@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+<!-- icons display -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Primary Meta Tags -->
 <meta name="description" content="Polyglot Quiz App - Test and improve your language skills with quizzes in French, Spanish, Ikinyarwanda, and more. Fun, interactive, and timed quizzes organized by difficulty levels.">
 <meta name="keywords" content="Polyglot Quiz, Language Learning, French Quiz, Spanish Quiz, Ikinyarwanda Quiz, Multilingual Quiz, Language Practice, Vocabulary, Grammar, Interactive Quiz">
@@ -93,7 +94,7 @@
       <button id="download-btn" type="button" class="hide">Download Results</button>
     </div>
 
-    <div id="leaderboard-container" class="hide" aria-label="Leaderboard">
+    <div id="leaderboard-container" class="board" aria-label="Leaderboard">
       <h3>Leaderboard</h3>
       <ol id="leaderboard-list"></ol>
     </div>
@@ -102,39 +103,41 @@
   <script src="script.js"></script>
   <script src="confetti.js"></script>
 
- 
- <footer class="footer"> 
- <div>
-  <class="social-links" aria-label="Social Media Links">
-            <a href="https://x.com/Nbenduse" 
-               class="social-icon" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               aria-label="Follow me on X (formerly Twitter)">
-                <i class="fab fa-x-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/benjamin-niyodusenga/" 
-               class="social-icon" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               aria-label="Connect with me on LinkedIn">
-                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.instagram.com/bennduse/" 
-               class="social-icon" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               aria-label="Follow me on Instagram">
-                <i class="fab fa-instagram" aria-hidden="true"></i>
-            </a>
-            <a href="https://github.com/benduse" 
-               class="social-icon" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               aria-label="Check out my projects on GitHub">
-                <i class="fab fa-github" aria-hidden="true"></i>
-            </a>
-            <p>&copy; 2025 Benjamin All Rights Reserved</p>
+<footer class="footer"> 
+  <div class="social-links" aria-label="Social Media Links" style="text-align:center;">
+    <a href="https://x.com/Nbenduse" 
+       class="social-icon" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Follow me on X (formerly Twitter)"
+       style="margin: 0 10px;">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/benjamin-niyodusenga/" 
+       class="social-icon" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Connect with me on LinkedIn"
+       style="margin: 0 10px;">
+        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+    </a>
+    <a href="https://github.com/benduse" 
+       class="social-icon" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Check out my projects on GitHub"
+       style="margin: 0 10px;">
+        <i class="fab fa-github" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.instagram.com/bennduse/" 
+       class="social-icon" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Follow me on Instagram"
+       style="margin: 0 10px;">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+    </a>
+    <p style="margin-top: 1rem;">&copy; 2025 Benjamin All Rights Reserved</p>
         </div>
   </footer>
 </body>
