@@ -93,15 +93,15 @@ main {
     position: static;
     }
 .score-container {
-    position: absolute;
+    position: static;
     top: 1.5rem;
     right: 2rem;
     font-size: 1.2rem;
     color: #fff;
-    background: #2d3e50;
+    background: transparent;
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: none;
 }
 #download-btn {
     margin-top: 1rem;
