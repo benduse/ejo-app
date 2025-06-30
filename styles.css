@@ -253,3 +253,42 @@ main {
         font-size: 1rem;
     }
 }
+
+/* Add this to your existing styles.css */
+
+.survey-button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: pulse 2s infinite;
+    transition: all 0.3s ease;
+}
+
+.survey-button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+@keyframes pulse {
+    0% { 
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); 
+    }
+    70% { 
+        box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); 
+    }
+    100% { 
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); 
+    }
+}

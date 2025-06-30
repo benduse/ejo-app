@@ -1,3 +1,4 @@
+
 class QuizApp {
     constructor() {
         this.currentQuestion = 0;
@@ -315,3 +316,4 @@ class QuizApp {
 document.addEventListener('DOMContentLoaded', () => {
     new QuizApp();
 });
+
