@@ -49,7 +49,7 @@
       <select id="languageSelect" aria-label="Select Language">
         <option value="french">French</option>
         <option value="spanish">Spanish</option>
-        <option value="ikinyarwanda">Ikinyarwanda</option>
+        <option value="ikinyarwanda">Ikinyarwanda</option> 
       </select>
 
       <label for="difficultySelect" style="margin-left:1rem;">Difficulty:</label>
@@ -63,6 +63,18 @@
     <div class="score-container" aria-live="polite" aria-atomic="true">
       Score: <span id="score">0</span>
     </div>
+<!-- Mode switcher for light/dark mode -->
+    <fieldset id="mode-switcher">
+      <legend>Select a color mode:</legend>
+      <div>
+        <input type="radio" id="light" name="mode" value="light" />
+        <label for="light">Light</label>
+      </div>
+      <div>
+        <input type="radio" id="dark" name="mode" value="dark" />
+        <label for="dark">Dark</label>
+      </div>
+    </fieldset>
   </header>
 
   <main>
