@@ -37,13 +37,15 @@
   <meta name="theme-color" content="#ffffff" />
 
   <title>Polyglot Quiz App</title>
+
   <link rel="stylesheet" href="styles.css" />
+  
 </head>
 
 <body>
   <header>
+  
     <h1>Polyglot Quiz App</h1>
-    <div id="user-name" style="cursor:pointer; user-select:none;" title="Click to change your name"></div>
     <div class="language-selector">
       <label for="languageSelect">Choose Language:</label>
       <select id="languageSelect" aria-label="Select Language">
@@ -68,11 +70,11 @@
       <legend>Select a color mode:</legend>
       <div>
         <input type="radio" id="light" name="mode" value="light" />
-        <label for="light">Light</label>
+        <label for="light">Dark</label>
       </div>
       <div>
         <input type="radio" id="dark" name="mode" value="dark" />
-        <label for="dark">Dark</label>
+        <label for="dark">Light</label>
       </div>
     </fieldset>
   </header>
@@ -114,6 +116,7 @@
 
   <script src="script.js"></script>
   <script src="confetti.js"></script>
+  <script src="leaderboardManager.js"></script>
 
 <footer class="footer"> 
   <div class="social-links" aria-label="Social Media Links" style="text-align:center;">
