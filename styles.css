@@ -259,6 +259,12 @@ main {
 .difficulty-hard {
     background: var(--ejo-primary);
 }
+.leaderboard {
+    flex: 1; /* Leaderboard takes less space */
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 5px;
+}
 
 #leaderboard-container {
     margin: 2rem auto 0 auto;
@@ -359,7 +365,7 @@ main {
 
 .lang-ikinyarwanda button.choice-btn {
     border: 2px solid rgba(78,205,196,0.3);
-    background-color: white;
+    background-color: rgb(39, 39, 39);
     color: var(--ejo-dark);
     font-size: 1.1rem;
     transition: all 0.3s ease;
