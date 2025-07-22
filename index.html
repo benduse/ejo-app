@@ -37,19 +37,21 @@
   <meta name="theme-color" content="#ffffff" />
 
   <title>Polyglot Quiz App</title>
+
   <link rel="stylesheet" href="styles.css" />
+  
 </head>
 
 <body>
   <header>
+  
     <h1>Polyglot Quiz App</h1>
-    <div id="user-name" style="cursor:pointer; user-select:none;" title="Click to change your name"></div>
     <div class="language-selector">
       <label for="languageSelect">Choose Language:</label>
       <select id="languageSelect" aria-label="Select Language">
         <option value="french">French</option>
         <option value="spanish">Spanish</option>
-        <option value="ikinyarwanda">Ikinyarwanda</option>
+        <option value="ikinyarwanda">Ikinyarwanda</option> 
       </select>
 
       <label for="difficultySelect" style="margin-left:1rem;">Difficulty:</label>
@@ -63,6 +65,18 @@
     <div class="score-container" aria-live="polite" aria-atomic="true">
       Score: <span id="score">0</span>
     </div>
+<!-- Mode switcher for light/dark mode -->
+    <fieldset id="mode-switcher">
+      <legend>Select a color mode:</legend>
+      <div>
+        <input type="radio" id="light" name="mode" value="light" />
+        <label for="light">Dark</label>
+      </div>
+      <div>
+        <input type="radio" id="dark" name="mode" value="dark" />
+        <label for="dark">Light</label>
+      </div>
+    </fieldset>
   </header>
 
   <main>
@@ -94,14 +108,15 @@
       <button id="download-btn" type="button" class="hide">Download Results</button>
     </div>
 
-    <div id="leaderboard-container" class="board" aria-label="Leaderboard">
+    <aside id="leaderboard-container" class="board" aria-label="Leaderboard">
       <h3>Leaderboard</h3>
       <ol id="leaderboard-list"></ol>
-    </div>
+    </aside>
   </main>
 
   <script src="script.js"></script>
   <script src="confetti.js"></script>
+  <script src="leaderboardManager.js"></script>
 
 <footer class="footer"> 
   <div class="social-links" aria-label="Social Media Links" style="text-align:center;">
