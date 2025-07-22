@@ -28,7 +28,7 @@
 <meta name="twitter:image" content="images/polyglot-quiz-app-banner.jpg">
 
    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='75' font-size='75' font-weight='bold' fill='%23FF6B6B'%3Eejo%3C/text%3E%3C/svg%3E">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -36,7 +36,7 @@
 
   <meta name="theme-color" content="#ffffff" />
 
-  <title>Polyglot Quiz App</title>
+  <title>Ejo Quiz App</title>
 
   <link rel="stylesheet" href="styles.css" />
   
@@ -44,7 +44,10 @@
 
 <body>
   <header>
-  
+  <div class="logo"> 
+  <img src=" images/logo.svg" alt="Polyglot Quiz App Logo" class="logo" aria-label="Polyglot Quiz App Logo">
+  </div>
+    <nav>  
     <h1>Polyglot Quiz App</h1>
     <div class="language-selector">
       <label for="languageSelect">Choose Language:</label>
@@ -107,13 +110,13 @@
       <button id="restart-btn" type="button">Restart Quiz</button>
       <button id="download-btn" type="button" class="hide">Download Results</button>
     </div>
-
-    <aside id="leaderboard-container" class="board" aria-label="Leaderboard">
-      <h3>Leaderboard</h3>
-      <ol id="leaderboard-list"></ol>
-    </aside>
   </main>
 
+<aside id="leaderboard-container" class="board" aria-label="Leaderboard">
+      <h3>Leaderboard</h3>
+      <ol id="leaderboard-list"></ol>
+      
+    </aside>
   <script src="script.js"></script>
   <script src="confetti.js"></script>
   <script src="leaderboardManager.js"></script>
