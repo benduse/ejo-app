@@ -3,19 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kinyarwanda Flashcards</title>
+    <title>ejo flashcards</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='75' font-size='75' font-weight='bold' fill='%23FF6B6B'%3Eejo%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="flashcards.css">
 </head>
 <body>
-    <section id="flashcards-section">
-  <h2>Flash Cards</h2>
-  <div id="flashcard-container"></div>
-  <div class="flashcard-controls">
-    <button id="prev-flashcard" type="button">Previous</button>
-    <button id="flip-flashcard" type="button">Flip</button>
-    <button id="next-flashcard" type="button">Next</button>
-  </div>
-</section>
+    <div class="container">
+        <section id="flashcards-section">
+            <h2>Practice Flash Cards</h2>
+            
+            <div id="flashcard-container">
+                <div class="flashcard-scene">
+                    <div class="flashcard" id="flashcard">
+                        <div class="card-face card-front">
+                            <div class="card-content">
+              
+                                <p id="front-content"></p>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <div class="card-content">
+                              
+                                <p id="back-content"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flashcard-controls">
+                <div class="progress-container">
+                    <span id="current-card">1</span> / <span id="total-cards">10</span>
+                </div>
+                <button id="prev-flashcard" type="button">Previous</button>
+                <button id="flip-flashcard" type="button">Flip</button>
+                <button id="next-flashcard" type="button">Next</button>
+            </div>
+        </section>
+    </div>
+    
     <script src="flashcards.js"></script>
 </body>
 </html>
