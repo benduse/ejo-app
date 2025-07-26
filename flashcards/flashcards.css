@@ -1,0 +1,160 @@
+:root {
+    --ejo-primary: #FF6B6B;
+    --ejo-secondary: #4ECDC4;
+    --ejo-accent: #FFE66D;
+    --ejo-dark: #2A2A2A;
+    --ejo-light: #F7F7F7;
+    --ejo-gradient: linear-gradient(135deg, #FF6B6B 0%, #FFE66D 50%, #4ECDC4 100%);
+    --ejo-shadow: 0 8px 32px rgba(78,205,196,0.18), 0 1.5px 6px rgba(255,107,107,0.12);
+    --ejo-radius: 24px;
+    --ejo-font-main: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    --ejo-font-size-lg: 2.2rem;
+    --ejo-font-size-md: 1.3rem;
+    --ejo-font-size-sm: 1rem;
+    --ejo-card-width: 380px;
+    --ejo-card-height: 260px;
+    --ejo-card-padding: 2.2rem 1.5rem;
+    --ejo-card-gap: 32px;
+}
+
+body {
+    background: var(--ejo-gradient);
+    min-height: 100vh;
+    margin: 0;
+    font-family: var(--ejo-font-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashcard-container {
+    display: flex;
+    gap: var(--ejo-card-gap);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 400px;
+}
+
+.flashcard {
+    width: var(--ejo-card-width);
+    height: var(--ejo-card-height);
+    perspective: 1200px;
+    cursor: pointer;
+    position: relative;
+    margin: 0 auto;
+    border-radius: var(--ejo-radius);
+    box-shadow: var(--ejo-shadow);
+    transition: box-shadow 0.3s, transform 0.3s;
+    background: transparent;
+    font-family: var(--ejo-font-main);
+    font-size: var(--ejo-font-size-md);
+    will-change: transform;
+    outline: none;
+    border: none;
+    z-index: 2;
+}
+
+.flashcard .front, 
+.flashcard .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--ejo-radius);
+    box-shadow: var(--ejo-shadow);
+    transition: transform 0.6s;
+    padding: var(--ejo-card-padding);
+    font-family: var(--ejo-font-main);
+    font-size: var(--ejo-font-size-lg);
+    letter-spacing: 0.02em;
+    font-weight: 500;
+}
+
+.flashcard .front {
+    background: linear-gradient(120deg, var(--ejo-primary) 0%, var(--ejo-accent) 100%);
+    color: var(--ejo-light);
+    box-shadow: var(--ejo-shadow);
+    font-size: var(--ejo-font-size-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 2px 8px rgba(46,46,46,0.08);
+}
+
+.flashcard .back {
+    background: linear-gradient(120deg, var(--ejo-secondary) 0%, var(--ejo-accent) 100%);
+    color: var(--ejo-dark);
+    transform: rotateY(180deg);
+    box-shadow: var(--ejo-shadow);
+    font-size: var(--ejo-font-size-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 2px 8px rgba(46,46,46,0.08);
+}
+
+.flashcard.flipped .front {
+    transform: rotateY(180deg);
+}
+.flashcard.flipped .back {
+    transform: rotateY(0deg);
+}
+
+.kinyarwanda-word {
+    font-size: var(--ejo-font-size-lg);
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    letter-spacing: 0.04em;
+    color: var(--ejo-light);
+    text-shadow: 0 2px 8px rgba(46,46,46,0.12);
+}
+.phonetics {
+    font-size: var(--ejo-font-size-md);
+    font-style: italic;
+    color: var(--ejo-accent);
+    margin-bottom: 0.5rem;
+}
+.meaning {
+    font-size: var(--ejo-font-size-md);
+    font-weight: 600;
+    color: var(--ejo-dark);
+    margin-bottom: 0.7rem;
+}
+.example {
+    font-size: var(--ejo-font-size-sm);
+    color: var(--ejo-primary);
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.flashcard-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2.5rem;
+}
+.flashcard-controls button {
+    background: var(--ejo-primary);
+    color: var(--ejo-light);
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 2.2rem;
+    font-size: var(--ejo-font-size-md);
+    font-family: var(--ejo-font-main);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(46,46,46,0.08);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+.flashcard-controls button:hover {
+    background: var(--ejo-secondary);
+    color: var(--ejo-dark);
+    transform: translateY(-2px) scale(1.04);
+}
