@@ -1,0 +1,186 @@
+:root {
+    /* Ejo Brand Colors */
+    --ejo-primary: #FF6B6B;      /* Warm sunrise red */
+    --ejo-secondary: #4ECDC4;    /* Fresh morning teal */
+    --ejo-accent: #FFE66D;       /* Dawn yellow */
+    --ejo-dark: #2A2A2A;         /* Soft black */
+    --ejo-light: #F7F7F7;        /* Off white */
+    --ejo-gradient: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+    
+    /* Dynamic color assignments */
+    --button: light-dark(var(--ejo-secondary), var(--ejo-primary));
+    --button-hover: light-dark(var(--ejo-primary), var(--ejo-accent));
+    --white: light-dark(#fff, #1a1a1a);
+    --black: light-dark(#1a1a1a, #fff);
+    --background: light-dark(var(--ejo-light), var(--ejo-dark));
+}
+/* Basic styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--ejo-gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 10px;
+    padding: 20px;
+}
+
+.logo-container {
+ top:0px;
+  left: 0px;
+  background: var(--ejo-gradient);
+    color: white;
+    text-align: left;
+    position: fixed;
+    width: 100vw;
+    margin-top: 0;
+    
+}
+
+.logo{
+    height: 100px;
+    width: auto;
+    margin: 0 auto;
+    text-align: left; 
+    position: relative;
+}
+.main-container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    background-color: var(--ejo-light);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Flashcard styling 
+#flashcard-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 500px;
+    height: 300px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: var(--ejo-gradient);
+    border-radius: 10px;
+}*/
+
+.flashcard-scene {
+    width: 500px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 0 auto 40px;
+}
+
+.flashcard {
+    width: 500px;
+    height: 300px;
+    border-radius:10px;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    background: var(--ejo-gradient); 
+}
+
+.flashcard.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-front {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.card-back {
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 24px;
+}
+
+/* Card content */
+.card-content {
+    text-align: center;
+    width: 100%;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.card-content p {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Controls */
+.flashcard-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+button {
+   background:var(--ejo-secondary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--ejo-dark);
+}
+
+#flip-flashcard {
+    background-color: #f7b731;
+}
+
+#flip-flashcard:hover {
+    background-color: #e5a82a;
+}
+
+/* Progress indicator */
+.progress-container {
+    margin-bottom: 20px;
+    color: #666;
+    font-weight: bolder;
+}
+.footer {
+    background: var(--ejo-gradient);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem 2px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    margin-top: 0;
+    z-index: 10;
+}

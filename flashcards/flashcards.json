@@ -1,0 +1,1500 @@
+{
+  "flashcards": [
+    {
+      "id": 1,
+      "kinyarwandaWord": "Muraho!",
+      "meaning": "Hello!",
+      "category": "greetings",
+      "phonetics": "mu-ra-ho",
+      "example": "Muraho! Aba hano? (Hello, there!)"
+    },
+    {
+      "id": 2,
+      "kinyarwandaWord": "Urakoze",
+      "meaning": "Thank you",
+      "category": "courtesy",
+      "phonetics": "u-ra-ko-ze",
+      "example": "Urakoze cyane ku bufasha bwawe. (Thank you for your help)"
+    },
+    {
+      "id": 3,
+      "kinyarwandaWord": "Ijoro ryiza",
+      "meaning": "Good night",
+      "category": "greetings",
+      "phonetics": "i-jo-ro ryi-za",
+      "example": "Murakoze, mugire ijoro ryiza. (Thank you, have a good night)"
+    },
+    {
+      "id": 4,
+      "kinyarwandaWord": "Ndagukunda",
+      "meaning": "I love you",
+      "category": "expressions",
+      "phonetics": "nda-gu-kun-da",
+      "example": "Ndagukunda cyane (I love you so much!)"
+    },
+    {
+      "id": 5,
+      "kinyarwandaWord": "Ndi gukora",
+      "meaning": "I'm working",
+      "category": "activities",
+      "phonetics": "ndi ko-ko-ra",
+      "example": "Ndi gukora umukoro. (I am doing a homework)"
+    },
+    {
+      "id": 6,
+      "kinyarwandaWord": "Ntacyo",
+      "meaning": "Nothing",
+      "category": "basic response",
+      "phonetics": "nta-cyo",
+      "example": "Ntacyo bitwaye. (It is nothing)"
+    },
+    {
+      "id": 7,
+      "kinyarwandaWord": "Oya",
+      "meaning": "No",
+      "category": "basic responses",
+      "phonetics": "o-ya",
+      "example": "Oya, ntabwo nshobora kubikora ubu. (No, I cannot do it now)"
+    },
+    {
+      "id": 8,
+      "kinyarwandaWord": "Umugabo",
+      "meaning": "Man/Husband",
+      "category": "family terms",
+      "phonetics": "u-mu-ga-bo",
+      "example": "Umugabo wanjye agera mu rugo nijoro. (My husband gets home at night)"
+    },
+    {
+      "id": 9,
+      "kinyarwandaWord": "Umujyi",
+      "meaning": "City",
+      "category": "places",
+      "phonetics": "u-mu-jyi",
+      "example": "Ndashaka gusura umujyi wa Kigali. (I want to visit Kigali City)"
+    },
+    {
+      "id": 10,
+      "kinyarwandaWord": "Igitabo",
+      "meaning": "Book",
+      "category": "objects",
+      "phonetics": "i-gi-ta-bo",
+      "example": "Mfite igitabo cyiza cyo gusoma. (I have a good book to read)"
+    },
+    {
+      "id": 11,
+      "kinyarwandaWord": "Tegereza",
+      "meaning": "Wait",
+      "category": "commands",
+      "phonetics": "te-ge-re-za",
+      "example": "Tegereza gato, ndaje mukanya. (Wait, I will be back soon)"
+    },
+    {
+      "id": 12,
+      "kinyarwandaWord": "Ndagusabye",
+      "meaning": "Please",
+      "category": "courtesy",
+      "phonetics": "nda-gu-sa-bye",
+      "example": "Ndagusabye, mbabarira! (I beg, please forgive me)"
+    },
+    {
+      "id": 13,
+      "kinyarwandaWord": "Umuryango",
+      "meaning": "Family",
+      "category": "family terms",
+      "phonetics": "u-mu-ryan-go",
+      "example": "Umuryango wanjye ni mugari. (My family is extended)"
+    },
+    {
+      "id": 14,
+      "kinyarwandaWord": "Inshuti",
+      "meaning": "Friend",
+      "category": "relationships",
+      "phonetics": "in-shu-ti",
+      "example": "Inshuti yanjye irikunda. (My friend is selfish)"
+    },
+    {
+      "id": 15,
+      "kinyarwandaWord": "Ndumva",
+      "meaning": "I understand",
+      "category": "verbs",
+      "phonetics": "ndu-mva",
+      "example": "Ndumva ibyo uvuze mbikunze. (I love what you are saying)"
+    },
+    {
+      "id": 16,
+      "kinyarwandaWord": "Ni byiza",
+      "meaning": "It's good",
+      "category": "expressions",
+      "phonetics": "ni byi-za",
+      "example": "Ni byiza ko tugira ubumwe. (It is good to have unity)"
+    },
+    {
+      "id": 17,
+      "kinyarwandaWord": "Uyu munsi",
+      "meaning": "Today",
+      "category": "time",
+      "phonetics": "u-yu munsi",
+      "example": "Uyu munsi ni mwiza. (Today is a good day!)"
+    },
+    {
+      "id": 18,
+      "kinyarwandaWord": "Imana",
+      "meaning": "God",
+      "category": "spiritual terms",
+      "phonetics": "i-ma-na",
+      "example": "Imana irahari kugirango iturinde amage. (God is here to protect us from misfortune)"
+    },
+    {
+      "id": 19,
+      "kinyarwandaWord": "Ngwino",
+      "meaning": "Come here",
+      "category": "commands",
+      "phonetics": "n-gwi-no",
+      "example": "Ngwino hano tuvugane.(Come here, let’s talk!)"
+    },
+    {
+      "id": 20,
+      "kinyarwandaWord": "Warakoze cyane",
+      "meaning": "Thank you very much",
+      "category": "courtesy",
+      "phonetics": "wa-ra-ko-ze cya-ne",
+      "example": "Warakoze cyane kubw'urukundo rwawe. (Thank you for your love!)"
+    },
+    {
+      "id": 21,
+      "kinyarwandaWord": "Umuhanda",
+      "meaning": "Road/Street",
+      "category": "places",
+      "phonetics": "u-mu-han-da",
+      "example": "Umuhanda mwiza, tuzongera ubutaha. (Safe journey, see you later!)"
+    },
+    {
+      "id": 22,
+      "kinyarwandaWord": "Umugore",
+      "meaning": "Woman/Wife",
+      "category": "family terms",
+      "phonetics": "u-mu-go-re",
+      "example": "Umugore wanjye ni mwiza. (My wife is beautiful)"
+    },
+    {
+      "id": 23,
+      "kinyarwandaWord": "Umugisha",
+      "meaning": "Blessing",
+      "category": "spiritual terms",
+      "phonetics": "u-mu-gi-sha",
+      "example": "Umugisha w’Imana urasumbya byose. (God's blessing surpasses everything)"
+    },
+    {
+      "id": 24,
+      "kinyarwandaWord": "Ni sawa",
+      "meaning": "It's okay",
+      "category": "expressions",
+      "phonetics": "ni sa-wa",
+      "example": "Byose ni sawa.(Everything is okay)"
+    },
+    {
+      "id": 25,
+      "kinyarwandaWord": "Ikinyamakuru",
+      "meaning": "Newspaper",
+      "category": "objects",
+      "phonetics": "i-ki-nya-ma-ku-ru",
+      "example": "Akunda gusoma ikinyamakuru. (He likes reading the newspaper)"
+    },
+    {
+      "id": 26,
+      "kinyarwandaWord": "Nta kibazo",
+      "meaning": "No problem",
+      "category": "expressions",
+      "phonetics": "nta ki-ba-zo",
+      "example": "Nta kibazo mfite.(I don't have a problem)"
+    },
+    {
+      "id": 27,
+      "kinyarwandaWord": "Umwana",
+      "meaning": "Child",
+      "category": "family terms",
+      "phonetics": "u-mwa-na",
+      "example": "Ndi umwana w'Imana. (I am a child of God)"
+    },
+    {
+      "id": 28,
+      "kinyarwandaWord": "Ndabizi",
+      "meaning": "I know",
+      "category": "expressions",
+      "phonetics": "nda-bi-zi",
+      "example": "Ndabizi ko bigoye.(I know that it is complicated)"
+    },
+    {
+      "id": 29,
+      "kinyarwandaWord": "Ikaze",
+      "meaning": "Welcome",
+      "category": "greetings",
+      "phonetics": "i-ka-ze",
+      "example": "Murakaza neza mu gikoni cyacu. (Welcome to our kitchen)"
+    },
+    {
+      "id": 30,
+      "kinyarwandaWord": "Ibyishimo",
+      "meaning": "Happiness",
+      "category": "emotions",
+      "phonetics": "i-byi-shi-mo",
+      "example": "Ibyishimo bituruka ku mutima unyuzwe. (Happines comes from a satisfied heart)"
+    },
+    {
+      "id": 31,
+      "kinyarwandaWord": "Ndicaye",
+      "meaning": "I am sitting",
+      "category": "actions",
+      "phonetics": "ndi-ca-ye",
+      "example": "Ndicaye ngaho mbwira. (I am sitting, then tell me)"
+    },
+    {
+      "id": 32,
+      "kinyarwandaWord": "Ejo hazaza",
+      "meaning": "Tomorrow",
+      "category": "time",
+      "phonetics": "e-jo ha-za-za",
+      "example": "Ejo hazaza tuzagusura. (Tomorrow we will visit you)"
+    },
+    {
+      "id": 33,
+      "kinyarwandaWord": "Urukundo",
+      "meaning": "Love",
+      "category": "emotions",
+      "phonetics": "u-ru-kun-do",
+      "example": "Urukundo rutuma isi izenguruka. (Love makes the world go round)"
+    },
+    {
+      "id": 34,
+      "kinyarwandaWord": "Telefone",
+      "meaning": "Phone",
+      "category": "technology",
+      "phonetics": "te-le-fo-ne",
+      "example": "Naguze telefone ku isoko. (I bought a phone at the market)"
+    },
+    {
+      "id": 35,
+      "kinyarwandaWord": "Komeza",
+      "meaning": "Continue",
+      "category": "commands",
+      "phonetics": "ko-me-za",
+      "example": "Komeza utere imbere. (Continue developing)"
+    },
+    {
+      "id": 36,
+      "kinyarwandaWord": "Turi kumwe",
+      "meaning": "We are together",
+      "category": "expressions",
+      "phonetics": "tu-ri ku-mwe",
+      "example": "Ntugire ubwoba, turi kumwe. (Don't be afraid, we are together)"
+    },
+    {
+      "id": 37,
+      "kinyarwandaWord": "Ndategereje",
+      "meaning": "I am waiting",
+      "category": "verbs",
+      "phonetics": "nda-te-ge-re-je",
+      "example": "Ndategereje, igisubizo cyawe.(I am waiting, for yor your response)"
+    },
+    {
+      "id": 38,
+      "kinyarwandaWord": "Reka tugende",
+      "meaning": "Let's go",
+      "category": "commands",
+      "phonetics": "re-ka tu-gen-de",
+      "example": "Reka tugende, igihe kirageze. (Let's go, the time has come)"
+    },
+    {
+      "id": 39,
+      "kinyarwandaWord": "Ishuri",
+      "meaning": "School",
+      "category": "education",
+      "phonetics": "i-shu-ri",
+      "example": "Ishuri ryacu rirakomeye. (out school is strong)"
+    },
+    {
+      "id": 40,
+      "kinyarwandaWord": "Mwaramutse",
+      "meaning": "Good morning",
+      "category": "greetings",
+      "phonetics": "mwa-ra-mut-se",
+      "example": "Mwaramutse, mwese. (Good morning, everyone!)"
+    },
+    {
+      "id": 41,
+      "kinyarwandaWord": "Ariko",
+      "meaning": "But",
+      "category": "conjunctions",
+      "phonetics": "a-ri-ko",
+      "example": "Ariko ndashaka kurya. (But I want to eat)"
+    },
+    {
+      "id": 42,
+      "kinyarwandaWord": "Ndi kwiga",
+      "meaning": "I am learning",
+      "category": "verbs",
+      "phonetics": "ndi kwi-ga",
+      "example": "Ndi kwiga kuboha.(I am learning to knit)"
+    },
+    {
+      "id": 43,
+      "kinyarwandaWord": "Mbabarira",
+      "meaning": "Forgive me",
+      "category": "courtesy",
+      "phonetics": "mba-ba-ri-ra",
+      "example": "Mbabarira kuba natinze.(forgive me that I was late)"
+    },
+    {
+      "id": 44,
+      "kinyarwandaWord": "Amazi",
+      "meaning": "Water",
+      "category": "basic words",
+      "phonetics": "a-ma-zi",
+      "example": "Ndashaka amazi akonje. (I want cold water)"
+    },
+    {
+      "id": 45,
+      "kinyarwandaWord": "Uraho",
+      "meaning": "How are you",
+      "category": "greetings",
+      "phonetics": "u-ra-ho",
+      "example": "Uraho mama? (How are you mother?)"
+    },
+    {
+      "id": 46,
+      "kinyarwandaWord": "Ibiryo",
+      "meaning": "Food",
+      "category": "basic words",
+      "phonetics": "i-bi-ryo",
+      "example": "Mbega ibiryo biryoshye! (What delicious food!)"
+    },
+    {
+      "id": 47,
+      "kinyarwandaWord": "Nziza",
+      "meaning": "Good",
+      "category": "adjectives",
+      "phonetics": "n-zi-za",
+      "example": "Ifoto yawe ni nziza. (Your photo is good)"
+    },
+    {
+      "id": 48,
+      "kinyarwandaWord": "Inzu",
+      "meaning": "House",
+      "category": "places",
+      "phonetics": "in-zu",
+      "example": "Inzu yanjye ni nini. (My house is big)"
+    },
+    {
+      "id": 49,
+      "kinyarwandaWord": "Kurya",
+      "meaning": "To eat",
+      "category": "verbs",
+      "phonetics": "ku-rya",
+      "example": "Ndashaka kurya imboga. (I want to eat vegetables)"
+    },
+    {
+      "id": 50,
+      "kinyarwandaWord": "Ndashaka",
+      "meaning": "I want",
+      "category": "verbs",
+      "phonetics": "nda-sha-ka",
+      "example": "Ndashaka amakara. (I want charcoal)"
+    },
+    {
+      "id": 51,
+      "kinyarwandaWord": "Kunywa",
+      "meaning": "To drink",
+      "category": "verbs",
+      "phonetics": "ku-nywa",
+      "example": "Ndashaka kunywa amata. (I want to drink milk)"
+    },
+    {
+      "id": 52,
+      "kinyarwandaWord": "Amafaranga",
+      "meaning": "Money",
+      "category": "basic words",
+      "phonetics": "a-ma-fa-ran-ga",
+      "example": "Ayo mafaranga ni menshi. (That's a lot of money)"
+    },
+    {
+      "id": 53,
+      "kinyarwandaWord": "Igihe",
+      "meaning": "Time",
+      "category": "time",
+      "phonetics": "i-gi-he",
+      "example": "Igihe kirageze ngo uhinduke. (It is time for you to change)"
+    },
+    {
+      "id": 54,
+      "kinyarwandaWord": "Murakaza neza",
+      "meaning": "Welcome",
+      "category": "greetings",
+      "phonetics": "mu-ra-ka-za ne-za",
+      "example": "Murakaza neza mu rugo rwacu."
+    },
+    {
+      "id": 55,
+      "kinyarwandaWord": "Kuvuga",
+      "meaning": "To speak",
+      "category": "verbs",
+      "phonetics": "ku-vu-ga",
+      "example": "Ndumva ushaka kuvuga icyo kibazo."
+    },
+    {
+      "id": 56,
+      "kinyarwandaWord": "Mama",
+      "meaning": "Mother",
+      "category": "family terms",
+      "phonetics": "ma-ma",
+      "example": "Mama wanjye ni umuganga."
+    },
+    {
+      "id": 57,
+      "kinyarwandaWord": "Data/papa",
+      "meaning": "Father",
+      "category": "family terms",
+      "phonetics": "da-ta/pa-pa",
+      "example": "Data ni umuyobozi mwiza."
+    },
+    {
+      "id": 58,
+      "kinyarwandaWord": "Ndagukumbuye",
+      "meaning": "I miss you",
+      "category": "expressions",
+      "phonetics": "nda-gu-kum-bu-ye",
+      "example": "Ndagukumbuye cyane."
+    },
+    {
+      "id": 59,
+      "kinyarwandaWord": "Kwandika",
+      "meaning": "To write",
+      "category": "verbs",
+      "phonetics": "kwa-ndi-ka",
+      "example": "Ndashaka kwandika ibaruwa."
+    },
+    {
+      "id": 60,
+      "kinyarwandaWord": "Ibintu",
+      "meaning": "Things",
+      "category": "basic words",
+      "phonetics": "i-bin-tu",
+      "example": "Ibintu byose ntabwo bigenda neza."
+    },
+    {
+      "id": 61,
+      "kinyarwandaWord": "Musaza",
+      "meaning": "Brother",
+      "category": "family terms",
+      "phonetics": "mu-sa-za",
+      "example": "Musaza wanjye ariga mu butaliyani."
+    },
+    {
+      "id": 62,
+      "kinyarwandaWord": "Mushiki",
+      "meaning": "Sister",
+      "category": "family terms",
+      "phonetics": "mu-shi-ki",
+      "example": "Mushiki wanjye akunda kuririmba. (My sisters likes singing)"
+    },
+    {
+      "id": 63,
+      "kinyarwandaWord": "Gusoma",
+      "meaning": "To read",
+      "category": "verbs",
+      "phonetics": "gu-so-ma",
+      "example": "Gusoma ibitabo birafasha cyane. (Reading books, helps a lot)"
+    },
+    {
+      "id": 64,
+      "kinyarwandaWord": "Ndagushaka",
+      "meaning": "I want you",
+      "category": "verbs",
+      "phonetics": "nda-gu-sha-ka",
+      "example": "Ndagushaka kugira ngo tuganire. (I want to have a conversation with you)"
+    },
+    {
+      "id": 65,
+      "kinyarwandaWord": "Vuba",
+      "meaning": "Quickly",
+      "category": "adverbs",
+      "phonetics": "vu-ba",
+      "example": "Rya vuba. (Eat faster)"
+    },
+    {
+      "id": 66,
+      "kinyarwandaWord": "Buhoro",
+      "meaning": "Slowly",
+      "category": "adverbs",
+      "phonetics": "bu-ho-ro",
+      "example": "Nzaza buhoro buhoro. (I will come solowly)"
+    },
+    {
+      "id": 67,
+      "kinyarwandaWord": "Cyane",
+      "meaning": "Very",
+      "category": "adverbs",
+      "phonetics": "cya-ne",
+      "example": "Nkunda inkoko zokeje cyane. (I like grilled chicken so much)"
+    },
+    {
+      "id": 68,
+      "kinyarwandaWord": "Neza",
+      "meaning": "Well",
+      "category": "adverbs",
+      "phonetics": "ne-za",
+      "example": "Wagize neza kwitabira ibirori byacu.(Thank you for attending our party)"
+    },
+    {
+      "id": 69,
+      "kinyarwandaWord": "Kuryama",
+      "meaning": "To sleep",
+      "category": "verbs",
+      "phonetics": "ku-rya-ma",
+      "example": "Ndashaka kuryama hakiri kare uyu munsi. (I want to sleep early today)"
+    },
+    {
+      "id": 70,
+      "kinyarwandaWord": "Akazi",
+      "meaning": "Work/Job",
+      "category": "work",
+      "phonetics": "a-ka-zi",
+      "example": "Wowe ufite akazi keza. (You have a great job)"
+    },
+    {
+      "id": 71,
+      "kinyarwandaWord": "Guhagarara",
+      "meaning": "To stand",
+      "category": "verbs",
+      "phonetics": "gu-ha-ga-ra-ra",
+      "example": "Hagararira aho ugeze. (Stop right there where you are)"
+    },
+    {
+      "id": 72,
+      "kinyarwandaWord": "Ndagusaba",
+      "meaning": "I ask you",
+      "category": "verbs",
+      "phonetics": "nda-gu-sa-ba",
+      "example": "Ndagusaba gushishoza. (I ask you to be careful)"
+    },
+    {
+      "id": 73,
+      "kinyarwandaWord": "Ubu",
+      "meaning": "Now",
+      "category": "time",
+      "phonetics": "u-bu",
+      "example": "Ubu ndi kugenda. (I am walking now)"
+    },
+    {
+      "id": 74,
+      "kinyarwandaWord": "Nimugoroba",
+      "meaning": "Evening",
+      "category": "time",
+      "phonetics": "ni-mu-go-ro-ba",
+      "example": "Nimugoroba turasenga. (We will pray tonight)"
+    },
+    {
+      "id": 75,
+      "kinyarwandaWord": "Kubyina",
+      "meaning": "To dance",
+      "category": "verbs",
+      "phonetics": "ku-byina",
+      "example": "Ndashaka kubyinana nawe. (I want to dance with you)"
+    },
+    {
+      "id": 76,
+      "kinyarwandaWord": "Ndifuza",
+      "meaning": "I wish",
+      "category": "verbs",
+      "phonetics": "ndi-fu-za",
+      "example": "Ndifuza kwiga mu mahanga. (I wish to study abroad)"
+    },
+    {
+      "id": 77,
+      "kinyarwandaWord": "Kuririmba",
+      "meaning": "To sing",
+      "category": "verbs",
+      "phonetics": "ku-ri-rim-ba",
+      "example": "Afite impano yo kuririmba neza. (He/She has a gift of singing)"
+    },
+    {
+      "id": 78,
+      "kinyarwandaWord": "Mugitondo",
+      "meaning": "Morning",
+      "category": "time",
+      "phonetics": "mu-gi-ton-do",
+      "example": "Mugitondo ndakora imyitozo. (I will work out in the morning)"
+    },
+    {
+      "id": 79,
+      "kinyarwandaWord": "Gufasha",
+      "meaning": "To help",
+      "category": "verbs",
+      "phonetics": "gu-fa-sha",
+      "example": "Gufasha abatishoboye ni byiza. (Helping the helpless is good)"
+    },
+    {
+      "id": 80,
+      "kinyarwandaWord": "Ndagukeneye",
+      "meaning": "I need you",
+      "category": "expressions",
+      "phonetics": "nda-gu-ke-nye",
+      "example": "Ndagukeneye mu buzima bwanjye. (I need you in my life)"
+    },
+    {
+      "id": 81,
+      "kinyarwandaWord": "Gutanga",
+      "meaning": "To give",
+      "category": "verbs",
+      "phonetics": "gu-tan-ga",
+      "example": "Ndashaka gutanga impano. (I want to give a gift)"
+    },
+    {
+      "id": 82,
+      "kinyarwandaWord": "Ijoro",
+      "meaning": "Night",
+      "category": "time",
+      "phonetics": "i-jo-ro",
+      "example": "Ijoro ryose ni rirerire. (The whole night is long)"
+    },
+    {
+      "id": 83,
+     "kinyarwandaWord": "Gusiba",
+      "meaning": "to delete",
+      "category": "verbs",
+      "phonetics": "gu-si-ba",
+      "example": "Gusiba amagambo. (Erasing the words)"
+},
+   {
+      "id": 84,
+      "kinyarwandaWord": "Kwakira",
+      "meaning": "To receive",
+      "category": "verbs",
+      "phonetics": "kwa-ki-ra",
+      "example": "Nkunda kwakira abashyitsi. (I like receiving visitors)"
+    },
+    {
+      "id": 85,
+      "kinyarwandaWord": "Ndaje",
+      "meaning": "I’m coming",
+      "category": "verbs",
+      "phonetics": "nda-je",
+      "example": "Ndaje nonaha. (I am coming now)"
+    },
+    {
+      "id": 86,
+      "kinyarwandaWord": "Gusigara",
+      "meaning": "To stay",
+      "category": "verbs",
+      "phonetics": "gu-si-ga-ra",
+      "example": "Nshobora gusigara hano. (I might stay here)"
+    },
+    {
+      "id": 87,
+      "kinyarwandaWord": "Gukina",
+      "meaning": "To play",
+      "category": "verbs",
+      "phonetics": "gu-ki-na",
+      "example": "Abana bakunda gukina imikino y’ubufindo. (Children like to play guessing games)"
+    },
+    {
+      "id": 88,
+      "kinyarwandaWord": "Nanone",
+      "meaning": "Again",
+      "category": "adverbs",
+      "phonetics": "na-no-ne",
+      "example": "Tuzabikora nanone ku munsi w'ejo. (We will do it again tommorrow)"
+    },
+    {
+      "id": 89,
+      "kinyarwandaWord": "Ndagiye",
+      "meaning": "I’m going",
+      "category": "verbs",
+      "phonetics": "nda-gi-ye",
+      "example": "Ndagiye mu rugo ubu. (I am gong home right now)"
+    },
+    {
+      "id": 90,
+      "kinyarwandaWord": "Kugura",
+      "meaning": "To buy",
+      "category": "verbs",
+      "phonetics": "ku-gu-ra",
+      "example": "Ndashaka kugura ibyo kurya. (I wan tto buy food)"
+    },
+    {
+      "id": 91,
+      "kinyarwandaWord": "Kugurisha",
+      "meaning": "To sell",
+      "category": "verbs",
+      "phonetics": "ku-gu-ri-sha",
+      "example": "Afite ibintu byo kugurisha. (She/ he has things to sell)"
+    },
+    {
+      "id": 92,
+      "kinyarwandaWord": "Kwibagirwa",
+      "meaning": "To forget",
+      "category": "verbs",
+      "phonetics": "kwi-ba-gi-rwa",
+      "example": "Sinshobora kwibagirwa izina ryawe. (I cannot forget your name)"
+    },
+    {
+      "id": 93,
+      "kinyarwandaWord": "Ndibuka",
+      "meaning": "I remember",
+      "category": "verbs",
+      "phonetics": "ndi-bu-ka",
+      "example": "Ndibuka amazina yanyu mwese. (I remember all your names)"
+    },
+    {
+      "id": 94,
+      "kinyarwandaWord": "Gutekereza",
+      "meaning": "To think",
+      "category": "verbs",
+      "phonetics": "gu-te-ke-re-za",
+      "example": "Gutekereza neza birakenewe. (Good thinking is necessary)"
+    },
+    {
+      "id": 95,
+      "kinyarwandaWord": "Kumenya",
+      "meaning": "To know",
+      "category": "verbs",
+      "phonetics": "ku-me-nya",
+      "example": "Ndashaka kumenya byinshi bikwerekeyeho. (I want to know more about you)"
+    },
+    {
+      "id": 96,
+      "kinyarwandaWord": "Kugenda",
+      "meaning": "To walk/go",
+      "category": "verbs",
+      "phonetics": "ku-gen-da",
+      "example": "Ndashaka kugenda imvura ihise. (I want to go when it stops raining)"
+    },
+    {
+      "id": 97,
+      "kinyarwandaWord": "Ndiruka",
+      "meaning": "I run",
+      "category": "verbs",
+      "phonetics": "ndi-ru-ka",
+      "example": "Ndiruka buri gitondo. (I run every morning )"
+    },
+    {
+      "id": 98,
+      "kinyarwandaWord": "Kwicara",
+      "meaning": "To sit",
+      "category": "verbs",
+      "phonetics": "kwi-ca-ra",
+      "example": "Kwicara ku ntebe ni byiza."
+    },
+    {
+      "id": 99,
+      "kinyarwandaWord": "Tuzabonana ejo",
+      "meaning": "See you tomorrow",
+      "category": "greetings",
+      "phonetics": "tu-za-bo-na-na e-jo",
+      "example": "Murabeho, tuzabonana ejo. (Bye, bye, see you tomorrow!)"
+    },
+    {
+      "id": 100,
+      "kinyarwandaWord": "Kuwa mbere",
+      "meaning": "Monday",
+      "category": "days_of_week",
+      "phonetics": "ku-wa mbe-re",
+      "example": "Kuwa mbere nzabaza umuyobozi. (On Monday, I will ask the leader)"
+    },
+    {
+      "id": 101,
+      "kinyarwandaWord": "Kuwa kabiri",
+      "meaning": "Tuesday",
+      "category": "days_of_week",
+      "phonetics": "ku-wa ka-bi-ri",
+      "example": "Kuwa kabiri, nkorera mu rugo. (On Tuesdays, I work from home )"
+    },
+    {
+      "id": 102,
+      "kinyarwandaWord": "Kuwa gatatu",
+      "meaning": "Wednesday",
+      "category": "days_of_week",
+      "phonetics": "ku-wa ga-ta-tu",
+      "example": "Kuwa gatatu tuzagira inama. (On Wednesday, we will have a meeting)"
+    },
+    {
+      "id": 103,
+      "kinyarwandaWord": "Kuwa kane",
+      "meaning": "Thursday",
+      "category": "days_of_week",
+      "phonetics": "ku-wa ka-ne",
+      "example": "Kuwa kane ni umunsi w'imyidagaduro. (Thursdays are for leisure)"
+    },
+    {
+      "id": 104,
+      "kinyarwandaWord": "Kuwa gatanu",
+      "meaning": "Friday",
+      "category": "days_of_week",
+      "phonetics": "ku-wa ga-ta-nu",
+      "example": "Kuwa gatanu, tuzagira ikiruhuko. (On Friday, we will have a day off)"
+    },
+    {
+      "id": 105,
+      "kinyarwandaWord": "Kuwa gatandatu",
+      "meaning": "Saturday",
+      "category": "days_of_week",
+      "phonetics": "ku-wa ga-ta-nda-tu",
+      "example": "Kuwa gatandatu, mfite isabukuru y’amavuko. (I have a birthday on Saturday)"
+    },
+    {
+      "id": 106,
+      "kinyarwandaWord": "Ku cyumweru",
+      "meaning": "Sunday",
+      "category": "days_of_week",
+      "phonetics": "ku cyum-we",
+      "example": "Tuza kurira hamwe ku cyumweru. (We eat together on Sunday)"
+    },
+    {
+      "id": 107,
+      "kinyarwandaWord": "Umutwe",
+      "meaning": "Head",
+      "category": "body parts",
+      "phonetics": "u-mu-twe",
+      "example": "Ndababara umutwe. (My head hurts)"
+    },
+    {
+      "id": 108,
+      "kinyarwandaWord": "Ukuboko",
+      "meaning": "Arm",
+      "category": "body parts",
+      "phonetics": "u-ku-bo-ko",
+      "example": "Yakomerekeje ukuboko kwe . (He/ she hurt his/her arm)"
+    },
+    {
+      "id": 109,
+      "kinyarwandaWord": "Ukuguru",
+      "meaning": "Leg",
+      "category": "body parts",
+      "phonetics": "u-ku-gu-ru",
+      "example": "Ukuguru kwari kubabaye. (The leg was hurt)"
+    },
+    {
+      "id": 110,
+      "kinyarwandaWord": "Ijisho",
+      "meaning": "Eye",
+      "category": "body parts",
+      "phonetics": "i-ji-sho",
+      "example": "Ijisho ry'ibumoso rifite ibibazo. (The left eye has a problem)"
+    },
+    {
+      "id": 111,
+      "kinyarwandaWord": "Izuru",
+      "meaning": "Nose",
+      "category": "body parts",
+      "phonetics": "i-zu-ru",
+      "example": "Izuru ryanjye rifite ibibazo. (My nose has a problem)"
+    },
+    {
+      "id": 112,
+      "kinyarwandaWord": "Umunwa",
+      "meaning": "Mouth",
+      "category": "body parts",
+      "phonetics": "u-mu-nwa",
+      "example": "Umunwa w’ihene. (A goat’s mouth)"
+    },
+    {
+      "id": 113,
+      "kinyarwandaWord": "Ugutwi",
+      "meaning": "Ear",
+      "category": "body parts",
+      "phonetics": "u-gu-twi",
+      "example": "Ugutwi kumva neza ni ingenzi. (An ear that hears well is necessary)"
+    },
+    {
+      "id": 114,
+      "kinyarwandaWord": "Inda",
+      "meaning": "Stomach",
+      "category": "body parts",
+      "phonetics": "in-da",
+      "example": "Inda nini y’uruyuki. (a big bee belly)"
+    },
+    {
+      "id": 115,
+      "kinyarwandaWord": "Umutima",
+      "meaning": "Heart",
+      "category": "body parts",
+      "phonetics": "u-mu-ti-ma",
+      "example": "Umutima wanjye urakomeye. (My heart is strong)"
+    },
+    {
+      "id": 116,
+      "kinyarwandaWord": "Umugongo",
+      "meaning": "Back",
+      "category": "body parts",
+      "phonetics": "u-mu-gon-go",
+      "example": "Umugongo mugari. (A wide back)"
+    },
+    {
+      "id": 117,
+      "kinyarwandaWord": "Urutoki",
+      "meaning": "Finger",
+      "category": "body parts",
+      "phonetics": "u-ru-to-ki",
+      "example": "Urutoki rw’ubururu. (A blue finger)"
+    },
+    {
+      "id": 118,
+      "kinyarwandaWord": "Ikiganza",
+      "meaning": "Hand",
+      "category": "body parts",
+      "phonetics": "i-ki-gan-za",
+      "example": "Ikiganza cya zahabu.(A golden hand)"
+    },
+    {
+      "id": 119,
+      "kinyarwandaWord": "Ukwaha",
+      "meaning": "Armpit",
+      "category": "body parts",
+      "phonetics": "u-kwa-ha",
+      "example": "Ukwaha kwawe kuranuka.(Your armpit stinks)"
+    },
+    {
+      "id": 120,
+      "kinyarwandaWord": "Akananwa",
+      "meaning": "Chin",
+      "category": "body parts",
+      "phonetics": "a-ka-nan-wa",
+      "example": "Akananwa gasongoye. (A long chin)"
+    },
+    {
+      "id": 121,
+      "kinyarwandaWord": "Amatama",
+      "meaning": "Cheeks",
+      "category": "body parts",
+      "phonetics": "a-ma-ta-ma",
+      "example": "Amatama abyibushye. (Big cheeks)"
+    },
+    {
+      "id": 122,
+      "kinyarwandaWord": "Ijosi",
+      "meaning": "Neck",
+      "category": "body parts",
+      "phonetics": "i-jo-si",
+      "example": "Ijosi ryanjye ni rirerire. (My neck is long)"
+    },
+    {
+      "id": 123,
+      "kinyarwandaWord": "Igituza",
+      "meaning": "Chest",
+      "category": "body parts",
+      "phonetics": "i-gi-tu-za",
+      "example": "Ryama mu gituza cyanjye. (Lay on my chest)"
+    },
+    {
+      "id": 124,
+      "kinyarwandaWord": "Urutugu",
+      "meaning": "Shoulder",
+      "category": "body parts",
+      "phonetics": "u-ru-tu-gu",
+      "example": "Uzaririra ku rutugu rwanjye. (You will cry on my shoulder)"
+    },
+    {
+      "id": 125,
+      "kinyarwandaWord": "Ivi",
+      "meaning": "Knee",
+      "category": "body parts",
+      "phonetics": "i-vi",
+      "example": "Ivi ry’inzovu. (An elephant’s knee)"
+    },
+    {
+      "id": 126,
+      "kinyarwandaWord": "Ikirenge",
+      "meaning": "Foot",
+      "category": "body parts",
+      "phonetics": "i-ki-ren-ge",
+      "example": "Ikirenge cyawe kirakuruta. (Your foot is bigger than you)"
+    },
+    {
+      "id": 127,
+      "kinyarwandaWord": "Inkokora",
+      "meaning": "Elbow",
+      "category": "body parts",
+      "phonetics": "in-ko-ko-ra",
+      "example": "Inkokora nk’izihene. (Elbow like a goat’s)"
+    },
+    {
+      "id": 128,
+      "kinyarwandaWord": "Uruhu",
+      "meaning": "Skin",
+      "category": "body parts",
+      "phonetics": "u-ru-hu",
+      "example": "Uruhu rwanjye ruroroshye. (My skin is soft)"
+    },
+    {
+      "id": 129,
+      "kinyarwandaWord": "Igufwa",
+      "meaning": "Bone",
+      "category": "body parts",
+      "phonetics": "i-gu-fwa",
+      "example": "Igufwa ry’isazi.(A fly’s bone)"
+    },
+    {
+      "id": 130,
+      "kinyarwandaWord": "Amaraso",
+      "meaning": "Blood",
+      "category": "body parts",
+      "phonetics": "a-ma-ra-so",
+      "example": "Amaraso y’umukara. (Dark blood)"
+    },
+    {
+      "id": 131,
+      "kinyarwandaWord": "Umutsi",
+      "meaning": "Vein",
+      "category": "body parts",
+      "phonetics": "u-mu-tsi",
+      "example": "Umutsi w’ukuguru. (The leg vein)"
+    },
+    {
+      "id": 132,
+      "kinyarwandaWord": "Ururimi",
+      "meaning": "Tongue",
+      "category": "body parts",
+      "phonetics": "u-ru-ri-mi",
+      "example": "Afite ururimi ku mavi. (She/ he has a tongue on the knees)"
+    },
+    {
+      "id": 133,
+      "kinyarwandaWord": "Iryinyo",
+      "meaning": "Tooth",
+      "category": "body parts",
+      "phonetics": "i-ryi-nyo",
+      "example": "Mfite iryinyo rya zahabu.(I have a golden tooth)"
+    },
+    {
+      "id": 134,
+      "kinyarwandaWord": "Umusatsi",
+      "meaning": "Hair",
+      "category": "body parts",
+      "phonetics": "u-mu-sa-tsi",
+      "example": "Umusatsi we uroroshye. (Her hair is soft)"
+    },
+    {
+      "id": 135,
+      "kinyarwandaWord": "Imbavu",
+      "meaning": "ribs",
+      "category": "body parts",
+      "phonetics": "e-mbah-voo",
+      "example": "Nkunda imbavu zawe. (I like your ribs)"
+    },
+    {
+      "id": 136,
+      "kinyarwandaWord": "Urwara",
+      "meaning": "Nail",
+      "category": "body parts",
+      "phonetics": "oo-roo-wa-rah",
+      "example": "Urwara rumwe. (One nail)"
+    },
+    {
+      "id": 137,
+      "kinyarwandaWord": "Intare",
+      "meaning": "Lion",
+      "category": "animals",
+      "phonetics": "ee-n-ta-ray",
+      "example": "Intare y’umweru. (a white lion )"
+    },
+    {
+      "id": 138,
+      "kinyarwandaWord": "Inzovu",
+      "meaning": "Elephant",
+      "category": "animals",
+      "phonetics": "in-zo-vu",
+      "example": "Inzovu y’umutku. (A red lion)"
+    },
+    {
+      "id": 139,
+      "kinyarwandaWord": "Ingwe",
+      "meaning": "Leopard",
+      "category": "animals",
+      "phonetics": "in-gwe",
+      "example": "Ingwe yihuta cyane. (a leopard is fast)"
+    },
+    {
+      "id": 140,
+      "kinyarwandaWord": "Imbogo",
+      "meaning": "Buffalo",
+      "category": "animals",
+      "phonetics": "im-bo-go",
+      "example": "Imbogo irarishya mu ishyamba. ( A buffalo grazes in the forest)"
+    },
+    {
+      "id": 141,
+      "kinyarwandaWord": "Impyisi",
+      "meaning": "Hyena",
+      "category": "animals",
+      "phonetics": "im-pyi-si",
+      "example": "Impyisi zihiga nijoro. (Hyenas hunt at night)"
+    },
+    {
+      "id": 142,
+      "kinyarwandaWord": "Imbwa",
+      "meaning": "Dog",
+      "category": "animals",
+      "phonetics": "im-bwa",
+      "example": "Imbwa Ziramoka. (Dogs bark)"
+    },
+    {
+      "id": 143,
+      "kinyarwandaWord": "Injangwe",
+      "meaning": "Cat",
+      "category": "animals",
+      "phonetics": "in-jan-gwe",
+      "example": "Injangwe y'umukara. (A black cat)"
+    },
+    {
+      "id": 144,
+      "kinyarwandaWord": "Ihene",
+      "meaning": "Goat",
+      "category": "animals",
+      "phonetics": "i-he-ne",
+      "example": "Ihene zirisha ubwatsi. (Goats grazing grass)"
+    },
+    {
+      "id": 145,
+      "kinyarwandaWord": "Intama",
+      "meaning": "Sheep",
+      "category": "animals",
+      "phonetics": "in-ta-ma",
+      "example": "Intama ni nyinshi mu kiraro. (Sheep are many in the pen)"
+    },
+    {
+      "id": 146,
+      "kinyarwandaWord": "Inka",
+      "meaning": "Cow",
+      "category": "animals",
+      "phonetics": "in-ka",
+      "example": "Inka zacu zirabyibushye. (Our cows are fat)"
+    },
+    {
+      "id": 147,
+      "kinyarwandaWord": "Inkoko",
+      "meaning": "Chicken",
+      "category": "animals",
+      "phonetics": "in-ko-ko",
+      "example": "Inkoko zitera amagi. (Checkens lay eggs)"
+    },
+    {
+      "id": 148,
+      "kinyarwandaWord": "Ingurube",
+      "meaning": "Pig",
+      "category": "animals",
+      "phonetics": "in-gu-ru-be",
+      "example": "Ingurube zanyuze mu gisenge."
+    },
+    {
+      "id": 149,
+      "kinyarwandaWord": "Inkende",
+      "meaning": "Monkey",
+      "category": "animals",
+      "phonetics": "in-ken-de",
+      "example": "Inkende irashakira imbuto."
+    },
+    {
+      "id": 150,
+      "kinyarwandaWord": "Inzoka",
+      "meaning": "Snake",
+      "category": "animals",
+      "phonetics": "in-zo-ka",
+      "example": "Inzoka isohotse mu gisenge."
+    },
+    {
+      "id": 151,
+      "kinyarwandaWord": "Inyoni",
+      "meaning": "Bird",
+      "category": "animals",
+      "phonetics": "in-yo-ni",
+      "example": "Inyoni iririmba mu gitondo."
+    },
+    {
+      "id": 152,
+      "kinyarwandaWord": "Inuma",
+      "meaning": "Dove",
+      "category": "animals",
+      "phonetics": "i-nu-ma",
+      "example": "Inuma itumye amahoro mu muryango."
+    },
+    {
+      "id": 153,
+      "kinyarwandaWord": "Igisiga",
+      "meaning": "Eagle",
+      "category": "animals",
+      "phonetics": "i-gi-si-ga",
+      "example": "Igisiga cyagaragaye ku musozi."
+    },
+    {
+      "id": 154,
+      "kinyarwandaWord": "Ifi",
+      "meaning": "Fish",
+      "category": "animals",
+      "phonetics": "i-fi",
+      "example": "Ifi irashaka amazi asukuye."
+    },
+    {
+      "id": 155,
+      "kinyarwandaWord": "Ingona",
+      "meaning": "Crocodile",
+      "category": "animals",
+      "phonetics": "in-go-na",
+      "example": "Ingona yaramuritse mu mazi."
+    },
+    {
+      "id": 156,
+      "kinyarwandaWord": "Imvubu",
+      "meaning": "Hippopotamus",
+      "category": "animals",
+      "phonetics": "im-vu-bu",
+      "example": "Imvubu irashaka kujya mu ruzi."
+    },
+    {
+      "id": 157,
+      "kinyarwandaWord": "Twiga",
+      "meaning": "Giraffe",
+      "category": "animals",
+      "phonetics": "twi-ga",
+      "example": "Twiga iri gufata ibiti binini."
+    },
+    {
+      "id": 158,
+      "kinyarwandaWord": "Imparage",
+      "meaning": "Zebra",
+      "category": "animals",
+      "phonetics": "im-pa-ra-ge",
+      "example": "Imparage zirahura mu murima."
+    },
+    {
+      "id": 159,
+      "kinyarwandaWord": "Urukwavu",
+      "meaning": "Rabbit",
+      "category": "animals",
+      "phonetics": "u-ru-kwa-vu",
+      "example": "Urukwavu rwacu ruri ku rugero rwiza."
+    },
+    {
+      "id": 160,
+      "kinyarwandaWord": "Imbeba",
+      "meaning": "Rat",
+      "category": "animals",
+      "phonetics": "im-be-ba",
+      "example": "Imbeba iri mu nzu."
+    },
+    {
+      "id": 161,
+      "kinyarwandaWord": "Ingagi",
+      "meaning": "Gorilla",
+      "category": "animals",
+      "phonetics": "in-ga-gi",
+      "example": "Ingagi yacu yabonye izuba mu ishyamba."
+    },
+    {
+      "id": 162,
+      "kinyarwandaWord": "Umuceri",
+      "meaning": "Rice",
+      "category": "food",
+      "phonetics": "u-mu-ce-ri",
+      "example": "Umuceri uri ku isahani."
+    },
+    {
+      "id": 163,
+      "kinyarwandaWord": "Ibishyimbo",
+      "meaning": "Beans",
+      "category": "food",
+      "phonetics": "i-bi-shyim-bo",
+      "example": "Ibishyimbo bikura mu murima wacu."
+    },
+    {
+      "id": 164,
+      "kinyarwandaWord": "Ibigori",
+      "meaning": "Corn/Maize",
+      "category": "food",
+      "phonetics": "i-bi-go-ri",
+      "example": "Ibigori biri ku murima."
+    },
+    {
+      "id": 165,
+      "kinyarwandaWord": "Ubugali",
+      "meaning": "Cassava paste",
+      "category": "food",
+      "phonetics": "u-bu-ga-li",
+      "example": "Ubugali ni igikoni cyacu."
+    },
+    {
+      "id": 166,
+      "kinyarwandaWord": "Imboga",
+      "meaning": "Vegetables",
+      "category": "food",
+      "phonetics": "im-bo-ga",
+      "example": "Imboga zidahinduwe ni nziza."
+    },
+    {
+      "id": 167,
+      "kinyarwandaWord": "Ibirayi",
+      "meaning": "Potatoes",
+      "category": "food",
+      "phonetics": "i-bi-ra-yi",
+      "example": "Ibirayi byatetse mu gikoni."
+    },
+    {
+      "id": 168,
+      "kinyarwandaWord": "Ibitoki",
+      "meaning": "Plantains/Cooking bananas",
+      "category": "food",
+      "phonetics": "i-bi-to-ki",
+      "example": "Ibitoki biri ku isoko."
+    },
+    {
+      "id": 169,
+      "kinyarwandaWord": "Ibijumba",
+      "meaning": "Sweet potatoes",
+      "category": "food",
+      "phonetics": "i-bi-jum-ba",
+      "example": "Ibijumba bishyushye ni byiza cyane."
+    },
+    {
+      "id": 170,
+      "kinyarwandaWord": "Inyama",
+      "meaning": "Meat",
+      "category": "food",
+      "phonetics": "i-nya-ma",
+      "example": "Inyama ziri ku isahani yanjye."
+    },
+    {
+      "id": 171,
+      "kinyarwandaWord": "Amafi",
+      "meaning": "Fish (as food)",
+      "category": "food",
+      "phonetics": "a-ma-fi",
+      "example": "Amafi ari ku isoko ni meza."
+    },
+    {
+      "id": 172,
+      "kinyarwandaWord": "Amata",
+      "meaning": "Milk",
+      "category": "food",
+      "phonetics": "a-ma-ta",
+      "example": "Amata akonje aryoheye gushira inyota."
+    },
+    {
+      "id": 173,
+      "kinyarwandaWord": "Umunyu",
+      "meaning": "Salt",
+      "category": "food",
+      "phonetics": "u-mu-nyu",
+      "example": "Umunyu ucagase mu mvange iryoshye."
+    },
+    {
+      "id": 174,
+      "kinyarwandaWord": "Isukari",
+      "meaning": "Sugar",
+      "category": "food",
+      "phonetics": "i-su-ka-ri",
+      "example": "Isukari irimo gukorwa mu nganda."
+    },
+    {
+      "id": 175,
+      "kinyarwandaWord": "Umugati",
+      "meaning": "Bread",
+      "category": "food",
+      "phonetics": "u-mu-ga-ti",
+      "example": "Umugati uraboneka mu iguriro."
+    },
+    {
+      "id": 176,
+      "kinyarwandaWord": "Keke",
+      "meaning": "Cake",
+      "category": "food",
+      "phonetics": "ke-ke",
+      "example": "Keke niyo dusangira ku isabukuru."
+    },
+    {
+      "id": 177,
+      "kinyarwandaWord": "Ikawa",
+      "meaning": "Coffee",
+      "category": "food",
+      "phonetics": "i-ka-wa",
+      "example": "Ikawa ivuguruza ibitotsi mu gitondo."
+    },
+    {
+      "id": 178,
+      "kinyarwandaWord": "Icyayi",
+      "meaning": "Tea",
+      "category": "food",
+      "phonetics": "i-cya-yi",
+      "example": "Icyayi kinyobwa mu gitondo. (Tea is drunk in the morning)"
+    },
+    {
+      "id": 179,
+      "kinyarwandaWord": "Imbuto",
+      "meaning": "Fruit",
+      "category": "food",
+      "phonetics": "im-bu-to",
+      "example": "Jya ura imbuto buri munsi.(You should eat fruits every day)"
+    },
+    {
+      "id": 180,
+      "kinyarwandaWord": "Igi",
+      "meaning": "Egg",
+      "category": "food",
+      "phonetics": "i-gi",
+      "example": "Igi ryatogoshejwe.(Hard-boiled egg)"
+    },
+    {
+      "id": 181,
+      "kinyarwandaWord": "Ubunyobwa",
+      "meaning": "Peanuts",
+      "category": "food",
+      "phonetics": "u-bu-nyo-bwa",
+      "example": "Ubunyobwa bukaranze. (Roasted peanuts)"
+    },
+    {
+      "id": 182,
+      "kinyarwandaWord": "Amasaka",
+      "meaning": "Sorghum",
+      "category": "food",
+      "phonetics": "a-ma-sa-ka",
+      "example": "Inyoni zikunda amasaka.(Birds like sorghum)"
+    },
+    {
+      "id": 183,
+      "kinyarwandaWord": "Igikoma",
+      "meaning": "Porridge",
+      "category": "food",
+      "phonetics": "i-gi-ko-ma",
+      "example": "Igikoma kinyobwa mu gitondo. (Porridge is drunk in the morning)"
+    },
+    {
+      "id": 184,
+      "kinyarwandaWord": "Ubuki",
+      "meaning": "Honey",
+      "category": "food",
+      "phonetics": "u-bu-ki",
+      "example": "Ubuki buturuka mu nzuki. (Honey comes from bees)"
+    },
+    {
+      "id": 185,
+      "kinyarwandaWord": "Amavuta",
+      "meaning": "Oil",
+      "category": "food",
+      "phonetics": "a-ma-vu-ta",
+      "example": "Amavuta akomoka ku bihwagari. (Sunflower oil)"
+    },
+    {
+      "id": 186,
+      "kinyarwandaWord": "Urusenda",
+      "meaning": "Pepper",
+      "category": "food",
+      "phonetics": "oo-roo-say-n-dah",
+      "example": "Urusenda rwongera uburyohe mu biryo. (Pepper adds flavor in food)"
+    },
+    {
+      "id": 187,
+      "kinyarwandaWord": "uburo",
+      "meaning": "Millet",
+      "category": "food",
+      "phonetics": "oo-boo-raw",
+      "example": "Uburo bugira ifu inoze. (Millet flour is very fine)"       
+    }
+  ]
+}
