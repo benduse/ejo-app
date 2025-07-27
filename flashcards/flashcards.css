@@ -27,17 +27,15 @@ body {
 }
 
 .logo-container {
-  top: 20px;
+ top:0px;
   left: 0px;
-  z-index: 0;
   background: var(--ejo-gradient);
     color: white;
     text-align: left;
-    padding: 1.5rem 1rem 2px;
     position: fixed;
     width: 100vw;
     margin-top: 0;
-    z-index: 10;
+    
 }
 
 .logo{
@@ -45,6 +43,7 @@ body {
     width: auto;
     margin: 0 auto;
     text-align: left; 
+    position: relative;
 }
 .main-container {
     max-width: 800px;
