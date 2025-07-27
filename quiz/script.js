@@ -49,7 +49,7 @@ class QuizApp {
 
     async loadQuestions() {
         const language = this.languageSelect.value;
-        let file = language === 'french' ? 'questions/french.json' : language === 'spanish'? 'questions/spanish.json' : 'questions/ikinyarwanda.json';
+        let file = language === 'french' ? '/questions/french.json' : language === 'spanish'? '/questions/spanish.json' : '/questions/ikinyarwanda.json';
         try {
             const response = await fetch(file);
             const data = await response.json();
