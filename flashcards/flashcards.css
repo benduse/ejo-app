@@ -26,11 +26,31 @@ body {
     padding: 20px;
 }
 
-.container {
+.logo-container {
+  top: 20px;
+  left: 0px;
+  z-index: 0;
+  background: var(--ejo-gradient);
+    color: white;
+    text-align: left;
+    padding: 1.5rem 1rem 2px;
+    position: fixed;
+    width: 100vw;
+    margin-top: 0;
+    z-index: 10;
+}
+
+.logo{
+    height: 100px;
+    width: auto;
+    margin: 0 auto;
+    text-align: left; 
+}
+.main-container {
     max-width: 800px;
     width: 100%;
     text-align: center;
-    background-color: var(--background);
+    background-color: var(--ejo-light);
 }
 
 h2 {
@@ -38,7 +58,7 @@ h2 {
     margin-bottom: 30px;
 }
 
-/* Flashcard styling */
+/* Flashcard styling 
 #flashcard-container {
     border: 1px solid #ddd;
     padding: 20px;
@@ -46,9 +66,9 @@ h2 {
     height: 300px;
     margin: 20px auto;
     text-align: center;
-    background-color: var(--ejo-light);
+    background-color: var(--ejo-gradient);
     border-radius: 10px;
-}
+}*/
 
 .flashcard-scene {
     width: 500px;
@@ -60,10 +80,12 @@ h2 {
 .flashcard {
     width: 500px;
     height: 300px;
+    border-radius:10px;
     position: relative;
     transition: transform 0.6s;
     transform-style: preserve-3d;
     cursor: pointer;
+    background: var(--ejo-gradient); 
 }
 
 .flashcard.flipped {
@@ -85,14 +107,12 @@ h2 {
 }
 
 .card-front {
-    background-color: #4a69bd;
     color: white;
     font-size: 28px;
     font-weight: bold;
 }
 
 .card-back {
-    background-color: #4a69bd;
     color: white;
     transform: rotateY(180deg);
     font-size: 24px;
@@ -125,18 +145,18 @@ h2 {
 }
 
 button {
-    background-color: #4a69bd;
+   background:var(--ejo-secondary);
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #3a5199;
+    background-color: var(--ejo-dark);
 }
 
 #flip-flashcard {
@@ -152,4 +172,16 @@ button:hover {
     margin-bottom: 20px;
     color: #666;
     font-weight: bolder;
+}
+.footer {
+    background: var(--ejo-gradient);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem 2px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    margin-top: 0;
+    z-index: 10;
 }
