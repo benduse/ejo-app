@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinyarwanda Flashcards - Learn Rwandan Language</title>
     <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="flashcards/flashcards.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -23,7 +24,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <a href="flashcards/flashcards.html" class="call-to-action-button">Start Learning</a>
+        <a href="#flashcards-section" class="call-to-action-button">Start Learning</a>
     </header>
 
     <!-- Hero Section -->
@@ -32,14 +33,38 @@
             <h1>Learn Kinyarwanda with Interactive Flashcards</h1>
             <p>Master the Rwandan language with our simple yet powerful flashcard system. Perfect for beginners and intermediate learners.</p>
             <div class="hero-buttons">
-                <a href="flashcards/flashcards.html" class="primary-button">Start Learning Now</a>
+                <a href="#flashcards-section" class="primary-button">Start Learning Now</a>
                 <a href="#features" class="secondary-button">Learn More</a>
             </div>
         </div>
-        <div class="hero-image">
-            <img src="images/hero-image.png" alt="Kinyarwanda Flashcards Preview">
-        </div>
     </section>
+<!-- flashcards-->
+        <section id="flashcards-section">
+  <div id="flashcard-container">
+    <div class="flashcard-scene">
+      <div class="flashcard" id="flashcard">
+        <div class="card-face card-front">
+          <div class="card-content">
+            <div id="front-content"></div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="card-content">
+            <div id="back-content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flashcard-controls">
+    <div class="progress-container">
+      <span id="current-card">1</span> out of <span id="total-cards">10</span>
+    </div>
+    <button id="prev-flashcard" type="button">Previous</button>
+    <button id="flip-flashcard" type="button">Flip</button>
+    <button id="next-flashcard" type="button">Next</button>
+  </div>
+</section>
 
     <!-- Features Section -->
     <section id="features" class="features">
@@ -76,7 +101,7 @@
     <section class="call-to-action">
         <h2>Ready to Start Learning Kinyarwanda?</h2>
         <p>Join thousands of learners discovering the beauty of this East African language.</p>
-        <a href="flashcards/flashcards.html" class="primary-button">Start Learning for Free</a>
+        <a href="#flashcards-section" class="primary-button">Start Learning for Free</a>
     </section>
 
     <!-- Footer -->
@@ -90,7 +115,7 @@
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="quiz/quiz.html">Quiz App</a></li>
-                    <li><a href="flashcards/flashcards.html">Flashcards</a></li>
+                    <li><a href="#flashcards-section">Flashcards</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#about">About</a></li>
                 </ul>
@@ -111,5 +136,6 @@
     </footer>
 
     <script src="landing.js"></script>
+    <script src="flashcards/flashcards.js"></script>
 </body>
 </html>

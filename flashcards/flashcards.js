@@ -1,96 +1,77 @@
 document.addEventListener("DOMContentLoaded", () => {
-	let flashcards = [];
-	let currentCardIndex = 0;
+    let flashcards = [];
+    let currentCardIndex = 0;
 
-	// DOM elements
-	const flashcardElement = document.getElementById("flashcard");
-	const frontContent = document.getElementById("front-content");
-	const backContent = document.getElementById("back-content");
-	const prevButton = document.getElementById("prev-flashcard");
-	const nextButton = document.getElementById("next-flashcard");
-	const flipButton = document.getElementById("flip-flashcard");
-	const currentCardElement = document.getElementById("current-card");
-	const totalCardsElement = document.getElementById("total-cards");
+    // DOM elements
+    const flashcardElement = document.getElementById("flashcard");
+    const frontContent = document.getElementById("front-content");
+    const backContent = document.getElementById("back-content");
+    const prevButton = document.getElementById("prev-flashcard");
+    const nextButton = document.getElementById("next-flashcard");
+    const flipButton = document.getElementById("flip-flashcard");
+    const currentCardElement = document.getElementById("current-card");
+    const totalCardsElement = document.getElementById("total-cards");
 
-	// Fetch flashcards from backend API
-	fetch("/api/flashcards")
-		.then((response) => response.json())
-		.then((data) => {
-			flashcards = data;
-			totalCardsElement.textContent = flashcards.length;
-			updateCard();
-		})
-		.catch((error) => {
-			console.error("Error loading flashcards from API:", error);
-			flashcardElement.querySelector(
-				".card-front .card-content p"
-			).textContent = "Failed to load flashcards. Please try again later.";
-		});
+    // ✅ Fetch flashcards from JSON file
+    async function loadFlashcards() {
+        try {
+            const response = await fetch("../flashcards.json");
+            if (!response.ok) throw new Error("Network error");
+            
+            flashcards = await response.json();
+            totalCardsElement.textContent = flashcards.length;
+            updateCard();
+        } catch (error) {
+            console.error("Error loading flashcards:", error);
+            frontContent.innerHTML = `<p class="error">Failed to load flashcards. Please try again later.</p>`;
+        }
+    }
 
-	// Function to update card content
-	function updateCard() {
-		if (flashcards.length === 0) return;
+    // ✅ Update card content
+    function updateCard() {
+        if (flashcards.length === 0) return;
 
-		const card = flashcards[currentCardIndex];
+        const card = flashcards[currentCardIndex];
+        frontContent.innerHTML = `
+            <p class="word">${card.kinyarwandaWord}</p>
+            <p class="phonetics">${card.phonetics || ""}</p>
+            <p class="meaning">${card.meaning}</p>
+        `;
+        backContent.innerHTML = `
+            <p class="example">${card.example || "No example available"}</p>
+        `;
 
-		// Update front side with Kinyarwanda word, meaning, and phonetics
-		frontContent.innerHTML = `
-			<div>
-				<p class="word">${card.kinyarwandaWord}</p>
-				<p class="phonetics">${card.phonetics || ""}</p>
-				<p class="meaning">${card.meaning}</p>
-				
-			</div>
-		`;
+        currentCardElement.textContent = currentCardIndex + 1;
+        flashcardElement.classList.remove("flipped"); // reset flip
+    }
 
-		// Update back side with phonetics and example
-		backContent.innerHTML = `
-			<div>
-				<p class="example">${card.example || "No example available"}</p>
-			</div>
-		`;
+    // ✅ Navigation helpers
+    function showPrevCard() {
+        if (currentCardIndex > 0) {
+            currentCardIndex--;
+            updateCard();
+        }
+    }
 
-		// Update card counter
-		currentCardElement.textContent = currentCardIndex + 1;
+    function showNextCard() {
+        if (currentCardIndex < flashcards.length - 1) {
+            currentCardIndex++;
+            updateCard();
+        }
+    }
 
-		// Reset card to front face when changing cards
-		flashcardElement.classList.remove("flipped");
-	}
+    // ✅ Event listeners
+    prevButton.addEventListener("click", showPrevCard);
+    nextButton.addEventListener("click", showNextCard);
+    flipButton.addEventListener("click", () => flashcardElement.classList.toggle("flipped"));
+    flashcardElement.addEventListener("click", () => flashcardElement.classList.toggle("flipped"));
 
-	// Previous button functionality
-	prevButton.addEventListener("click", () => {
-		if (currentCardIndex > 0) {
-			currentCardIndex--;
-			updateCard();
-		}
-	});
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") showPrevCard();
+        else if (e.key === "ArrowRight") showNextCard();
+        else if (e.key === " " || e.key === "Enter") flashcardElement.classList.toggle("flipped");
+    });
 
-	// Flip button functionality
-	flipButton.addEventListener("click", () => {
-		flashcardElement.classList.toggle("flipped");
-	});
-
-	// Click on card to flip (additional convenience)
-	flashcardElement.addEventListener("click", () => {
-		flashcardElement.classList.toggle("flipped");
-	});
-
-	// Next button functionality
-	nextButton.addEventListener("click", () => {
-		if (currentCardIndex < flashcards.length - 1) {
-			currentCardIndex++;
-			updateCard();
-		}
-	});
-
-	// Keyboard navigation
-	document.addEventListener("keydown", (e) => {
-		if (e.key === "ArrowLeft") {
-			prevButton.click();
-		} else if (e.key === "ArrowRight") {
-			nextButton.click();
-		} else if (e.key === " " || e.key === "Enter") {
-			flipButton.click();
-		}
-	});
+    // ✅ Initialize
+    loadFlashcards();
 });
