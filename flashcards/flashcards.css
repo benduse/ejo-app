@@ -14,42 +14,6 @@
     --black: light-dark(#1a1a1a, #fff);
     --background: light-dark(var(--ejo-light), var(--ejo-dark));
 }
-/* Basic styling */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--ejo-gradient);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 10px;
-    padding: 20px;
-}
-
-.logo-container {
- top:0px;
-  left: 0px;
-  background: var(--ejo-gradient);
-    color: white;
-    text-align: left;
-    position: fixed;
-    width: 100vw;
-    margin-top: 0;
-    
-}
-
-.logo{
-    height: 100px;
-    width: auto;
-    margin: 0 auto;
-    text-align: left; 
-    position: relative;
-}
-.main-container {
-    display: flex;
-    width: 500px;
-    text-align: center;
-}
 
 h2 {
     color: #333;
@@ -59,10 +23,14 @@ h2 {
 .flashcard-scene {
     width: 500px;
     height: 300px;
-    perspective: 1000px;
     margin: 0 auto 40px;
+    
 }
-
+.flashcards-section{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
 .flashcard {
     width: 500px;
     height: 300px;
@@ -158,18 +126,6 @@ button:hover {
     margin-bottom: 20px;
     color: #666;
     font-weight: bolder;
-}
-.footer {
-    background: var(--ejo-gradient);
-    color: white;
-    text-align: center;
-    padding: 1.5rem 1rem 2px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100vw;
-    margin-top: 0;
-    z-index: 10;
 }
 @media (max-width: 600px) {
     .flashcard-scene, .flashcard {
