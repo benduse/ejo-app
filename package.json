@@ -1,5 +1,4 @@
 {
-  "dependencies": {},
   "name": "ejo-app",
   "version": "1.0.0",
   "description": "A modern web-based app for learning Kinyarwanda, French, and Spanish through quizzes and flashcards. The app features instant feedback, scoring, and a beautiful, responsive UI. No backend required—all data is local.",
@@ -19,5 +18,6 @@
   "bugs": {
     "url": "https://github.com/benduse/ejo-app/issues"
   },
-  "homepage": "https://github.com/benduse/ejo-app#landing.js"
+  "homepage": "https://github.com/benduse/ejo-app#landing.js",
+  "main": "landing.js"
 }

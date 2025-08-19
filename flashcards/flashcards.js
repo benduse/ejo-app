@@ -13,18 +13,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalCardsElement = document.getElementById("total-cards");
 
     // ✅ Fetch flashcards from JSON file
-    async function loadFlashcards() {
-        try {
-            const response = await fetch("../questions/flashcards.json");
-            if (!response.ok) throw new Error("Network error");
-            
-            flashcards = await response.json();
-            totalCardsElement.textContent = flashcards.length;
-            updateCard();
-        } catch (error) {
-            console.error("Error loading flashcards:", error);
-            frontContent.innerHTML = `<p class="error">Failed to load flashcards. Please try again later.</p>`;
-        }
+    function loadFlashcards() {
+        fetch("./flashcards/flashcards.json")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network error");
+                }
+                return response.json();
+            })
+            .then(data => {
+                flashcards = data;
+                totalCardsElement.textContent = flashcards.length;
+                updateCard();
+            })
+            .catch(error => {
+                console.error("Error loading flashcards:", error);
+                frontContent.innerHTML = `<p class="error">Failed to load flashcards. Please try again later.</p>`;
+            });
     }
 
     // ✅ Update card content
@@ -43,6 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         currentCardElement.textContent = currentCardIndex + 1;
         flashcardElement.classList.remove("flipped"); // reset flip
+        updateNavButtons();
+    }
+
+    // ✅ Update navigation button states
+    function updateNavButtons() {
+        prevButton.disabled = currentCardIndex === 0;
+        nextButton.disabled = currentCardIndex === flashcards.length - 1;
     }
 
     // ✅ Navigation helpers
@@ -60,16 +72,30 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    function flipCard() {
+        flashcardElement.classList.toggle("flipped");
+    }
+
     // ✅ Event listeners
     prevButton.addEventListener("click", showPrevCard);
     nextButton.addEventListener("click", showNextCard);
-    flipButton.addEventListener("click", () => flashcardElement.classList.toggle("flipped"));
-    flashcardElement.addEventListener("click", () => flashcardElement.classList.toggle("flipped"));
+    flipButton.addEventListener("click", flipCard);
+    flashcardElement.addEventListener("click", flipCard);
 
     document.addEventListener("keydown", (e) => {
-        if (e.key === "ArrowLeft") showPrevCard();
-        else if (e.key === "ArrowRight") showNextCard();
-        else if (e.key === " " || e.key === "Enter") flashcardElement.classList.toggle("flipped");
+        // Use a switch statement for better readability
+        switch (e.key) {
+            case "ArrowLeft":
+                showPrevCard();
+                break;
+            case "ArrowRight":
+                showNextCard();
+                break;
+            case " ": // Space bar
+            case "Enter":
+                flipCard();
+                break;
+        }
     });
 
     // ✅ Initialize
