@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ✅ Fetch flashcards from JSON file
     async function loadFlashcards() {
         try {
-            const response = await fetch("../flashcards.json");
+            const response = await fetch("../questions/flashcards.json");
             if (!response.ok) throw new Error("Network error");
             
             flashcards = await response.json();

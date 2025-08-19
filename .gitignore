@@ -1,0 +1,29 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnpm-store/
+
+# macOS
+.DS_Store
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build artifacts
+dist/
+build/
+.parcel-cache/
+
+# Local environment variables
+.env
+.env.local
+
+# Temporary files
+*.tmp
+*.log
+commit_message.txt # Our temporary commit message file

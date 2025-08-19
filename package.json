@@ -1,14 +1,11 @@
 {
-  "dependencies": {
-    "express": "^5.1.0",
-    "pg": "^8.16.3"
-  },
+  "dependencies": {},
   "name": "ejo-app",
   "version": "1.0.0",
   "description": "A modern web-based app for learning Kinyarwanda, French, and Spanish through quizzes and flashcards. The app features instant feedback, scoring, and a beautiful, responsive UI. No backend required—all data is local.",
-  "main": "landing.js",
   "devDependencies": {},
   "scripts": {
+    "start": "http-server .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

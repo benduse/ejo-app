@@ -1,6 +1,6 @@
 # Polyglot Boost App
 
-A modern web-based app for learning Kinyarwanda, French, and Spanish through quizzes and flashcards. The app features instant feedback, scoring, and a beautiful, responsive UI. No backend required—all data is local.
+A modern web-based app for learning Kinyarwanda, French, and Spanish through quizzes and flashcards. The app features instant feedback, scoring, and a beautiful, responsive UI. All data is stored locally in JSON and browser storage, **requiring no backend server**.
 
 ## Features
 
@@ -11,43 +11,46 @@ A modern web-based app for learning Kinyarwanda, French, and Spanish through qui
 - **Login & Account:** Simple local login/registration to track progress
 - **Progress Tracking:** Score, progress bar, reviewed flashcard count
 - **Modern UI:** Sidebar navigation, attractive cards, mobile-friendly
-- **No Backend:** All data stored locally in JSON and browser storage
 
 ## How to Use
 
-1. **Download or Clone the Repository**
+To set up and run the project locally, follow these steps:
 
-   - Place all files and folders in the same directory.
-
-2. **Open the App**
-
-   - Open `index.html` in your web browser (double-click or right-click and choose "Open with browser").
-
-3. **Login or Register**
-
-   - Create an account or log in to track your learning progress.
-
-4. **Select a Language & Mode**
-
-   - Choose Kinyarwanda, French, or Spanish. Switch between Quiz and Flashcards using the sidebar.
-
-5. **Learn & Track Progress**
-   - Answer quiz questions, review flashcards, and see your score and review count update in real time.
+1.  **Clone the Repository:**
+    ```bash
+    git clone https://github.com/benduse/ejo-app.git
+    cd ejo-app
+    ```
+2.  **Install Dependencies (if any, for development tools):**
+    ```bash
+    npm install
+    ```
+3.  **Install a Local Web Server (if you don't have one):**
+    This project is a static site and requires a local web server to function correctly (e.g., to fetch JSON data). If you don't have `http-server` installed globally, you can install it:
+    ```bash
+    npm install -g http-server
+    ```
+4.  **Start the Application:**
+    ```bash
+    npm start
+    ```
+    This will start a local server (usually on `http://localhost:8080`).
+5.  **Open in Browser:**
+    Open your web browser and navigate to the address provided by the `npm start` command (e.g., `http://localhost:8080`).
 
 ## Folder Structure
 
 ```
-polyglot-boost-app/
+ejo-app/
 ├── index.html
 ├── landing.css
 ├── landing.js
 ├── README.md
-├── data/
+├── package.json
+├── flashcards.json  <-- Moved to root
 ├── flashcards/
 │   ├── flashcards.css
-│   ├── flashcards.html
-│   ├── flashcards.js
-│   └── flashcards.json
+│   └── flashcards.js
 ├── images/
 ├── questions/
 │   ├── french.json
@@ -60,8 +63,6 @@ polyglot-boost-app/
 │   ├── script.js
 │   ├── site.webmanifest
 │   └── styles.css
-├── survey/
-│   └── survey.html
 ```
 
 ## Customization
