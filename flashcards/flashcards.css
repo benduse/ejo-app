@@ -179,8 +179,9 @@ button:hover {
   }
   
   .flashcard-controls {
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;
+    padding-top: 25px;
+    gap: 10px;
     align-items: center;
   }
   
@@ -298,7 +299,7 @@ button:hover {
   
   .flashcard-controls > div:not(.progress-container) {
     flex-direction: column;
-    gap: 8px;
+    gap: 2px;
   }
   
   #flip-flashcard {
