@@ -23,14 +23,14 @@ h2 {
 .flashcard-scene {
     width: 500px;
     height: 300px;
-    margin: 0 auto 40px;
-    
+    margin: 0 auto 40px; 
 }
 .flashcards-section{
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;}
+    align-items: center;
+}
 .flashcard {
     width: 500px;
     height: 300px;
@@ -56,20 +56,20 @@ h2 {
     align-items: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 20px;
+    padding: min(20px, 5%);
     box-sizing: border-box;
 }
 
 .card-front {
     color: white;
-    font-size: 28px;
+    font-size: clamp(1.2rem, 5vw, 2.5rem);
     font-weight: bold;
 }
 
 .card-back {
     color: white;
     transform: rotateY(180deg);
-    font-size: 24px;
+    font-size: clamp(1.2rem, 5vw, 2.5rem);
 }
 
 /* Card content */
@@ -81,13 +81,13 @@ h2 {
 .card-content h3 {
     margin-top: 0;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: clamp(1.2rem, 5vw, 2.5rem);
     opacity: 0.7;
 }
 
 .card-content p {
     margin: 0;
-    font-size: 28px;
+    font-size: clamp(1.2rem, 5vw, 2.5rem);
 }
 
 /* Controls */
@@ -127,9 +127,322 @@ button:hover {
     color: #666;
     font-weight: bolder;
 }
-@media (max-width: 600px) {
-    .flashcard-scene, .flashcard {
-        width: 90vw;
-        height: 60vw;
+
+/* Mobile devices (600px and down) */
+@media only screen and (max-width: 600px) {
+  #flashcards-section {
+    padding: 20px 15px;
+    margin: 30px 0;
+    background: var(--background);
+    border-radius: 16px;
+  }
+  
+  #flashcard-container {
+    margin-bottom: 25px;
+  }
+  
+  .flashcard-scene {
+    height: 250px;
+    margin: 0 auto;
+  }
+  
+  .flashcard {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-radius: 12px;
+  }
+  
+  .card-face {
+    border-radius: 12px;
+  }
+  
+  .card-front {
+    background: var(--ejo-gradient);
+    color: var(--white);
+  }
+  
+  .card-back {
+    background: linear-gradient(135deg, var(--ejo-accent) 0%, var(--ejo-primary) 100%);
+    color: var(--ejo-dark);
+  }
+  
+  .card-content {
+    padding: 20px 15px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  #front-content,
+  #back-content {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  .flashcard-controls {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .progress-container {
+    order: -1;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black);
+    background: var(--white);
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid var(--ejo-secondary);
+  }
+  
+  .flashcard-controls > div:not(.progress-container) {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  #prev-flashcard,
+  #next-flashcard,
+  #flip-flashcard {
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 25px;
+    font-weight: 500;
+    min-height: 44px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    border: none;
+    cursor: pointer;
+  }
+  
+  #flip-flashcard {
+    background: var(--ejo-primary);
+    color: var(--white);
+    flex: 1;
+    max-width: 200px;
+  }
+  
+  #flip-flashcard:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  #prev-flashcard,
+  #next-flashcard {
+    background: var(--ejo-secondary);
+    color: var(--white);
+    min-width: 80px;
+  }
+  
+  #prev-flashcard:hover,
+  #next-flashcard:hover {
+    background: var(--ejo-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+}
+
+/* Small phones (480px and down) */
+@media only screen and (max-width: 480px) {
+  #flashcards-section {
+    padding: 15px 10px;
+    margin: 20px 5px;
+  }
+  
+  .flashcard-scene {
+    height: 220px;
+  }
+  
+  .card-content {
+    padding: 15px 12px;
+    font-size: 13px;
+  }
+  
+  .progress-container {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+  
+  #prev-flashcard,
+  #next-flashcard,
+  #flip-flashcard {
+    padding: 10px 16px;
+    font-size: 13px;
+    min-height: 42px;
+  }
+  
+  #prev-flashcard,
+  #next-flashcard {
+    min-width: 70px;
+  }
+}
+
+/* Extra small phones (360px and down) */
+@media only screen and (max-width: 360px) {
+  #flashcards-section {
+    padding: 12px 8px;
+    margin: 15px 3px;
+  }
+  
+  .flashcard-scene {
+    height: 200px;
+  }
+  
+  .card-content {
+    padding: 12px 10px;
+    font-size: 12px;
+  }
+  
+  .flashcard-controls > div:not(.progress-container) {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  #flip-flashcard {
+    order: -1;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 8px;
+  }
+  
+  #prev-flashcard,
+  #next-flashcard {
+    flex: 1;
+    min-width: auto;
+  }
+  
+  .progress-container {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+/* Landscape orientation for mobile devices */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+  #flashcards-section {
+    padding: 10px 15px;
+    margin: 10px 0;
+  }
+  
+  .flashcard-scene {
+    height: 160px;
+  }
+  
+  .card-content {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .flashcard-controls {
+    margin-top: 8px;
+    gap: 8px;
+  }
+  
+  .flashcard-controls > div:not(.progress-container) {
+    flex-direction: row;
+  }
+  
+  #flip-flashcard {
+    order: 0;
+    flex: 0 0 auto;
+  }
+}
+
+/* High DPI displays optimization */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 192dpi) {
+  .card-face {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  }
+  
+  .flashcard-controls button {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .flashcard {
+    cursor: default;
+  }
+  
+  .card-face {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  
+  #prev-flashcard,
+  #next-flashcard,
+  #flip-flashcard {
+    min-height: 44px; /* iOS recommended touch target size */
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  #prev-flashcard:active,
+  #next-flashcard:active,
+  #flip-flashcard:active {
+    transform: scale(0.95);
+    background: var(--button-hover);
+  }
+}
+
+/* Light mode specific adjustments */
+@media (prefers-color-scheme: light) and (max-width: 600px) {
+  #flashcards-section {
+    background: var(--ejo-light);
+    color: var(--ejo-dark);
+  }
+  
+  .progress-container {
+    background: var(--white);
+    color: var(--ejo-dark);
+    border: 1px solid var(--ejo-secondary);
+  }
+  
+  .card-front {
+    background: var(--ejo-gradient);
+    color: var(--white);
+  }
+  
+  .card-back {
+    background: linear-gradient(135deg, var(--ejo-accent) 0%, var(--ejo-secondary) 100%);
+    color: var(--ejo-dark);
+  }
+}
+
+/* Accessibility improvements for mobile */
+@media only screen and (max-width: 600px) {
+  .flashcard:focus-visible {
+    outline: 3px solid var(--ejo-primary);
+    outline-offset: 2px;
+  }
+  
+  .flashcard-controls button:focus-visible {
+    outline: 2px solid var(--ejo-secondary);
+    outline-offset: 2px;
+  }
+  
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .progress-container {
+      border: 2px solid var(--ejo-primary);
     }
+    
+    .card-face {
+      border: 2px solid var(--ejo-dark);
+    }
+    
+    #prev-flashcard,
+    #next-flashcard,
+    #flip-flashcard {
+      border: 1px solid var(--ejo-dark);
+    }
+  }
 }

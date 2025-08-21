@@ -44,7 +44,7 @@ header {
     padding: 20px 5%;
     background-color: var(--white);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 1000;
 }
@@ -327,6 +327,7 @@ footer {
     
     .nav-links {
         margin: 15px 0;
+        flex-direction: column;;
     }
     
     .hero {
