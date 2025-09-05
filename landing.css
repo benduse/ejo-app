@@ -88,7 +88,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 80px 5%;
-    background-color: var(--white);
+    background-color: var(--light-color);
 }
 
 .hero-content {
@@ -204,7 +204,7 @@ header {
 /* About Section */
 .about {
     padding: 80px 5%;
-    background-color: var(--white);
+    background-color: var(--light-color);
 }
 
 .about-content {

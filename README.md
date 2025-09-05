@@ -4,7 +4,7 @@ A modern web-based app for learning Kinyarwanda, French, and Spanish through qui
 
 ## Features
 
-- **Language Support:** Kinyarwanda, French, Spanish
+- **Language Support:** Kinyarwanda
 - **Quiz Mode:** Multiple-choice questions, progressive difficulty, color badges
 - **Flashcards:** Interactive flashcards with flip, navigation, and review tracking
 - **Leaderboard:** Top 10 high scores, confetti celebration for achievements
@@ -51,6 +51,7 @@ ejo-app/
 ├── flashcards/
 │   ├── flashcards.css
 │   └── flashcards.js
+
 ├── images/
 ├── questions/
 │   ├── french.json
