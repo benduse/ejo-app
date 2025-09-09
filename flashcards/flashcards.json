@@ -429,7 +429,7 @@
       "meaning": "Welcome",
       "category": "greetings",
       "phonetics": "mu-ra-ka-za ne-za",
-      "example": "Murakaza neza mu rugo rwacu."
+      "example": "Murakaza neza mu rugo rwacu. (Welcome to our home)"
     },
     {
       "id": 55,
@@ -437,7 +437,7 @@
       "meaning": "To speak",
       "category": "verbs",
       "phonetics": "ku-vu-ga",
-      "example": "Ndumva ushaka kuvuga icyo kibazo."
+      "example": "Iga kuvuga neza. (Learn to speak clearly)"
     },
     {
       "id": 56,
@@ -445,7 +445,7 @@
       "meaning": "Mother",
       "category": "family terms",
       "phonetics": "ma-ma",
-      "example": "Mama wanjye ni umuganga."
+      "example": "Mama wanjye ni umuganga. (My mom is nurse)"
     },
     {
       "id": 57,
@@ -453,7 +453,7 @@
       "meaning": "Father",
       "category": "family terms",
       "phonetics": "da-ta/pa-pa",
-      "example": "Data ni umuyobozi mwiza."
+      "example": "Data ni umuyobozi mwiza.(Dad is a good leader)"
     },
     {
       "id": 58,
@@ -461,7 +461,7 @@
       "meaning": "I miss you",
       "category": "expressions",
       "phonetics": "nda-gu-kum-bu-ye",
-      "example": "Ndagukumbuye cyane."
+      "example": "Ndagukumbuye cyane. (I miss you so much)"
     },
     {
       "id": 59,
@@ -469,7 +469,7 @@
       "meaning": "To write",
       "category": "verbs",
       "phonetics": "kwa-ndi-ka",
-      "example": "Ndashaka kwandika ibaruwa."
+      "example": "Ndashaka kwandika ibaruwa. (I want to write a letter)"
     },
     {
       "id": 60,
@@ -477,7 +477,7 @@
       "meaning": "Things",
       "category": "basic words",
       "phonetics": "i-bin-tu",
-      "example": "Ibintu byose ntabwo bigenda neza."
+      "example": "Ibintu byose ntabwo bigenda neza. (Everything does not go well)"
     },
     {
       "id": 61,
@@ -485,7 +485,7 @@
       "meaning": "Brother",
       "category": "family terms",
       "phonetics": "mu-sa-za",
-      "example": "Musaza wanjye ariga mu butaliyani."
+      "example": "Musaza wanjye ariga mu butaliyani. (My brother studies in Italy)"
     },
     {
       "id": 62,
@@ -692,7 +692,7 @@
       "kinyarwandaWord": "Gukina",
       "meaning": "To play",
       "category": "verbs",
-      "phonetics": "gu-ki-na",
+      "phonetics": "goo-ki-nah",
       "example": "Abana bakunda gukina imikino y’ubufindo. (Children like to play guessing games)"
     },
     {
@@ -700,7 +700,7 @@
       "kinyarwandaWord": "Nanone",
       "meaning": "Again",
       "category": "adverbs",
-      "phonetics": "na-no-ne",
+      "phonetics": "nah-no-nay",
       "example": "Tuzabikora nanone ku munsi w'ejo. (We will do it again tommorrow)"
     },
     {
@@ -716,7 +716,7 @@
       "kinyarwandaWord": "Kugura",
       "meaning": "To buy",
       "category": "verbs",
-      "phonetics": "ku-gu-ra",
+      "phonetics": "koo-goo-rah",
       "example": "Ndashaka kugura ibyo kurya. (I wan tto buy food)"
     },
     {
@@ -781,7 +781,7 @@
       "meaning": "To sit",
       "category": "verbs",
       "phonetics": "kwi-ca-ra",
-      "example": "Kwicara ku ntebe ni byiza."
+      "example": "Kwicara nabi bivuna umugongo. (Sitting bad hurts the back)"
     },
     {
       "id": 99,
