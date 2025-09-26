@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Word Recommendations</title>
+    <link rel="stylesheet" href="suggestions.css">
+</head>
+<body>
+    <h1>Flashcard Words Recommendations</h1>
+    <form id="recommendation-form">
+        <label for="word">Word:</label>
+        <input type="text" id="word" name="word" maxlength="10"><br><br>
+        <span id="char-counter" style="color: gray;">0/10 characters</span><br><br>
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+            <option value="categoryspaceholder">Select a category</option>
+            <option value="noun">Noun</option>
+            <option value="verb">Verb</option>
+            <option value="adjective">Adjective</option>
+            <option value="adverb">Adverb</option>
+            <option value="other">Sentence</option>
+        </select><br><br>
+        <label for="sentence">Example Sentence:</label>
+        <textarea id="sentence" name="sentence" maxlength="50"></textarea>
+        <span id="char-counter" style="color: gray;">0/50 characters</span><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+
+    <script src="suggestions.js"></script>
+</body>
+</html>

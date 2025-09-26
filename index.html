@@ -29,6 +29,7 @@
                 <li><a href="#features">Features</a></li>
                 <!-- <li><a href="#flashcards-section">Portfolio</a></li></li> -->
                 <li><a href="#about">About</a></li>
+                <li><a href="/wordSuggestionsForm/suggestions.html">Suggestions</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -71,6 +72,12 @@
     <button id="prev-flashcard" type="button">Previous</button>
     <button id="flip-flashcard" type="button">Flip</button>
     <button id="next-flashcard" type="button">Next</button>
+    <button id="skip-flashcard">Skip</button>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search flashcards...">
+        <div id="search-results" class="search-results"></div>
+    </div>
+    <input type="number" id="goto-card" min="1" placeholder="Go to card #">
   </div>
 </section>
 
@@ -122,7 +129,7 @@
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="quiz/quiz.html">Quiz App</a></li>
+                    <li><a href="SpanishApp/index.html">Quiz App</a></li>
                     <li><a href="#flashcards-section">Flashcards</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#about">About</a></li>

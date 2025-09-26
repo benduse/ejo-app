@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevButton = document.getElementById("prev-flashcard");
     const nextButton = document.getElementById("next-flashcard");
     const flipButton = document.getElementById("flip-flashcard");
+    const skipButton = document.getElementById("skip-flashcard");
+    const searchInput = document.getElementById("search-input");
+    const searchResults = document.getElementById("search-results");
+    const gotoCardInput = document.getElementById("goto-card");
     const currentCardElement = document.getElementById("current-card");
     const totalCardsElement = document.getElementById("total-cards");
 
@@ -95,6 +99,111 @@ document.addEventListener("DOMContentLoaded", () => {
             case "Enter":
                 flipCard();
                 break;
+        }
+    });
+
+    // Skip to a random unviewed card
+    function skipCard() {
+        if (flashcards.length <= 1) return;
+        const currentIndex = currentCardIndex;
+        do {
+            currentCardIndex = Math.floor(Math.random() * flashcards.length);
+        } while (currentCardIndex === currentIndex);
+        updateCard();
+    }
+
+    // Search functionality
+    function searchFlashcards(query) {
+        if (!query.trim()) {
+            searchResults.innerHTML = '';
+            searchResults.style.display = 'none';
+            return;
+        }
+
+        const results = flashcards.filter((card, index) => {
+            const searchString = `${card.kinyarwandaWord} ${card.meaning} ${card.phonetics || ''} ${card.example || ''}`.toLowerCase();
+            return searchString.includes(query.toLowerCase());
+        });
+
+        displaySearchResults(results);
+    }
+
+    function displaySearchResults(results) {
+        if (results.length === 0) {
+            searchResults.innerHTML = '<p>No matches found</p>';
+        } else {
+            searchResults.innerHTML = results.map((card, index) => {
+                const cardIndex = flashcards.findIndex(f => f === card);
+                return `
+                    <div class="search-result" data-index="${cardIndex}">
+                        <strong>${card.kinyarwandaWord}</strong> - ${card.meaning}
+                    </div>
+                `;
+            }).join('');
+        }
+        searchResults.style.display = 'block';
+    }
+
+    function goToCard(number) {
+        const index = number - 1;
+        if (index >= 0 && index < flashcards.length) {
+            currentCardIndex = index;
+            updateCard();
+            return true;
+        }
+        return false;
+    }
+
+    // Additional event listeners
+    skipButton.addEventListener("click", skipCard);
+
+    searchInput.addEventListener("input", (e) => {
+        searchFlashcards(e.target.value);
+    });
+
+    searchResults.addEventListener("click", (e) => {
+        const resultElement = e.target.closest('.search-result');
+        if (resultElement) {
+            const index = parseInt(resultElement.dataset.index);
+            currentCardIndex = index;
+            updateCard();
+            searchInput.value = '';
+            searchResults.style.display = 'none';
+        }
+    });
+
+    gotoCardInput.addEventListener("change", (e) => {
+        const number = parseInt(e.target.value);
+        if (goToCard(number)) {
+            e.target.value = ''; // Clear the input
+        } else {
+            alert('Please enter a valid card number');
+        }
+    });
+
+    document.addEventListener("keydown", (e) => {
+        // Use a switch statement for better readability
+        switch (e.key) {
+            case "ArrowLeft":
+                showPrevCard();
+                break;
+            case "ArrowRight":
+                showNextCard();
+                break;
+            case " ": // Space bar
+            case "Enter":
+                flipCard();
+                break;
+            case "s": // Skip with 's' key
+                skipCard();
+                break;
+        }
+    });
+
+    // Click outside search results to close them
+    document.addEventListener("click", (e) => {
+        if (!searchResults.contains(e.target) && e.target !== searchInput) {
+            searchResults.style.display = 'none';
         }
     });
 
