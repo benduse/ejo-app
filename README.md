@@ -37,7 +37,7 @@ A modern web-based app for learning Kinyarwanda, French, and Spanish through qui
 ## Folder Structure
 
 ```
-polyglot-boost-app/
+ejo-app/
 ├── index.html
 ├── landing.css
 ├── landing.js
