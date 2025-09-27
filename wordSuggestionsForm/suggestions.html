@@ -15,16 +15,16 @@
 
     <!-- Word input -->
     <label for="word">Word:</label>
-    <input type="text" id="word" name="word" maxlength="10" required>
+    <input type="text" id="word" name="word" maxlength="50" required>
     <br>
-    <small id="word-counter" style="color: gray;">0/10 characters</small>
+    <small id="word-counter" style="color: gray;">0/50 characters</small>
     <br><br>
 
     <!-- Category dropdown -->
     <label for="category">Category:</label>
     <select id="category" name="category" required>
       <option value="" disabled selected>Select a category</option>
-      <option value="noun">Noun</option>
+      <option value="greetings">greetings</option>
       <option value="verb">Verb</option>
       <option value="adjective">Adjective</option>
       <option value="adverb">Adverb</option>
@@ -33,7 +33,8 @@
     <br><br>
 
     <!-- Sentence input -->
-    <label for="sentence">Example Sentence:</label><br>
+    <label for="sentence">Example Sentence:</label>
+    <br>
     <textarea id="sentence" name="sentence" maxlength="50" required></textarea>
     <br>
     <small id="sentence-counter" style="color: gray;">0/50 characters</small>
