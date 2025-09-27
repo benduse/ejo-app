@@ -15,39 +15,39 @@
 </header>
 <body>
 
-    <div class="main-container">
+    <!-- flashcards-->
         <section id="flashcards-section">
-            <h2>Kinyarwanda Flash Cards</h2>
-            
-            <div id="flashcard-container">
-                <div class="flashcard-scene">
-                    <div class="flashcard" id="flashcard">
-                        <div class="card-face card-front">
-                            <div class="card-content">
-              
-                                <p id="front-content"></p>
-                            </div>
-                        </div>
-                        <div class="card-face card-back">
-                            <div class="card-content">
-                              
-                                <p id="back-content"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="flashcard-controls">
-                <div class="progress-container">
-                    <span id="current-card">1</span> / <span id="total-cards">10</span>
-                </div>
-                <button id="prev-flashcard" type="button">Previous</button>
-                <button id="flip-flashcard" type="button">Flip</button>
-                <button id="next-flashcard" type="button">Next</button>
-            </div>
-        </section>
+  <div id="flashcard-container">
+    <div class="flashcard-scene">
+      <div class="flashcard" id="flashcard">
+        <div class="card-face card-front">
+          <div class="card-content">
+            <div id="front-content"></div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="card-content">
+            <div id="back-content"></div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="flashcard-controls">
+    <div class="progress-container">
+      <span id="current-card">1</span> out of <span id="total-cards">10</span>
+    </div>
+    <button id="prev-flashcard" type="button">Previous</button>
+    <button id="flip-flashcard" type="button">Flip</button>
+    <button id="next-flashcard" type="button">Next</button>
+    <button id="skip-flashcard">Skip</button>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search flashcards...">
+        <div id="search-results" class="search-results"></div>
+    </div>
+    <input type="number" id="goto-card" min="1" placeholder="Go to card #" >
+  </div>
+</section>
     
     <footer class="footer"> 
   <div class="social-links" aria-label="Social Media Links" style="text-align:center;">

@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Mobile navigation toggle (if you add a hamburger menu later)
-    // const navToggle = document.querySelector('.nav-toggle');
-    // const navLinks = document.querySelector('.nav-links');
-    // if (navToggle) {
-    //     navToggle.addEventListener('click', () => {
-    //         navLinks.classList.toggle('active');
-    //     });
-    // }
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
 });

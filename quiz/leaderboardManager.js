@@ -1,7 +1,7 @@
 // leaderboardManager.js
 
 export default class LeaderboardManager {
-  constructor(storageKey = 'polyglot_leaderboard', userKey = 'polyglot_player_name') {
+  constructor(storageKey = 'ejo_leaderboard', userKey = 'ejo_player_name') {
     this.storageKey = storageKey;
     this.userKey = userKey;
     this.leaderboard = this.loadLeaderboard();
