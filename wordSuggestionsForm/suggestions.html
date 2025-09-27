@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashcard Word Recommendations</title>
-    <link rel="stylesheet" href="suggestions.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard Word Recommendations</title>
+  <link rel="stylesheet" href="suggestions.css">
 </head>
 <body>
-    <h1>Flashcard Words Recommendations</h1>
-    <form id="recommendation-form">
-        <label for="word">Word:</label>
-        <input type="text" id="word" name="word" maxlength="10"><br><br>
-        <span id="char-counter" style="color: gray;">0/10 characters</span><br><br>
-        <label for="category">Category:</label>
-        <select id="category" name="category">
-            <option value="categoryspaceholder">Select a category</option>
-            <option value="noun">Noun</option>
-            <option value="verb">Verb</option>
-            <option value="adjective">Adjective</option>
-            <option value="adverb">Adverb</option>
-            <option value="other">Sentence</option>
-        </select><br><br>
-        <label for="sentence">Example Sentence:</label>
-        <textarea id="sentence" name="sentence" maxlength="50"></textarea>
-        <span id="char-counter" style="color: gray;">0/50 characters</span><br><br>
-        <input type="submit" value="Submit">
-    </form>
+  <h1>Flashcard Words Recommendations</h1>
 
-    <div id="result"></div>
+  <!-- Netlify form setup -->
+  <form name="recommendation-form" method="POST" data-netlify="true" id="recommendation-form">
+    <input type="hidden" name="form-name" value="recommendation-form">
 
-    <button id="clear-recommendations" style="margin-top: 20px; background-color: #e74c3c;">
-        Clear All Recommendations
-    </button>
+    <!-- Word input -->
+    <label for="word">Word:</label>
+    <input type="text" id="word" name="word" maxlength="10" required>
+    <br>
+    <small id="word-counter" style="color: gray;">0/10 characters</small>
+    <br><br>
 
-    <script src="suggestions.js"></script>
+    <!-- Category dropdown -->
+    <label for="category">Category:</label>
+    <select id="category" name="category" required>
+      <option value="" disabled selected>Select a category</option>
+      <option value="noun">Noun</option>
+      <option value="verb">Verb</option>
+      <option value="adjective">Adjective</option>
+      <option value="adverb">Adverb</option>
+      <option value="other">Sentence</option>
+    </select>
+    <br><br>
+
+    <!-- Sentence input -->
+    <label for="sentence">Example Sentence:</label><br>
+    <textarea id="sentence" name="sentence" maxlength="50" required></textarea>
+    <br>
+    <small id="sentence-counter" style="color: gray;">0/50 characters</small>
+    <br><br>
+
+    <!-- Submit button -->
+    <input type="submit" value="Submit">
+  </form>
+
+  <!-- Result area -->
+  <div id="result"></div>
+
+  <!-- Clear button -->
+  <button id="clear-recommendations" style="margin-top: 20px; background-color: #e74c3c;">
+    Clear All Recommendations
+  </button>
+
+  <script src="suggestions.js"></script>
 </body>
 </html>
