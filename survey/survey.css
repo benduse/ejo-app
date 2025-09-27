@@ -1,0 +1,262 @@
+/* ===========================
+   Ejo Quiz Feedback Survey Styles
+   =========================== */
+
+:root {
+    /* Ejo Brand Colors */
+    --ejo-primary: #FF6B6B;      /* Warm sunrise red */
+    --ejo-secondary: #4ECDC4;    /* Fresh morning teal */
+    --ejo-accent: #FFE66D;       /* Dawn yellow */
+    --ejo-dark: #2A2A2A;         /* Soft black */
+    --ejo-light: #F7F7F7;        /* Off white */
+    --ejo-gradient: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+    
+    /* Dynamic color assignments */
+    --button: var(--ejo-secondary);
+    --button-hover: var(--ejo-primary);
+    --white: #ffffff;
+    --black: #1a1a1a;
+    --background: var(--ejo-light);
+}
+
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: var(--background);
+    color: var(--ejo-dark);
+    line-height: 1.6;
+}
+
+/* ===========================
+   Survey Page Container
+   =========================== */
+.survey-page {
+    max-width: 700px;
+    margin: 40px auto;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    padding: 30px 40px;
+    transition: all 0.3s ease;
+}
+
+/* ===========================
+   Header
+   =========================== */
+.survey-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.survey-header h1 {
+    font-size: 2rem;
+    color: var(--ejo-primary);
+    margin-bottom: 5px;
+    background: var(--ejo-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.survey-header p {
+    font-size: 1rem;
+    color: var(--ejo-dark);
+    opacity: 0.8;
+}
+
+/* ===========================
+   Progress Bar
+   =========================== */
+.survey-progress {
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px 0 30px;
+}
+
+.survey-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--ejo-gradient);
+    transition: width 0.4s ease;
+}
+
+/* ===========================
+   Form Steps
+   =========================== */
+.survey-step {
+    display: none;
+}
+
+.survey-step.active {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   Form Elements
+   =========================== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"],
+input[type="range"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: 0.2s ease;
+    background: var(--ejo-light);
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--ejo-secondary);
+    box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.3);
+}
+
+/* Checkbox & Radio */
+.checkbox-group label {
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--ejo-primary);
+}
+
+/* Star Rating */
+.star-rating {
+    font-size: 1.8rem;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.star-rating .star {
+    margin-right: 5px;
+    transition: color 0.2s ease;
+    display: inline-block;
+}
+
+.star-rating .star.active,
+.star-rating .star:hover,
+.star-rating .star:hover ~ .star {
+    color: var(--ejo-accent);
+}
+
+/* Slider */
+.slider {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 6px;
+    border-radius: 5px;
+    background: #ddd;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--ejo-primary);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--ejo-primary);
+    cursor: pointer;
+}
+
+.slider-value {
+    font-weight: 600;
+    display: inline-block;
+    margin-left: 10px;
+    color: var(--ejo-dark);
+}
+
+/* ===========================
+   Navigation Buttons
+   =========================== */
+.survey-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-prev {
+    background: #ccc;
+    color: #333;
+}
+
+.btn-next,
+.btn-submit {
+    background: var(--button);
+    color: var(--white);
+}
+
+button:hover {
+    background: var(--button-hover);
+    transform: translateY(-1px);
+}
+
+.hide {
+    display: none !important;
+}
+
+/* ===========================
+   Thank You Section
+   =========================== */
+.survey-thank-you {
+    text-align: center;
+    padding: 30px;
+}
+
+.survey-thank-you h2 {
+    color: var(--ejo-primary);
+    margin-bottom: 15px;
+}
+
+.btn-return {
+    margin-top: 20px;
+    background: var(--ejo-secondary);
+    color: #fff;
+}
+
+.btn-return:hover {
+    background: var(--ejo-primary);
+}
