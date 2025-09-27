@@ -1,4 +1,4 @@
-const recommendations = [];
+let recommendations = JSON.parse(localStorage.getItem('recommendations') || '[]');
 
 const charLimit = 50;
 const textarea = document.getElementById('sentence');
@@ -52,6 +52,9 @@ document.getElementById('recommendation-form').addEventListener('submit', (e) =>
 
     // Add the new recommendation to the array
     recommendations.push(recommendation);
+    
+    // Save to localStorage
+    localStorage.setItem('recommendations', JSON.stringify(recommendations));
 
     // Process the recommendation (e.g., send it to a server or store it locally)
     console.log(recommendation);
@@ -81,3 +84,16 @@ function displayResults() {
         `;
     });
 }
+
+// Add a clear function (optional)
+function clearAllRecommendations() {
+    recommendations = [];
+    localStorage.removeItem('recommendations');
+    displayResults();
+}
+
+document.getElementById('clear-recommendations').addEventListener('click', () => {
+    if (confirm('Are you sure you want to clear all recommendations?')) {
+        clearAllRecommendations();
+    }
+});
