@@ -1,4 +1,3 @@
-
 class QuizApp {
     constructor() {
         this.currentQuestion = 0;
@@ -24,7 +23,7 @@ class QuizApp {
         this.scoreElement = document.getElementById('score');
         this.downloadBtn = document.getElementById('download-btn');
         this.endQuizBtn = document.getElementById('end-quiz-btn');
-        this.printPdfBtn = document.getElementById('print-pdf-btn');
+        // this.printPdfBtn = document.getElementById('print-pdf-btn');
         this.difficultyBadge = document.getElementById('difficulty-badge');
         this.leaderboardContainer = document.getElementById('leaderboard-container');
         this.leaderboardList = document.getElementById('leaderboard-list');
@@ -40,7 +39,7 @@ class QuizApp {
         this.languageSelect.addEventListener('change', () => this.handleLanguageChange());
         this.downloadBtn.addEventListener('click', () => this.downloadResults());
         this.endQuizBtn.addEventListener('click', () => this.endQuiz());
-        this.printPdfBtn.addEventListener('click', () => this.printResultsPDF());
+        // this.printPdfBtn.addEventListener('click', () => this.printResultsPDF());
 
         await this.loadQuestions();
         this.loadLeaderboard();
@@ -209,13 +208,13 @@ class QuizApp {
 
         this.finalScoreElement.textContent = `${this.score} out of ${this.questions.length * 5}` + endMsg;
 
-        if (this.questions.length >= 25 || this.endedEarly) {
-            this.downloadBtn.classList.remove('hide');
-            this.printPdfBtn.classList.remove('hide');
-        } else {
-            this.downloadBtn.classList.add('hide');
-            this.printPdfBtn.classList.add('hide');
-        }
+        // if (this.questions.length >= 25 || this.endedEarly) {
+        //     this.downloadBtn.classList.remove('hide');
+        //     this.printPdfBtn.classList.remove('hide');
+        // } else {
+        //     this.downloadBtn.classList.add('hide');
+        //     this.printPdfBtn.classList.add('hide');
+        // }
 
         this.saveScoreToLeaderboard();
         this.displayLeaderboard();
@@ -225,45 +224,45 @@ class QuizApp {
         }
     }
 
-    downloadResults() {
-        const language = this.languageSelect.options[this.languageSelect.selectedIndex].text;
-        const total = this.questions.length;
-        const correct = this.correctCount;
-        const wrong = this.wrongCount;
+    // downloadResults() {
+    //     const language = this.languageSelect.options[this.languageSelect.selectedIndex].text;
+    //     const total = this.questions.length;
+    //     const correct = this.correctCount;
+    //     const wrong = this.wrongCount;
 
-        const content = `Polyglot Quiz Results\n\nLanguage: ${language}\nTotal Questions: ${total}\nCorrect Answers: ${correct}\nWrong Answers: ${wrong}\nFinal Score: ${this.score} out of ${total * 5}`;
+    //     const content = `ejo Quiz Results\n\nLanguage: ${language}\nTotal Questions: ${total}\nCorrect Answers: ${correct}\nWrong Answers: ${wrong}\nFinal Score: ${this.score} out of ${total * 5}`;
 
-        const blob = new Blob([content], { type: 'text/plain' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `quiz_results_${language.toLowerCase()}_${new Date().getFullYear()}.txt`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-    }
+    //     const blob = new Blob([content], { type: 'text/plain' });
+    //     const url = URL.createObjectURL(blob);
+    //     const a = document.createElement('a');
+    //     a.href = url;
+    //     a.download = `quiz_results_${language.toLowerCase()}_${new Date().getFullYear()}.txt`;
+    //     document.body.appendChild(a);
+    //     a.click();
+    //     document.body.removeChild(a);
+    //     URL.revokeObjectURL(url);
+    // }
 
     endQuiz() {
         this.endedEarly = true;
         this.showResult(false);
     }
 
-    printResultsPDF() {
-        const language = this.languageSelect.options[this.languageSelect.selectedIndex].text;
-        const total = this.questions.length;
-        const correct = this.correctCount;
-        const wrong = this.wrongCount;
+    // printResultsPDF() {
+    //     const language = this.languageSelect.options[this.languageSelect.selectedIndex].text;
+    //     const total = this.questions.length;
+    //     const correct = this.correctCount;
+    //     const wrong = this.wrongCount;
 
-        const content = `Polyglot Quiz Results\n\nLanguage: ${language}\nTotal Questions: ${total}\nCorrect Answers: ${correct}\nWrong Answers: ${wrong}\nFinal Score: ${this.score} out of ${total * 5}`;
+    //     const content = `ejo Quiz Results\n\nLanguage: ${language}\nTotal Questions: ${total}\nCorrect Answers: ${correct}\nWrong Answers: ${wrong}\nFinal Score: ${this.score} out of ${total * 5}`;
 
-        const win = window.open('', '', 'width=600,height=700');
-        win.document.write('<html><head><title>Quiz Results PDF</title></head><body>');
-        win.document.write(`<pre style="font-size:1.2rem;">${content}</pre>`);
-        win.document.write('</body></html>');
-        win.document.close();
-        win.print();
-    }
+    //     const win = window.open('', '', 'width=600,height=700');
+    //     win.document.write('<html><head><title>Quiz Results PDF</title></head><body>');
+    //     win.document.write(`<pre style="font-size:1.2rem;">${content}</pre>`);
+    //     win.document.write('</body></html>');
+    //     win.document.close();
+    //     win.print();
+    // }
 
     async restartQuiz() {
         this.currentQuestion = 0;
@@ -280,21 +279,21 @@ class QuizApp {
     }
 
     loadLeaderboard() {
-        this.leaderboard = JSON.parse(localStorage.getItem('polyglot_leaderboard') || '[]');
+        this.leaderboard = JSON.parse(localStorage.getItem('ejo_leaderboard') || '[]');
     }
 
     saveScoreToLeaderboard() {
-        let storedName = localStorage.getItem('polyglot_player_name');
+        let storedName = localStorage.getItem('ejo_player_name');
         if (!storedName) {
             storedName = prompt('Enter your name for the leaderboard:', 'Player') || 'Player';
-            localStorage.setItem('polyglot_player_name', storedName);
+            localStorage.setItem('ejo_player_name', storedName);
         }
         const name = storedName;
 
         this.leaderboard.push({ name, score: this.score, date: new Date().toLocaleDateString() });
         this.leaderboard.sort((a, b) => b.score - a.score);
         this.leaderboard = this.leaderboard.slice(0, 10);
-        localStorage.setItem('polyglot_leaderboard', JSON.stringify(this.leaderboard));
+        localStorage.setItem('ejo_leaderboard', JSON.stringify(this.leaderboard));
     }
 
     displayLeaderboard() {
