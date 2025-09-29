@@ -172,6 +172,32 @@ button:hover {
     color: #666;
     font-weight: bolder;
 }
+
+#quiz-container {
+  background: var(--ejo-light);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#quiz-options button {
+  display: block;
+  margin: 8px auto;
+  padding: 10px 20px;
+  width: 80%;
+  background: var(--ejo-secondary);
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#quiz-options button:hover {
+  background: var(--ejo-primary);
+}
+
 .footer {
     background: var(--ejo-gradient);
     color: white;

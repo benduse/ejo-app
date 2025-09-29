@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     let flashcards = [];
     let currentCardIndex = 0;
+    let viewedCards = new Set(); // ✅ Track viewed cards
 
     // DOM elements
     const flashcardElement = document.getElementById("flashcard");
@@ -15,6 +16,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const gotoCardInput = document.getElementById("goto-card");
     const currentCardElement = document.getElementById("current-card");
     const totalCardsElement = document.getElementById("total-cards");
+
+    // ✅ Quiz DOM elements
+    const startQuizButton = document.getElementById("start-quiz");
+    const quizContainer = document.getElementById("quiz-container");
+    const quizQuestion = document.getElementById("quiz-question");
+    const quizOptions = document.getElementById("quiz-options");
+    const quizFeedback = document.getElementById("quiz-feedback");
+    const nextQuestionBtn = document.getElementById("next-question");
+    const quizScoreElement = document.getElementById("quiz-score");
+
+    let quizIndex = 0;
+    let score = 0;
+    let quizCards = [];
 
     // ✅ Fetch flashcards from JSON file
     function loadFlashcards() {
@@ -41,6 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (flashcards.length === 0) return;
 
         const card = flashcards[currentCardIndex];
+
+        // Track as viewed
+        viewedCards.add(card.id);
+
         frontContent.innerHTML = `
             <p class="word">${card.kinyarwandaWord}</p>
             <p class="phonetics">${card.phonetics || ""}</p>
@@ -51,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
         currentCardElement.textContent = currentCardIndex + 1;
-        flashcardElement.classList.remove("flipped"); // reset flip
+        flashcardElement.classList.remove("flipped");
         updateNavButtons();
     }
 
@@ -87,7 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
     flashcardElement.addEventListener("click", flipCard);
 
     document.addEventListener("keydown", (e) => {
-        // Use a switch statement for better readability
         switch (e.key) {
             case "ArrowLeft":
                 showPrevCard();
@@ -95,14 +112,14 @@ document.addEventListener("DOMContentLoaded", () => {
             case "ArrowRight":
                 showNextCard();
                 break;
-            case " ": // Space bar
+            case " ": 
             case "Enter":
                 flipCard();
                 break;
         }
     });
 
-    // Skip to a random unviewed card
+    // Skip to a random card
     function skipCard() {
         if (flashcards.length <= 1) return;
         const currentIndex = currentCardIndex;
@@ -120,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        const results = flashcards.filter((card, index) => {
+        const results = flashcards.filter((card) => {
             const searchString = `${card.kinyarwandaWord} ${card.meaning} ${card.phonetics || ''} ${card.example || ''}`.toLowerCase();
             return searchString.includes(query.toLowerCase());
         });
@@ -132,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (results.length === 0) {
             searchResults.innerHTML = '<p>No matches found</p>';
         } else {
-            searchResults.innerHTML = results.map((card, index) => {
+            searchResults.innerHTML = results.map((card) => {
                 const cardIndex = flashcards.findIndex(f => f === card);
                 return `
                     <div class="search-result" data-index="${cardIndex}">
@@ -175,14 +192,13 @@ document.addEventListener("DOMContentLoaded", () => {
     gotoCardInput.addEventListener("change", (e) => {
         const number = parseInt(e.target.value);
         if (goToCard(number)) {
-            e.target.value = ''; // Clear the input
+            e.target.value = '';
         } else {
             alert('Please enter a valid card number');
         }
     });
 
     document.addEventListener("keydown", (e) => {
-        // Use a switch statement for better readability
         switch (e.key) {
             case "ArrowLeft":
                 showPrevCard();
@@ -190,23 +206,109 @@ document.addEventListener("DOMContentLoaded", () => {
             case "ArrowRight":
                 showNextCard();
                 break;
-            case " ": // Space bar
+            case " ": 
             case "Enter":
                 flipCard();
                 break;
-            case "s": // Skip with 's' key
+            case "s": 
                 skipCard();
                 break;
         }
     });
 
-    // Click outside search results to close them
     document.addEventListener("click", (e) => {
         if (!searchResults.contains(e.target) && e.target !== searchInput) {
             searchResults.style.display = 'none';
         }
     });
 
+    // ✅ QUIZ MODE FUNCTIONS
+    function startQuiz() {
+        const viewedArray = flashcards.filter(card => viewedCards.has(card.id));
+
+        if (viewedArray.length === 0) {
+            alert("Please view some flashcards before starting the quiz!");
+            return;
+        }
+
+        if (viewedArray.length > 25) {
+            quizCards = [...viewedArray]
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 25);
+        } else {
+            quizCards = [...viewedArray].sort(() => Math.random() - 0.5);
+        }
+
+        quizIndex = 0;
+        score = 0;
+
+        quizContainer.style.display = "block";
+        document.getElementById("flashcards-section").style.display = "none";
+        showQuizQuestion();
+    }
+
+    function showQuizQuestion() {
+        if (quizIndex >= quizCards.length) {
+            endQuiz();
+            return;
+        }
+
+        const card = quizCards[quizIndex];
+        quizQuestion.textContent = `What does "${card.kinyarwandaWord}" mean?`;
+
+        let options = [card.meaning];
+        while (options.length < 4) {
+            const random = flashcards[Math.floor(Math.random() * flashcards.length)];
+            if (!options.includes(random.meaning)) {
+                options.push(random.meaning);
+            }
+        }
+        options = options.sort(() => Math.random() - 0.5);
+
+        quizOptions.innerHTML = options.map(opt => 
+            `<button class="quiz-option">${opt}</button>`
+        ).join("");
+
+        quizFeedback.textContent = "";
+        nextQuestionBtn.style.display = "none";
+
+        document.querySelectorAll(".quiz-option").forEach(btn => {
+            btn.addEventListener("click", () => {
+                if (btn.textContent === card.meaning) {
+                    quizFeedback.textContent = "✅ Correct!";
+                    score++;
+                } else {
+                    quizFeedback.textContent = `❌ Wrong! The correct answer is "${card.meaning}"`;
+                }
+                quizScoreElement.textContent = `Score: ${score}`;
+                nextQuestionBtn.style.display = "inline-block";
+            });
+        });
+    }
+
+    function endQuiz() {
+        quizQuestion.textContent = "Quiz finished!";
+        quizOptions.innerHTML = "";
+        quizFeedback.textContent = `Final Score: ${score} / ${quizCards.length}`;
+        nextQuestionBtn.style.display = "none";
+
+        const backBtn = document.createElement("button");
+        backBtn.textContent = "Back to Flashcards";
+        backBtn.addEventListener("click", () => {
+            quizContainer.style.display = "none";
+            document.getElementById("flashcards-section").style.display = "block";
+        });
+        quizOptions.appendChild(backBtn);
+    }
+
+    nextQuestionBtn.addEventListener("click", () => {
+        quizIndex++;
+        showQuizQuestion();
+    });
+
+    startQuizButton.addEventListener("click", startQuiz);
+
     // ✅ Initialize
     loadFlashcards();
+    document.getElementById("flashcards-section").style.display = "block";
 });
