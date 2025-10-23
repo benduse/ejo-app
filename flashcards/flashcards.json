@@ -5,7 +5,7 @@
       "kinyarwandaWord": "Muraho!",
       "meaning": "Hello!",
       "category": "greetings",
-      "phonetics": "mu-ra-ho",
+      "phonetics": "moo-rah-oh",
       "example": "Muraho! Aba hano? (Hello, there!)"
     },
     {
@@ -13,7 +13,7 @@
       "kinyarwandaWord": "Urakoze",
       "meaning": "Thank you",
       "category": "courtesy",
-      "phonetics": "u-ra-ko-ze",
+      "phonetics": "oo-rack-oh-zay",
       "example": "Urakoze cyane ku bufasha bwawe. (Thank you for your help)"
     },
     {
@@ -21,7 +21,7 @@
       "kinyarwandaWord": "Ijoro ryiza",
       "meaning": "Good night",
       "category": "greetings",
-      "phonetics": "i-jo-ro ryi-za",
+      "phonetics": "e-jo-roh-ryee-zah",
       "example": "Murakoze, mugire ijoro ryiza. (Thank you, have a good night)"
     },
     {
@@ -29,7 +29,7 @@
       "kinyarwandaWord": "Ndagukunda",
       "meaning": "I love you",
       "category": "expressions",
-      "phonetics": "nda-gu-kun-da",
+      "phonetics": "n-da-goo-koon-dah",
       "example": "Ndagukunda cyane (I love you so much!)"
     },
     {
@@ -37,7 +37,7 @@
       "kinyarwandaWord": "Ndi gukora",
       "meaning": "I'm working",
       "category": "activities",
-      "phonetics": "ndi ko-ko-ra",
+      "phonetics": "n-de-goo-korah",
       "example": "Ndi gukora umukoro. (I am doing a homework)"
     },
     {
@@ -45,7 +45,7 @@
       "kinyarwandaWord": "Ntacyo",
       "meaning": "Nothing",
       "category": "basic response",
-      "phonetics": "nta-cyo",
+      "phonetics": "n-tah-cyo",
       "example": "Ntacyo bitwaye. (It is nothing)"
     },
     {
@@ -53,7 +53,7 @@
       "kinyarwandaWord": "Oya",
       "meaning": "No",
       "category": "basic responses",
-      "phonetics": "o-ya",
+      "phonetics": "oh-yeah",
       "example": "Oya, ntabwo nshobora kubikora ubu. (No, I cannot do it now)"
     },
     {
@@ -61,7 +61,7 @@
       "kinyarwandaWord": "Umugabo",
       "meaning": "Man/Husband",
       "category": "family terms",
-      "phonetics": "u-mu-ga-bo",
+      "phonetics": "oo-moo-gah-bo",
       "example": "Umugabo wanjye agera mu rugo nijoro. (My husband gets home at night)"
     },
     {
@@ -69,7 +69,7 @@
       "kinyarwandaWord": "Umujyi",
       "meaning": "City",
       "category": "places",
-      "phonetics": "u-mu-jyi",
+      "phonetics": "oo-moo-jyi",
       "example": "Ndashaka gusura umujyi wa Kigali. (I want to visit Kigali City)"
     },
     {
@@ -77,7 +77,7 @@
       "kinyarwandaWord": "Igitabo",
       "meaning": "Book",
       "category": "objects",
-      "phonetics": "i-gi-ta-bo",
+      "phonetics": "e-gee-ta-boh",
       "example": "Mfite igitabo cyiza cyo gusoma. (I have a good book to read)"
     },
     {
@@ -85,7 +85,7 @@
       "kinyarwandaWord": "Tegereza",
       "meaning": "Wait",
       "category": "commands",
-      "phonetics": "te-ge-re-za",
+      "phonetics": "tay-gay-ray-zah",
       "example": "Tegereza gato, ndaje mukanya. (Wait, I will be back soon)"
     },
     {
@@ -93,7 +93,7 @@
       "kinyarwandaWord": "Ndagusabye",
       "meaning": "Please",
       "category": "courtesy",
-      "phonetics": "nda-gu-sa-bye",
+      "phonetics": "nda-goo-sah-byay",
       "example": "Ndagusabye, mbabarira! (I beg, please forgive me)"
     },
     {
@@ -101,7 +101,7 @@
       "kinyarwandaWord": "Umuryango",
       "meaning": "Family",
       "category": "family terms",
-      "phonetics": "u-mu-ryan-go",
+      "phonetics": "oo-moo-ryah-ngo",
       "example": "Umuryango wanjye ni mugari. (My family is extended)"
     },
     {
@@ -109,7 +109,7 @@
       "kinyarwandaWord": "Inshuti",
       "meaning": "Friend",
       "category": "relationships",
-      "phonetics": "in-shu-ti",
+      "phonetics": "ee-nshoo-tee",
       "example": "Inshuti yanjye irikunda. (My friend is selfish)"
     },
     {
@@ -117,7 +117,7 @@
       "kinyarwandaWord": "Ndumva",
       "meaning": "I understand",
       "category": "verbs",
-      "phonetics": "ndu-mva",
+      "phonetics": "n-doom-vah",
       "example": "Ndumva ibyo uvuze mbikunze. (I love what you are saying)"
     },
     {
@@ -125,7 +125,7 @@
       "kinyarwandaWord": "Ni byiza",
       "meaning": "It's good",
       "category": "expressions",
-      "phonetics": "ni byi-za",
+      "phonetics": "knee-byee-zah",
       "example": "Ni byiza ko tugira ubumwe. (It is good to have unity)"
     },
     {
@@ -133,7 +133,7 @@
       "kinyarwandaWord": "Uyu munsi",
       "meaning": "Today",
       "category": "time",
-      "phonetics": "u-yu munsi",
+      "phonetics": "oo-you-moon-see",
       "example": "Uyu munsi ni mwiza. (Today is a good day!)"
     },
     {
@@ -141,7 +141,7 @@
       "kinyarwandaWord": "Imana",
       "meaning": "God",
       "category": "spiritual terms",
-      "phonetics": "i-ma-na",
+      "phonetics": "e-mah-nah",
       "example": "Imana irahari kugirango iturinde amage. (God is here to protect us from misfortune)"
     },
     {
@@ -149,7 +149,7 @@
       "kinyarwandaWord": "Ngwino",
       "meaning": "Come here",
       "category": "commands",
-      "phonetics": "n-gwi-no",
+      "phonetics": "n-gui-no",
       "example": "Ngwino hano tuvugane.(Come here, let’s talk!)"
     },
     {
@@ -157,7 +157,7 @@
       "kinyarwandaWord": "Warakoze cyane",
       "meaning": "Thank you very much",
       "category": "courtesy",
-      "phonetics": "wa-ra-ko-ze cya-ne",
+      "phonetics": "wah-rah-ko-zay cya-nay",
       "example": "Warakoze cyane kubw'urukundo rwawe. (Thank you for your love!)"
     },
     {
@@ -165,7 +165,7 @@
       "kinyarwandaWord": "Umuhanda",
       "meaning": "Road/Street",
       "category": "places",
-      "phonetics": "u-mu-han-da",
+      "phonetics": "oo-moo-han-dah",
       "example": "Umuhanda mwiza, tuzongera ubutaha. (Safe journey, see you later!)"
     },
     {
@@ -173,7 +173,7 @@
       "kinyarwandaWord": "Umugore",
       "meaning": "Woman/Wife",
       "category": "family terms",
-      "phonetics": "u-mu-go-re",
+      "phonetics": "oo-moo-goh-ray",
       "example": "Umugore wanjye ni mwiza. (My wife is beautiful)"
     },
     {
@@ -181,7 +181,7 @@
       "kinyarwandaWord": "Umugisha",
       "meaning": "Blessing",
       "category": "spiritual terms",
-      "phonetics": "u-mu-gi-sha",
+      "phonetics": "oo-moo-ghee-shah",
       "example": "Umugisha w’Imana urasumbya byose. (God's blessing surpasses everything)"
     },
     {
@@ -189,7 +189,7 @@
       "kinyarwandaWord": "Ni sawa",
       "meaning": "It's okay",
       "category": "expressions",
-      "phonetics": "ni sa-wa",
+      "phonetics": "knee-sah-wah",
       "example": "Byose ni sawa.(Everything is okay)"
     },
     {
@@ -197,7 +197,7 @@
       "kinyarwandaWord": "Ikinyamakuru",
       "meaning": "Newspaper",
       "category": "objects",
-      "phonetics": "i-ki-nya-ma-ku-ru",
+      "phonetics": "e-kee-nyah-mah-koo-roo",
       "example": "Akunda gusoma ikinyamakuru. (He likes reading the newspaper)"
     },
     {
@@ -205,7 +205,7 @@
       "kinyarwandaWord": "Nta kibazo",
       "meaning": "No problem",
       "category": "expressions",
-      "phonetics": "nta ki-ba-zo",
+      "phonetics": "n-tah-kee-bah-zoh",
       "example": "Nta kibazo mfite.(I don't have a problem)"
     },
     {
@@ -213,7 +213,7 @@
       "kinyarwandaWord": "Umwana",
       "meaning": "Child",
       "category": "family terms",
-      "phonetics": "u-mwa-na",
+      "phonetics": "oo-moo-wah-nah",
       "example": "Ndi umwana w'Imana. (I am a child of God)"
     },
     {
@@ -229,15 +229,15 @@
       "kinyarwandaWord": "Ikaze",
       "meaning": "Welcome",
       "category": "greetings",
-      "phonetics": "i-ka-ze",
-      "example": "Murakaza neza mu gikoni cyacu. (Welcome to our kitchen)"
+      "phonetics": "e-kah-zay",
+      "example": "Ikaze mu gikoni cyacu. (Welcome to our kitchen)"
     },
     {
       "id": 30,
       "kinyarwandaWord": "Ibyishimo",
       "meaning": "Happiness",
       "category": "emotions",
-      "phonetics": "i-byi-shi-mo",
+      "phonetics": "ee-byee-shee-moh",
       "example": "Ibyishimo bituruka ku mutima unyuzwe. (Happines comes from a satisfied heart)"
     },
     {
@@ -245,7 +245,7 @@
       "kinyarwandaWord": "Ndicaye",
       "meaning": "I am sitting",
       "category": "actions",
-      "phonetics": "ndi-ca-ye",
+      "phonetics": "n-dich-ah-ye",
       "example": "Ndicaye ngaho mbwira. (I am sitting, then tell me)"
     },
     {
@@ -261,8 +261,8 @@
       "kinyarwandaWord": "Urukundo",
       "meaning": "Love",
       "category": "emotions",
-      "phonetics": "u-ru-kun-do",
-      "example": "Urukundo rutuma isi izenguruka. (Love makes the world go round)"
+      "phonetics": "oo-roo-koon-doh",
+      "example": "Urukundo rutuma isi izenguruka. (Love makes the world go around)"
     },
     {
       "id": 34,
@@ -277,7 +277,7 @@
       "kinyarwandaWord": "Komeza",
       "meaning": "Continue",
       "category": "commands",
-      "phonetics": "ko-me-za",
+      "phonetics": "ko-may-zah",
       "example": "Komeza utere imbere. (Continue developing)"
     },
     {
