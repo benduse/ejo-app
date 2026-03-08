@@ -11,17 +11,10 @@ body {
     line-height: 1.6;
 }
 
-/* ===========================
-   Survey Page Container
-   =========================== */
 .survey-page {
     max-width: 700px;
-    margin: 40px auto;
-    background: var(--white);
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    margin: 0 auto;
     padding: 30px 40px;
-    transition: all 0.3s ease;
 }
 
 /* ===========================

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejo App - Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="components.css">
+    <style>
+        .doc-content {
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .doc-content h2 {
+            color: var(--ejo-primary);
+            margin-top: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--ejo-secondary);
+        }
+        .doc-content h3 {
+            color: var(--ejo-secondary);
+            margin-top: 1.5rem;
+        }
+        .doc-content code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        .doc-content pre {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .tech-item {
+            background: var(--ejo-light);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--ejo-secondary);
+        }
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+        .info-box {
+            background: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header class="app-header">
+        <img src="images/logo.svg" alt="Ejo App Logo" class="logo">
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="quiz/quiz.html">Quiz</a>
+            <a href="flashcards/flashcards.html">Flashcards</a>
+            <a href="survey/survey.html">Feedback</a>
+        </nav>
+    </header>
+
+    <main class="app-main">
+        <div class="app-card doc-content">
+            <h1>Ejo App - Complete Documentation</h1>
+            <p><strong>Version:</strong> 1.0.0 | <strong>Last Updated:</strong> January 2025</p>
+
+            <h2>1. Overview</h2>
+            <p>Ejo is a polyglot language learning application designed to help users learn Kinyarwanda, French, and Spanish through interactive quizzes and flashcards. The app features instant feedback, scoring, leaderboards, and a beautiful, responsive UI—all without requiring a backend server.</p>
+
+            <h2>2. Technologies Used</h2>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <strong>HTML5</strong>
+                    <p>Semantic markup, accessibility features</p>
+                </div>
+                <div class="tech-item">
+                    <strong>CSS3</strong>
+                    <p>Custom properties, Grid, Flexbox, animations</p>
+                </div>
+                <div class="tech-item">
+                    <strong>JavaScript (ES6+)</strong>
+                    <p>Modules, async/await, classes</p>
+                </div>
+                <div class="tech-item">
+                    <strong>LocalStorage API</strong>
+                    <p>Client-side data persistence</p>
+                </div>
+                <div class="tech-item">
+                    <strong>JSON</strong>
+                    <p>Question and flashcard data storage</p>
+                </div>
+                <div class="tech-item">
+                    <strong>Font Awesome</strong>
+                    <p>Icon library for UI elements</p>
+                </div>
+            </div>
+
+            <h2>3. Architecture</h2>
+            <h3>3.1 File Structure</h3>
+            <pre>
+ejo-app/
+├── index.html              # Landing page
+├── shared.css              # Brand colors & CSS variables
+├── components.css          # Reusable UI components
+├── landing.css/js          # Landing page specific
+├── quiz/                   # Quiz module
+│   ├── quiz.html
+│   ├── script.js           # Quiz logic & confetti
+│   ├── styles.css
+│   └── leaderboardManager.js
+├── flashcards/             # Flashcard module
+│   ├── flashcards.html
+│   ├── flashcards.js       # Flashcard & quiz logic
+│   ├── flashcards.css
+│   └── flashcards.json     # Kinyarwanda vocabulary
+├── questions/              # Quiz questions
+│   ├── french.json
+│   ├── spanish.json
+│   └── ikinyarwanda.json
+├── survey/                 # Feedback form
+│   ├── survey.html         # JS inlined
+│   └── survey.css
+└── images/                 # Assets
+            </pre>
+
+            <h3>3.2 Design Patterns</h3>
+            <ul>
+                <li><strong>Component-Based UI:</strong> Shared header, footer, and card components across all pages</li>
+                <li><strong>Module Pattern:</strong> ES6 modules for code organization</li>
+                <li><strong>Class-Based:</strong> QuizApp and LeaderboardManager classes</li>
+                <li><strong>Event-Driven:</strong> DOM event listeners for user interactions</li>
+            </ul>
+
+            <h2>4. Features</h2>
+            <h3>4.1 Quiz Mode</h3>
+            <ul>
+                <li>Multiple-choice questions with 4 options</li>
+                <li>3 difficulty levels: Easy, Medium, Hard</li>
+                <li>Timed questions (8-10 seconds based on difficulty)</li>
+                <li>Real-time scoring (+5 correct, -1 incorrect)</li>
+                <li>Progress bar and question counter</li>
+                <li>Auto-end after 5 wrong answers</li>
+                <li>Confetti animation for high scores</li>
+            </ul>
+
+            <h3>4.2 Flashcards</h3>
+            <ul>
+                <li>Interactive flip cards with Kinyarwanda vocabulary</li>
+                <li>Front: Word, phonetics, meaning</li>
+                <li>Back: Example sentence</li>
+                <li>Navigation: Previous, Next, Skip, Go to card #</li>
+                <li>Search functionality</li>
+                <li>Quiz mode based on viewed cards</li>
+                <li>Keyboard shortcuts (Arrow keys, Space/Enter)</li>
+            </ul>
+
+            <h3>4.3 Leaderboard</h3>
+            <ul>
+                <li>Top 10 scores stored in localStorage</li>
+                <li>Player name persistence</li>
+                <li>Separate leaderboards for quiz and flashcard modes</li>
+                <li>Date tracking for each score</li>
+            </ul>
+
+            <h2>5. Navigation Guide</h2>
+            <div class="info-box">
+                <strong>Desktop Navigation:</strong>
+                <ul>
+                    <li>Use the header navigation bar to switch between pages</li>
+                    <li>Click logo to return to home page</li>
+                    <li>All links open in the same window</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <strong>Mobile Navigation:</strong>
+                <ul>
+                    <li>Tap the hamburger menu (☰) to open navigation</li>
+                    <li>Menu collapses automatically after selection</li>
+                    <li>Optimized for touch interactions</li>
+                </ul>
+            </div>
+
+            <h3>5.1 Keyboard Shortcuts</h3>
+            <p><strong>Flashcards:</strong></p>
+            <ul>
+                <li><code>←</code> Previous card</li>
+                <li><code>→</code> Next card</li>
+                <li><code>Space</code> or <code>Enter</code> Flip card</li>
+                <li><code>S</code> Skip to random card</li>
+            </ul>
+
+            <h2>6. Data Management</h2>
+            <h3>6.1 LocalStorage Keys</h3>
+            <ul>
+                <li><code>ejo_leaderboard</code> - Quiz leaderboard data</li>
+                <li><code>ejo_player_name</code> - Quiz player name</li>
+                <li><code>flashcard_leaderboard</code> - Flashcard quiz scores</li>
+                <li><code>flashcard_player_name</code> - Flashcard player name</li>
+            </ul>
+
+            <h3>6.2 JSON Data Format</h3>
+            <p><strong>Quiz Questions:</strong></p>
+            <pre>{
+  "id": 1,
+  "name": "French Quiz",
+  "questions": [
+    {
+      "id": 1,
+      "question": "How do you say 'Hello' in French?",
+      "choices": ["Bonjour", "Gracias", "Ciao", "Hola"],
+      "correctAnswer": "Bonjour",
+      "explanation": "Bonjour is the French word for Hello"
+    }
+  ]
+}</pre>
+
+            <p><strong>Flashcards:</strong></p>
+            <pre>{
+  "flashcards": [
+    {
+      "id": 1,
+      "kinyarwandaWord": "Muraho!",
+      "meaning": "Hello!",
+      "category": "greetings",
+      "phonetics": "mu-ra-ho",
+      "example": "Muraho! Aba hano?"
+    }
+  ]
+}</pre>
+
+            <h2>7. Customization</h2>
+            <h3>7.1 Brand Colors</h3>
+            <p>Edit <code>shared.css</code> to change colors globally:</p>
+            <pre>:root {
+    --ejo-primary: #FF6B6B;    /* Red */
+    --ejo-secondary: #4ECDC4;  /* Teal */
+    --ejo-accent: #FFE66D;     /* Yellow */
+    --ejo-dark: #2A2A2A;       /* Dark gray */
+    --ejo-light: #F7F7F7;      /* Light gray */
+}</pre>
+
+            <h3>7.2 Adding Questions</h3>
+            <ol>
+                <li>Open the appropriate JSON file in <code>questions/</code></li>
+                <li>Add new question object with unique ID</li>
+                <li>Follow the existing format</li>
+                <li>Questions 1-10: Easy, 11-35: Medium, 36+: Hard</li>
+            </ol>
+
+            <h3>7.3 Adding Languages</h3>
+            <ol>
+                <li>Create new JSON file: <code>questions/language.json</code></li>
+                <li>Update <code>quiz/script.js</code> loadQuestions() method</li>
+                <li>Add option to language selector in <code>quiz.html</code></li>
+            </ol>
+
+            <h2>8. Limitations</h2>
+            <div class="warning-box">
+                <strong>Known Limitations:</strong>
+                <ul>
+                    <li><strong>No Backend:</strong> All data stored locally, no cloud sync</li>
+                    <li><strong>Browser-Specific:</strong> Data doesn't transfer between browsers</li>
+                    <li><strong>No Authentication:</strong> Anyone can change player names</li>
+                    <li><strong>Limited Storage:</strong> LocalStorage has ~5-10MB limit</li>
+                    <li><strong>No Audio:</strong> No pronunciation audio files</li>
+                    <li><strong>Static Content:</strong> Questions must be manually updated</li>
+                    <li><strong>Single User:</strong> No multi-user support or profiles</li>
+                </ul>
+            </div>
+
+            <h2>9. Browser Compatibility</h2>
+            <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+                <tr style="background: var(--ejo-light);">
+                    <th style="padding: 0.75rem; text-align: left; border: 1px solid #ddd;">Browser</th>
+                    <th style="padding: 0.75rem; text-align: left; border: 1px solid #ddd;">Minimum Version</th>
+                    <th style="padding: 0.75rem; text-align: left; border: 1px solid #ddd;">Status</th>
+                </tr>
+                <tr>
+                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Chrome</td>
+                    <td style="padding: 0.75rem; border: 1px solid #ddd;">90+</td>
+                    <td style="padding: 0.75rem; border: 1px solid #ddd;">✅ Fully Supported</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Firefox</td>
+                    <td style="padding: 0.75rem; border: 1px solid #ddd;">88+</td>
+                    <td style="padding: 0.75rem; border: 1px solid #ddd;">✅ Fully Supported</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Safari</td>
+                    <td style="padding: 0.75rem; border: 1px solid #ddd;">14+</td>
+                    <td style="padding: 0.75rem; border: 1px solid #ddd;">✅ Fully Supported</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Edge</td>
+                    <td style="padding: 0.75rem; border: 1px solid #ddd;">90+</td>
+                    <td style="padding: 0.75rem; border: 1px solid #ddd;">✅ Fully Supported</td>
+                </tr>
+            </table>
+
+            <h2>10. Accessibility</h2>
+            <ul>
+                <li>ARIA labels on interactive elements</li>
+                <li>Semantic HTML structure</li>
+                <li>Keyboard navigation support</li>
+                <li>Color contrast ratios meet WCAG AA standards</li>
+                <li>Focus indicators on all interactive elements</li>
+                <li>Screen reader friendly</li>
+            </ul>
+
+            <h2>11. Performance</h2>
+            <ul>
+                <li><strong>Load Time:</strong> < 2 seconds on 3G</li>
+                <li><strong>Bundle Size:</strong> ~50KB (excluding images)</li>
+                <li><strong>No Dependencies:</strong> Vanilla JavaScript only</li>
+                <li><strong>Lazy Loading:</strong> Questions loaded on demand</li>
+            </ul>
+
+            <h2>12. Troubleshooting</h2>
+            <h3>Quiz not loading questions?</h3>
+            <ul>
+                <li>Check browser console for errors</li>
+                <li>Verify JSON files are in correct location</li>
+                <li>Ensure relative paths are correct</li>
+            </ul>
+
+            <h3>Leaderboard not saving?</h3>
+            <ul>
+                <li>Check if localStorage is enabled</li>
+                <li>Clear browser cache and try again</li>
+                <li>Check storage quota (5-10MB limit)</li>
+            </ul>
+
+            <h3>Flashcards not flipping?</h3>
+            <ul>
+                <li>Ensure JavaScript is enabled</li>
+                <li>Check for console errors</li>
+                <li>Try refreshing the page</li>
+            </ul>
+
+            <h2>13. Future Enhancements</h2>
+            <ul>
+                <li>Audio pronunciation support</li>
+                <li>Spaced repetition algorithm</li>
+                <li>Progress tracking and analytics</li>
+                <li>Social sharing features</li>
+                <li>More languages (Swahili, German, etc.)</li>
+                <li>Offline PWA support</li>
+                <li>Backend integration for cloud sync</li>
+            </ul>
+
+            <h2>14. Credits & License</h2>
+            <p><strong>Developer:</strong> Benjamin Niyodusenga</p>
+            <p><strong>Year:</strong> 2025</p>
+            <p><strong>License:</strong> All rights reserved</p>
+            <p><strong>Icons:</strong> Font Awesome (Free License)</p>
+            <p><strong>Fonts:</strong> System fonts (Segoe UI, Roboto, etc.)</p>
+
+            <h2>15. Contact & Support</h2>
+            <p>For questions, feedback, or bug reports:</p>
+            <ul>
+                <li><strong>GitHub:</strong> <a href="https://github.com/benduse" target="_blank">@benduse</a></li>
+                <li><strong>Twitter:</strong> <a href="https://x.com/Nbenduse" target="_blank">@Nbenduse</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/benjamin-niyodusenga/" target="_blank">Benjamin Niyodusenga</a></li>
+                <li><strong>Feedback Form:</strong> <a href="survey/survey.html">Submit Feedback</a></li>
+            </ul>
+
+            <div class="info-box" style="margin-top: 2rem;">
+                <strong>📚 Quick Start:</strong> New to the app? Start with <a href="flashcards/flashcards.html">Flashcards</a> to learn vocabulary, then test yourself with the <a href="quiz/quiz.html">Quiz</a>!
+            </div>
+        </div>
+    </main>
+
+    <footer class="app-footer">
+        <div class="social-links">
+            <a href="https://x.com/Nbenduse" class="social-icon" target="_blank" rel="noopener" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/benjamin-niyodusenga/" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/benduse" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/bennduse/" class="social-icon" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p>&copy; 2025 Benjamin. All Rights Reserved</p>
+    </footer>
+
+    <script>
+        document.querySelector('.nav-toggle')?.addEventListener('click', () => {
+            document.querySelector('.app-header nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

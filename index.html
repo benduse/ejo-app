@@ -9,19 +9,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="landing.css">
 </head>
 <body>
     <!-- Header Section -->
-    <header>
-        <div class="logo-container">
-            <img src="images/logo.svg" alt="Kinyarwanda Flashcards Logo" class="logo">
-        </div>
+    <header class="app-header">
+        <img src="images/logo.svg" alt="Kinyarwanda Flashcards Logo" class="logo">
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
         <nav>
-            <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="quiz/quiz.html">Quiz</a>
+            <a href="flashcards/flashcards.html">Flashcards</a>
+            <a href="survey/survey.html">Feedback</a>
         </nav>
     </header>
 
@@ -78,37 +82,30 @@
     </section> -->
 
     <!-- Footer -->
-    <footer id="contact">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="images/logo.svg" alt="Kinyarwanda Flashcards Logo" class="logo">
-                <p>Kinyarwanda Flashcards</p>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="quiz/quiz.html">Quizzes</a></li>
-                    <li><a href="flashcards/flashcards.html">Flashcards</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="/survey/survey.html">Feedback</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contact Us</h4>
-                <p>Email: contact@kinyarwandaflashcards.com</p>
-                <div class="social-icons">
-                    <a href="#" class="social-icon">📘</a>
-                    <a href="#" class="social-icon">📱</a>
-                    <a href="#" class="social-icon">📸</a>
-                </div>
-            </div>
+    <footer class="app-footer">
+        <div class="social-links">
+            <a href="documentation.html" style="color: white; text-decoration: underline;">Documentation</a>
+            <a href="https://x.com/Nbenduse" class="social-icon" target="_blank" rel="noopener" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/benjamin-niyodusenga/" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/benduse" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/bennduse/" class="social-icon" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
-        <div class="copyright">
-            <p>&copy; 2025 ejo Flashcards. All rights reserved.</p>
-        </div>
+        <p>&copy; 2025 ejo Flashcards. All rights reserved.</p>
     </footer>
 
     <script src="landing.js"></script>
+    <script>
+        document.querySelector('.nav-toggle')?.addEventListener('click', () => {
+            document.querySelector('.app-header nav').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

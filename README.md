@@ -42,6 +42,7 @@ ejo-app/
 ├── landing.css
 ├── landing.js
 ├── shared.css              # Shared brand colors & variables
+├── components.css          # Unified UI components
 ├── README.md
 ├── data/
 ├── flashcards/

@@ -1,0 +1,191 @@
+/* Shared UI Components - Mozilla Protocol Inspired */
+
+/* Header Component */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: var(--ejo-gradient);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: 60px;
+}
+
+.app-header .logo {
+    height: 80px;
+    width: auto;
+}
+
+.app-header nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.app-header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.app-header nav a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Main Content Container */
+.app-main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 5%;
+    min-height: calc(100vh - 200px);
+}
+
+/* Card Component */
+.app-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Footer Component */
+.app-footer {
+    background: var(--ejo-gradient);
+    color: white;
+    text-align: center;
+    padding: 2rem 5%;
+    margin-top: 4rem;
+}
+
+.app-footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.app-footer .social-icon {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.app-footer .social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Button System */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--ejo-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #e55a5a;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--ejo-secondary);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #45b7aa;
+    transform: translateY(-2px);
+}
+
+/* Responsive Navigation */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .app-header {
+        flex-wrap: wrap;
+        padding: 1rem 3%;
+    }
+
+    .app-header .logo {
+        height: 60px;
+    }
+
+    .app-header nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .app-header nav.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .app-main {
+        padding: 0 3%;
+        margin: 1rem auto;
+    }
+
+    .app-card {
+        padding: 1.5rem;
+    }
+
+    .app-footer {
+        padding: 1.5rem 3%;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-header {
+        padding: 0.75rem 2%;
+    }
+
+    .app-header .logo {
+        height: 50px;
+    }
+
+    .app-main {
+        padding: 0 2%;
+    }
+
+    .app-card {
+        padding: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 0.875rem;
+    }
+}

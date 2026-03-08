@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejo Quiz App - Feedback Survey</title>
     <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="../components.css">
     <link rel="stylesheet" href="survey.css">
 </head>
 <body>
-    <div class="survey-page">
+    <header class="app-header">
+        <img src="../images/logo.svg" alt="Ejo Survey Logo" class="logo">
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../quiz/quiz.html">Quiz</a>
+            <a href="../flashcards/flashcards.html">Flashcards</a>
+        </nav>
+    </header>
+
+    <main class="app-main">
+    <div class="survey-page app-card">
         <header class="survey-header">
             <h1>Ejo Quiz Feedback Survey</h1>
             
@@ -153,6 +167,26 @@
             <button class="btn-return" onclick="window.location.href='/quiz/quiz.html'">Return to Quiz</button>
         </div>
     </div>
+    </main>
+
+    <footer class="app-footer">
+        <div class="social-links">
+            <a href="../documentation.html" style="color: white; text-decoration: underline;">Documentation</a>
+            <a href="https://x.com/Nbenduse" class="social-icon" target="_blank" rel="noopener" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/benjamin-niyodusenga/" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/benduse" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/bennduse/" class="social-icon" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p>&copy; 2025 Benjamin. All Rights Reserved</p>
+    </footer>
 
     <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -210,6 +244,9 @@
             thankYouSection.classList.remove("hide");
         });
     });
+        document.querySelector('.nav-toggle')?.addEventListener('click', () => {
+            document.querySelector('.app-header nav').classList.toggle('active');
+        });
     </script>
 </body>
 </html>

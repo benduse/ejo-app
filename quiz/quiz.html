@@ -39,27 +39,37 @@
   <title>Ejo Quiz App</title>
 
   <link rel="stylesheet" href="../shared.css" />
+  <link rel="stylesheet" href="../components.css" />
   <link rel="stylesheet" href="styles.css" />
   
 </head>
 
 <body>
-  <header>
-  <div class="logo"> 
-  <img src="../images/logo.svg" alt="ejo Quiz App Logo" class="logo" aria-label="ejo Quiz App Logo">
-  </div>
-    <nav>  
-    <h1>Ejo Quiz App</h1>
-    <div class="language-selector">
+  <header class="app-header">
+    <img src="../images/logo.svg" alt="ejo Quiz App Logo" class="logo">
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../flashcards/flashcards.html">Flashcards</a>
+      <a href="../survey/survey.html">Feedback</a>
+    </nav>
+  </header>
+
+  <main class="app-main">
+    <div class="app-card">
+      <div class="quiz-controls">
+        <h1>Ejo Quiz App</h1>
+        <div class="language-selector">
       <label for="languageSelect">Choose Language:</label>
       <select id="languageSelect" aria-label="Select Language">
        <option value="ikinyarwanda">Ikinyarwanda</option>  
        <option value="french">French</option>
         <option value="spanish">Spanish</option>
-        
       </select>
 
-      <label for="difficultySelect" style="margin-left:1rem;">Difficulty:</label>
+      <label for="difficultySelect">Difficulty:</label>
       <select id="difficultySelect" aria-label="Select Difficulty">
         <option value="all">All</option>
         <option value="easy">Easy</option>
@@ -67,24 +77,10 @@
         <option value="hard">Hard</option>
       </select>
     </div>
-    <div class="score-container" aria-live="polite" aria-atomic="true">
+    <div class="score-display" aria-live="polite">
       Score: <span id="score">0</span>
     </div>
-<!-- Mode switcher for light/dark mode -->
-    <fieldset id="mode-switcher">
-      <legend>Select a color mode:</legend>
-      <div>
-        <input type="radio" id="light" name="mode" value="light" />
-        <label for="light">Dark</label>
       </div>
-      <div>
-        <input type="radio" id="dark" name="mode" value="dark" />
-        <label for="dark">Light</label>
-      </div>
-    </fieldset>
-  </header>
-
-  <main>
     <div id="quiz-container">
       <div id="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Quiz Progress"></div>
 
@@ -101,64 +97,47 @@
       </div>
 
       <div id="end-quiz-container">
-        <button id="end-quiz-btn" type="button">End Quiz</button>
-        <button id="print-pdf-btn" type="button" class="hide">Print Results</button>
+        <button id="end-quiz-btn" type="button" class="btn btn-secondary">End Quiz</button>
       </div>
     </div>
 
     <div id="result-container" class="hide" aria-live="polite" aria-atomic="true">
       <h2>Quiz Complete!</h2>
       <p>Your final score: <span id="final-score">0</span></p>
-      <button id="restart-btn" type="button">Restart Quiz</button>
-      <button id="download-btn" type="button" class="hide">Download Results</button>
+      <button id="restart-btn" type="button" class="btn btn-primary">Restart Quiz</button>
+    </div>
     </div>
   </main>
  
-<aside id="leaderboard-container" class="board" aria-label="Leaderboard">
-      <h3>Leaderboard</h3>
-      <ol id="leaderboard-list"></ol>
-      
-    </aside>
-  <script src="script.js"></script>
- 
- 
+  <aside id="leaderboard-container" class="board" aria-label="Leaderboard">
+    <h3>Leaderboard</h3>
+    <ol id="leaderboard-list"></ol>
+  </aside>
 
-<footer class="footer"> 
-  <div class="social-links" aria-label="Social Media Links" style="text-align:center;">
-    <a href="https://x.com/Nbenduse" 
-       class="social-icon" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       aria-label="Follow me on X (formerly Twitter)"
-       style="margin: 0 10px;">
-        <i class="fab fa-twitter" aria-hidden="true"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/benjamin-niyodusenga/" 
-       class="social-icon" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       aria-label="Connect with me on LinkedIn"
-       style="margin: 0 10px;">
-        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-    </a>
-    <a href="https://github.com/benduse" 
-       class="social-icon" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       aria-label="Check out my projects on GitHub"
-       style="margin: 0 10px;">
-        <i class="fab fa-github" aria-hidden="true"></i>
-    </a>
-    <a href="https://www.instagram.com/bennduse/" 
-       class="social-icon" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       aria-label="Follow me on Instagram"
-       style="margin: 0 10px;">
-        <i class="fab fa-instagram" aria-hidden="true"></i>
-    </a>
-    <p style="margin-top: 1rem;">&copy; 2025 Benjamin All Rights Reserved</p>
-        </div>
+  <footer class="app-footer">
+    <div class="social-links">
+      <a href="../documentation.html" style="color: white; text-decoration: underline;">Documentation</a>
+      <a href="https://x.com/Nbenduse" class="social-icon" target="_blank" rel="noopener" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/benjamin-niyodusenga/" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/benduse" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.instagram.com/bennduse/" class="social-icon" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <p>&copy; 2025 Benjamin. All Rights Reserved</p>
   </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.querySelector('.nav-toggle')?.addEventListener('click', () => {
+      document.querySelector('.app-header nav').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

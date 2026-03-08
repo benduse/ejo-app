@@ -1,44 +1,13 @@
 /* Basic styling */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--ejo-gradient);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 10px;
-    padding: 20px;
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
 }
 
-.logo-container {
- top:0px;
-  left: 0px;
-  background: var(--ejo-gradient);
-    color: white;
-    text-align: left;
-    position: fixed;
-    width: 100vw;
-    margin-top: 0;
-    
-}
-
-.logo{
-    height: 100px;
-    width: auto;
-    margin: 0 auto;
-    text-align: left; 
-    position: relative;
-}
-.main-container {
-    max-width: 800px;
-    width: 100%;
+#flashcards-section {
     text-align: center;
-    background-color: var(--ejo-light);
-}
-
-h2 {
-    color: #333;
-    margin-bottom: 30px;
 }
 
 /* Flashcard styling 
@@ -123,27 +92,73 @@ h2 {
 .flashcard-controls {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 20px;
-    gap: 15px;
+    gap: 10px;
+}
+
+.flashcard-controls button {
+    margin: 5px;
+}
+
+.search-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    position: relative;
+}
+
+#search-input,
+#goto-card {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 5px 0;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 100;
+    display: none;
+}
+
+.search-result {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.search-result:hover {
+    background: var(--ejo-light);
 }
 
 button {
-   background:var(--ejo-secondary);
+    background: var(--ejo-secondary);
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 15px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: var(--ejo-dark);
+    background-color: var(--ejo-primary);
 }
 
 #flip-flashcard {
-    background-color: #f7b731;
+    background-color: var(--ejo-accent);
+    color: var(--ejo-dark);
 }
 
 #flip-flashcard:hover {
@@ -161,7 +176,6 @@ button:hover {
   background: var(--ejo-light);
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   text-align: center;
 }
 
@@ -170,10 +184,11 @@ button:hover {
   margin: 8px auto;
   padding: 10px 20px;
   width: 80%;
+  max-width: 400px;
   background: var(--ejo-secondary);
-  border-radius: 10px;
+  border-radius: 8px;
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -182,17 +197,27 @@ button:hover {
   background: var(--ejo-primary);
 }
 
-.footer {
-    background: var(--ejo-gradient);
-    color: white;
-    text-align: center;
-    padding: 1.5rem 1rem 2px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100vw;
-    margin-top: 0;
-    z-index: 10;
+@media (max-width: 768px) {
+  .flashcard-scene {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+  }
+  
+  .flashcard {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .flashcard-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .flashcard-controls button {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 .board {
