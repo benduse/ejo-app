@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejo Quiz App - Feedback Survey</title>
+    <link rel="stylesheet" href="../shared.css">
     <link rel="stylesheet" href="survey.css">
 </head>
 <body>
@@ -153,6 +154,62 @@
         </div>
     </div>
 
-    <script src="survey.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const steps = document.querySelectorAll(".survey-step");
+        const progressBar = document.getElementById("survey-progress-bar");
+        const btnPrev = document.getElementById("survey-prev");
+        const btnNext = document.getElementById("survey-next");
+        const btnSubmit = document.getElementById("survey-submit");
+        const surveyForm = document.getElementById("survey-form");
+        const thankYouSection = document.getElementById("thank-you-section");
+        let currentStep = 0;
+
+        function updateStep() {
+            steps.forEach((step, index) => step.classList.toggle("active", index === currentStep));
+            progressBar.style.width = ((currentStep) / (steps.length - 1)) * 100 + "%";
+            btnPrev.style.display = currentStep === 0 ? "none" : "inline-block";
+            btnNext.classList.toggle("hide", currentStep === steps.length - 1);
+            btnSubmit.classList.toggle("hide", currentStep !== steps.length - 1);
+        }
+
+        btnPrev.addEventListener("click", () => { if (currentStep > 0) { currentStep--; updateStep(); } });
+        btnNext.addEventListener("click", () => { if (currentStep < steps.length - 1) { currentStep++; updateStep(); } });
+        updateStep();
+
+        document.querySelectorAll(".star-rating").forEach(ratingContainer => {
+            const stars = ratingContainer.querySelectorAll(".star");
+            const hiddenInput = ratingContainer.nextElementSibling;
+            stars.forEach(star => {
+                star.addEventListener("click", () => {
+                    const value = parseInt(star.dataset.value);
+                    hiddenInput.value = value;
+                    stars.forEach(s => s.classList.toggle("active", parseInt(s.dataset.value) <= value));
+                });
+            });
+        });
+
+        document.querySelectorAll(".slider").forEach(slider => {
+            const output = slider.nextElementSibling;
+            slider.addEventListener("input", () => output.textContent = slider.value);
+        });
+
+        surveyForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const formData = new FormData(surveyForm);
+            const results = {};
+            formData.forEach((val, key) => {
+                if (results[key]) {
+                    results[key] = Array.isArray(results[key]) ? [...results[key], val] : [results[key], val];
+                } else {
+                    results[key] = val;
+                }
+            });
+            console.log("Survey Results:", results);
+            surveyForm.style.display = "none";
+            thankYouSection.classList.remove("hide");
+        });
+    });
+    </script>
 </body>
 </html>

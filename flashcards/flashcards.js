@@ -1,3 +1,5 @@
+import LeaderboardManager from '../quiz/leaderboardManager.js';
+
 document.addEventListener("DOMContentLoaded", () => {
     let flashcards = [];
     let currentCardIndex = 0;
@@ -29,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let quizIndex = 0;
     let score = 0;
     let quizCards = [];
+    const leaderboard = new LeaderboardManager('flashcard_leaderboard', 'flashcard_player_name');
 
     // ✅ Fetch flashcards from JSON file
     function loadFlashcards() {
@@ -292,11 +295,15 @@ document.addEventListener("DOMContentLoaded", () => {
         quizFeedback.textContent = `Final Score: ${score} / ${quizCards.length}`;
         nextQuestionBtn.style.display = "none";
 
+        leaderboard.addScore(score);
+        displayLeaderboard();
+
         const backBtn = document.createElement("button");
         backBtn.textContent = "Back to Flashcards";
         backBtn.addEventListener("click", () => {
             quizContainer.style.display = "none";
             document.getElementById("flashcards-section").style.display = "block";
+            document.getElementById("flashcard-leaderboard").style.display = "none";
         });
         quizOptions.appendChild(backBtn);
     }
@@ -305,6 +312,18 @@ document.addEventListener("DOMContentLoaded", () => {
         quizIndex++;
         showQuizQuestion();
     });
+
+    function displayLeaderboard() {
+        const leaderboardEl = document.getElementById("flashcard-leaderboard");
+        const listEl = document.getElementById("flashcard-leaderboard-list");
+        leaderboardEl.style.display = "block";
+        listEl.innerHTML = "";
+        leaderboard.getLeaderboard().forEach(entry => {
+            const li = document.createElement("li");
+            li.textContent = `${entry.name} - ${entry.score}`;
+            listEl.appendChild(li);
+        });
+    }
 
     startQuizButton.addEventListener("click", startQuiz);
 

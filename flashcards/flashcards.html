@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>ejo flashcards</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='75' font-size='75' font-weight='bold' fill='%23FF6B6B'%3Eejo%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../shared.css">
     <link rel="stylesheet" href="flashcards.css">
 </head>
 <header>
 <div class="logo-container"> 
-  <img src="/images/logo.svg" alt="Ejo Quiz App Logo" class="logo" aria-label="Polyglot Quiz App Logo">
+  <img src="../images/logo.svg" alt="Ejo Quiz App Logo" class="logo" aria-label="Polyglot Quiz App Logo">
   </div>
 </header>
 <body>
@@ -60,6 +61,11 @@
   <button id="next-question" style="display:none;">Next</button>
   <p id="quiz-score"></p>
 </div>
+
+<aside id="flashcard-leaderboard" class="board" style="display:none;" aria-label="Leaderboard">
+  <h3>Leaderboard</h3>
+  <ol id="flashcard-leaderboard-list"></ol>
+</aside>
     
     <footer class="footer"> 
   <div class="social-links" aria-label="Social Media Links" style="text-align:center;">
@@ -98,6 +104,6 @@
     <p style="margin-top: 1rem;">&copy; 2025 Benjamin All Rights Reserved</p>
         </div>
   </footer>
-    <script src="flashcards.js"></script>
+    <script src="flashcards.js" type="module"></script>
 </body>
 </html>

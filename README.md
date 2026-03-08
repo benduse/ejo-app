@@ -41,6 +41,7 @@ ejo-app/
 ├── index.html
 ├── landing.css
 ├── landing.js
+├── shared.css              # Shared brand colors & variables
 ├── README.md
 ├── data/
 ├── flashcards/
@@ -54,21 +55,22 @@ ejo-app/
 │   ├── ikinyarwanda.json
 │   └── spanish.json
 ├── quiz/
-│   ├── confetti.js
 │   ├── leaderboardManager.js
 │   ├── quiz.html
 │   ├── script.js
 │   ├── site.webmanifest
 │   └── styles.css
 ├── survey/
-│   └── survey.html
+│   ├── survey.css
+│   └── survey.html         # JS inlined
 ```
 
 ## Customization
 
-- To add more questions, edit the relevant JSON files in the `questions` or `flashcards` folders.
-- To add more languages, create a new JSON file and update the language selector and logic in the app.
-- To change the look, edit the CSS files for each module.
+- **Brand Colors**: Edit `shared.css` to change colors across all pages
+- **Questions**: Edit JSON files in `questions/` or `flashcards/` folders
+- **Languages**: Create new JSON file and update language selector logic
+- **Styles**: Edit individual CSS files for page-specific styling
 
 ## Credits
 

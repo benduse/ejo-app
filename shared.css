@@ -1,0 +1,14 @@
+/* Shared Ejo Brand Variables */
+:root {
+    --ejo-primary: #FF6B6B;
+    --ejo-secondary: #4ECDC4;
+    --ejo-accent: #FFE66D;
+    --ejo-dark: #2A2A2A;
+    --ejo-light: #F7F7F7;
+    --ejo-gradient: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+    --button: light-dark(var(--ejo-secondary), var(--ejo-primary));
+    --button-hover: light-dark(var(--ejo-primary), var(--ejo-accent));
+    --white: light-dark(#fff, #1a1a1a);
+    --black: light-dark(#1a1a1a, #fff);
+    --background: light-dark(var(--ejo-light), var(--ejo-dark));
+}

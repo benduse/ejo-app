@@ -2,23 +2,6 @@
    Ejo Quiz Feedback Survey Styles
    =========================== */
 
-:root {
-    /* Ejo Brand Colors */
-    --ejo-primary: #FF6B6B;      /* Warm sunrise red */
-    --ejo-secondary: #4ECDC4;    /* Fresh morning teal */
-    --ejo-accent: #FFE66D;       /* Dawn yellow */
-    --ejo-dark: #2A2A2A;         /* Soft black */
-    --ejo-light: #F7F7F7;        /* Off white */
-    --ejo-gradient: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
-    
-    /* Dynamic color assignments */
-    --button: var(--ejo-secondary);
-    --button-hover: var(--ejo-primary);
-    --white: #ffffff;
-    --black: #1a1a1a;
-    --background: var(--ejo-light);
-}
-
 /* General Reset */
 body {
     margin: 0;
