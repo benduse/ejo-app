@@ -17,14 +17,13 @@ body {
 }
 
 #quiz-container {
-    background: #f8f9fa;
+    background: var(--ejo-gradient);
     border-radius: 10px;
     padding: 20px;
     text-align: center;
 }
 
 #question-container {
-    background: white;
     padding: 2rem;
     border-radius: 10px;
     margin-bottom: 1rem;
@@ -91,7 +90,7 @@ body {
 }
 
 #leaderboard-container h3 {
-    color: var(--ejo-dark);
+    color: var(--ejo-primary);
 }
 
 #leaderboard-list li {
@@ -100,7 +99,7 @@ body {
 }
 
 #leaderboard-list li:hover {
-    background: rgba(78,205,196,0.1);
+    background: var(--ejo-);
 }
 
 /* Responsive Design */
@@ -227,18 +226,18 @@ button:focus,
     main,
     .board,
     #leaderboard-container {
-        background: #2a2a2a;
+        background: var(--ejo-dark);
         color: #f7f7f7;
     }
     
     .choice-btn {
-        background: #3a3a3a;
+        background: #7d89b6;
         color: #f7f7f7;
         border-color: rgba(78,205,196,0.3);
     }
     
     #leaderboard-list li {
-        background: #3a3a3a;
+        background: #526cae;
         color: #f7f7f7;
     }
 }
@@ -265,6 +264,11 @@ button:focus,
     gap: 1rem;
     margin-bottom: 2rem;
 }
+.languageSelect, .difficultySelect {
+    color: var(--ejo-secondary);
+    padding: 0.5rem;
+}
+
 
 .language-selector {
     display: flex;
@@ -278,7 +282,7 @@ button:focus,
     font-weight: 600;
     color: var(--ejo-primary);
     padding: 0.75rem 1.5rem;
-    background: var(--ejo-light);
+    background: var(--ejo-accent);
     border-radius: 25px;
     text-align: center;
 }
