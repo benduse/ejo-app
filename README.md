@@ -1,4 +1,4 @@
-# Polyglot Boost App
+# Ejo
 
 A modern web-based app for learning Kinyarwanda, French, and Spanish through quizzes and flashcards. The app features instant feedback, scoring, and a beautiful, responsive UI. No backend required—all data is local.
 
@@ -43,6 +43,7 @@ ejo-app/
 ├── landing.js
 ├── shared.css              # Shared brand colors & variables
 ├── components.css          # Unified UI components
+├── utils.js                # Shared utility functions
 ├── README.md
 ├── data/
 ├── flashcards/

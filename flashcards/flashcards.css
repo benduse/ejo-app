@@ -10,18 +10,6 @@ body {
     text-align: center;
 }
 
-/* Flashcard styling 
-#flashcard-container {
-    border: 1px solid #ddd;
-    padding: 20px;
-    width: 500px;
-    height: 300px;
-    margin: 20px auto;
-    text-align: center;
-    background-color: var(--ejo-gradient);
-    border-radius: 10px;
-}*/
-
 .flashcard-scene {
     width: 500px;
     height: 300px;
@@ -110,7 +98,7 @@ body {
 
 #search-input,
 #goto-card {
-    width: 100%;
+    width: 40%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;

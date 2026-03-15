@@ -11,8 +11,8 @@ export default class LeaderboardManager {
   // Load leaderboard from localStorage
   loadLeaderboard() {
     try {
-      const data = localStorage.getItem(this.storageKey);
-      return data ? JSON.parse(data) : [];
+      const storedData = localStorage.getItem(this.storageKey);
+      return storedData ? JSON.parse(storedData) : [];
     } catch (error) {
       console.error('Error loading leaderboard:', error);
       return [];
@@ -30,20 +30,20 @@ export default class LeaderboardManager {
 
   // Load player name from localStorage or prompt for it
   loadPlayerName() {
-    let name = localStorage.getItem(this.userKey);
-    if (!name) {
-      name = this.promptForPlayerName();
+    let savedName = localStorage.getItem(this.userKey);
+    if (!savedName) {
+      savedName = this.promptForPlayerName();
     }
-    return name;
+    return savedName;
   }
 
   // Prompt user for their name
   promptForPlayerName() {
-    let name = prompt('Welcome! Please enter your username:');
-    name = name ? name.trim() : 'Player';
-    if (!name) name = 'Player';
-    localStorage.setItem(this.userKey, name);
-    return name;
+    let trimmedName = prompt('Welcome! Please enter your username:');
+    trimmedName = trimmedName ? trimmedName.trim() : 'Player';
+    if (!trimmedName) trimmedName = 'Player';
+    localStorage.setItem(this.userKey, trimmedName);
+    return trimmedName;
   }
 
   // Change player name
@@ -68,31 +68,31 @@ export default class LeaderboardManager {
 
   // Add or update score for current player
   addScore(score) {
-    const now = new Date().toISOString();
+    const currentTimestamp = new Date().toISOString();
     
     // Find existing entry for this player
-    const existingIndex = this.leaderboard.findIndex(entry => entry.name === this.playerName);
+    const playerEntryIndex = this.leaderboard.findIndex(entry => entry.name === this.playerName);
     
-    if (existingIndex !== -1) {
+    if (playerEntryIndex !== -1) {
       // Player already has a score
-      if (score > this.leaderboard[existingIndex].score) {
+      if (score > this.leaderboard[playerEntryIndex].score) {
         // Update only if new score is higher
-        this.leaderboard[existingIndex].score = score;
-        this.leaderboard[existingIndex].date = now;
-        this.leaderboard[existingIndex].attempts = (this.leaderboard[existingIndex].attempts || 1) + 1;
+        this.leaderboard[playerEntryIndex].score = score;
+        this.leaderboard[playerEntryIndex].date = currentTimestamp;
+        this.leaderboard[playerEntryIndex].attempts = (this.leaderboard[playerEntryIndex].attempts || 1) + 1;
       } else {
         // Track attempts even if score isn't higher
-        this.leaderboard[existingIndex].attempts = (this.leaderboard[existingIndex].attempts || 1) + 1;
-        this.leaderboard[existingIndex].lastAttempt = now;
+        this.leaderboard[playerEntryIndex].attempts = (this.leaderboard[playerEntryIndex].attempts || 1) + 1;
+        this.leaderboard[playerEntryIndex].lastAttempt = currentTimestamp;
       }
     } else {
       // New player entry
       this.leaderboard.push({
         name: this.playerName,
         score: score,
-        date: now,
+        date: currentTimestamp,
         attempts: 1,
-        lastAttempt: now
+        lastAttempt: currentTimestamp
       });
     }
 
@@ -103,9 +103,9 @@ export default class LeaderboardManager {
 
   // Remove current player's score from leaderboard
   removePlayerScore() {
-    const index = this.leaderboard.findIndex(entry => entry.name === this.playerName);
-    if (index !== -1) {
-      this.leaderboard.splice(index, 1);
+    const playerEntryIndex = this.leaderboard.findIndex(entry => entry.name === this.playerName);
+    if (playerEntryIndex !== -1) {
+      this.leaderboard.splice(playerEntryIndex, 1);
       this.saveLeaderboard();
       return true;
     }
@@ -114,9 +114,9 @@ export default class LeaderboardManager {
 
   // Remove a specific player's score (admin feature)
   removeScoreByName(playerName) {
-    const index = this.leaderboard.findIndex(entry => entry.name === playerName);
-    if (index !== -1) {
-      this.leaderboard.splice(index, 1);
+    const playerEntryIndex = this.leaderboard.findIndex(entry => entry.name === playerName);
+    if (playerEntryIndex !== -1) {
+      this.leaderboard.splice(playerEntryIndex, 1);
       this.saveLeaderboard();
       return true;
     }
@@ -147,13 +147,13 @@ export default class LeaderboardManager {
 
   // Get player's current score and rank
   getPlayerStats() {
-    const entry = this.leaderboard.find(entry => entry.name === this.playerName);
-    if (entry) {
-      const rank = this.leaderboard.findIndex(e => e.name === this.playerName) + 1;
+    const playerEntry = this.leaderboard.find(entry => entry.name === this.playerName);
+    if (playerEntry) {
+      const rank = this.leaderboard.findIndex(leaderboardEntry => leaderboardEntry.name === this.playerName) + 1;
       return {
-        score: entry.score,
+        score: playerEntry.score,
         rank: rank,
-        attempts: entry.attempts || 1
+        attempts: playerEntry.attempts || 1
       };
     }
     return null;
@@ -187,9 +187,9 @@ export default class LeaderboardManager {
   // Import leaderboard data from JSON string
   importLeaderboard(jsonString) {
     try {
-      const data = JSON.parse(jsonString);
-      if (Array.isArray(data)) {
-        this.leaderboard = data;
+      const importedData = JSON.parse(jsonString);
+      if (Array.isArray(importedData)) {
+        this.leaderboard = importedData;
         this.sortAndTrimLeaderboard();
         this.saveLeaderboard();
         return true;

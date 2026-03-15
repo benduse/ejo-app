@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Mobile navigation toggle (if you add a hamburger menu later)
+    // Mobile navigation toggle (a hamburger menu for smaller screens)
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
     if (navToggle) {

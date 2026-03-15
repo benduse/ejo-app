@@ -1,4 +1,5 @@
 import LeaderboardManager from '../quiz/leaderboardManager.js';
+import { shuffleArray, fetchJSON, renderLeaderboard } from '../utils.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     let flashcards = [];
@@ -35,20 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ✅ Fetch flashcards from JSON file
     function loadFlashcards() {
-        fetch("./flashcards.json")
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Network error");
-                }
-                return response.json();
-            })
+        fetchJSON('./flashcards.json')
             .then(data => {
                 flashcards = data.flashcards;
                 totalCardsElement.textContent = flashcards.length;
                 updateCard();
             })
-            .catch(error => {
-                console.error("Error loading flashcards:", error);
+            .catch(() => {
                 frontContent.innerHTML = `<p class="error">Failed to load flashcards. Please try again later.</p>`;
             });
     }
@@ -57,19 +51,30 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateCard() {
         if (flashcards.length === 0) return;
 
-        const card = flashcards[currentCardIndex];
+        const currentCard = flashcards[currentCardIndex];
 
         // Track as viewed
-        viewedCards.add(card.id);
+        viewedCards.add(currentCard.id);
 
-        frontContent.innerHTML = `
-            <p class="word">${card.kinyarwandaWord}</p>
-            <p class="phonetics">${card.phonetics || ""}</p>
-            <p class="meaning">${card.meaning}</p>
-        `;
-        backContent.innerHTML = `
-            <p class="example">${card.example || "No example available"}</p>
-        `;
+        const wordEl = document.createElement('p');
+        wordEl.className = 'word';
+        wordEl.textContent = currentCard.kinyarwandaWord;
+
+        const phoneticsEl = document.createElement('p');
+        phoneticsEl.className = 'phonetics';
+        phoneticsEl.textContent = currentCard.phonetics || '';
+
+        const meaningEl = document.createElement('p');
+        meaningEl.className = 'meaning';
+        meaningEl.textContent = currentCard.meaning;
+
+        frontContent.replaceChildren(wordEl, phoneticsEl, meaningEl);
+
+        const exampleEl = document.createElement('p');
+        exampleEl.className = 'example';
+        exampleEl.textContent = currentCard.example || 'No example available';
+
+        backContent.replaceChildren(exampleEl);
 
         currentCardElement.textContent = currentCardIndex + 1;
         flashcardElement.classList.remove("flipped");
@@ -140,34 +145,40 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        const results = flashcards.filter((card) => {
+        const matchingCards = flashcards.filter((card) => {
             const searchString = `${card.kinyarwandaWord} ${card.meaning} ${card.phonetics || ''} ${card.example || ''}`.toLowerCase();
             return searchString.includes(query.toLowerCase());
         });
 
-        displaySearchResults(results);
+        displaySearchResults(matchingCards);
     }
 
-    function displaySearchResults(results) {
-        if (results.length === 0) {
-            searchResults.innerHTML = '<p>No matches found</p>';
+    function displaySearchResults(matchingCards) {
+        searchResults.replaceChildren();
+        if (matchingCards.length === 0) {
+            const noMatch = document.createElement('p');
+            noMatch.textContent = 'No matches found';
+            searchResults.appendChild(noMatch);
         } else {
-            searchResults.innerHTML = results.map((card) => {
-                const cardIndex = flashcards.findIndex(f => f === card);
-                return `
-                    <div class="search-result" data-index="${cardIndex}">
-                        <strong>${card.kinyarwandaWord}</strong> - ${card.meaning}
-                    </div>
-                `;
-            }).join('');
+            matchingCards.forEach((card) => {
+                const cardIndex = flashcards.findIndex(flashcard => flashcard === card);
+                const resultDiv = document.createElement('div');
+                resultDiv.className = 'search-result';
+                resultDiv.dataset.index = cardIndex;
+                const wordStrong = document.createElement('strong');
+                wordStrong.textContent = card.kinyarwandaWord;
+                resultDiv.appendChild(wordStrong);
+                resultDiv.appendChild(document.createTextNode(` - ${card.meaning}`));
+                searchResults.appendChild(resultDiv);
+            });
         }
         searchResults.style.display = 'block';
     }
 
-    function goToCard(number) {
-        const index = number - 1;
-        if (index >= 0 && index < flashcards.length) {
-            currentCardIndex = index;
+    function goToCard(cardNumber) {
+        const cardIndex = cardNumber - 1;
+        if (cardIndex >= 0 && cardIndex < flashcards.length) {
+            currentCardIndex = cardIndex;
             updateCard();
             return true;
         }
@@ -184,8 +195,8 @@ document.addEventListener("DOMContentLoaded", () => {
     searchResults.addEventListener("click", (e) => {
         const resultElement = e.target.closest('.search-result');
         if (resultElement) {
-            const index = parseInt(resultElement.dataset.index);
-            currentCardIndex = index;
+            const cardIndex = parseInt(resultElement.dataset.index);
+            currentCardIndex = cardIndex;
             updateCard();
             searchInput.value = '';
             searchResults.style.display = 'none';
@@ -193,8 +204,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     gotoCardInput.addEventListener("change", (e) => {
-        const number = parseInt(e.target.value);
-        if (goToCard(number)) {
+        const cardNumber = parseInt(e.target.value);
+        if (goToCard(cardNumber)) {
             e.target.value = '';
         } else {
             alert('Please enter a valid card number');
@@ -227,19 +238,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ✅ QUIZ MODE FUNCTIONS
     function startQuiz() {
-        const viewedArray = flashcards.filter(card => viewedCards.has(card.id));
+        const viewedFlashcards = flashcards.filter(card => viewedCards.has(card.id));
 
-        if (viewedArray.length === 0) {
+        if (viewedFlashcards.length === 0) {
             alert("Please view some flashcards before starting the quiz!");
             return;
         }
 
-        if (viewedArray.length > 25) {
-            quizCards = [...viewedArray]
-                .sort(() => Math.random() - 0.5)
-                .slice(0, 25);
+        if (viewedFlashcards.length > 25) {
+            quizCards = shuffleArray([...viewedFlashcards]).slice(0, 25);
         } else {
-            quizCards = [...viewedArray].sort(() => Math.random() - 0.5);
+            quizCards = shuffleArray([...viewedFlashcards]);
         }
 
         quizIndex = 0;
@@ -256,20 +265,20 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        const card = quizCards[quizIndex];
-        quizQuestion.textContent = `What does "${card.kinyarwandaWord}" mean?`;
+        const currentCard = quizCards[quizIndex];
+        quizQuestion.textContent = `What does "${currentCard.kinyarwandaWord}" mean?`;
 
-        let options = [card.meaning];
-        while (options.length < 4) {
-            const random = flashcards[Math.floor(Math.random() * flashcards.length)];
-            if (!options.includes(random.meaning)) {
-                options.push(random.meaning);
+        let answerOptions = [currentCard.meaning];
+        while (answerOptions.length < 4) {
+            const randomCard = flashcards[Math.floor(Math.random() * flashcards.length)];
+            if (!answerOptions.includes(randomCard.meaning)) {
+                answerOptions.push(randomCard.meaning);
             }
         }
-        options = options.sort(() => Math.random() - 0.5);
+        answerOptions = answerOptions.sort(() => Math.random() - 0.5);
 
-        quizOptions.innerHTML = options.map(opt => 
-            `<button class="quiz-option">${opt}</button>`
+        quizOptions.innerHTML = answerOptions.map(answerOption => 
+            `<button class="quiz-option">${answerOption}</button>`
         ).join("");
 
         quizFeedback.textContent = "";
@@ -277,11 +286,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.querySelectorAll(".quiz-option").forEach(btn => {
             btn.addEventListener("click", () => {
-                if (btn.textContent === card.meaning) {
+                if (btn.textContent === currentCard.meaning) {
                     quizFeedback.textContent = "✅ Correct!";
                     score++;
                 } else {
-                    quizFeedback.textContent = `❌ Wrong! The correct answer is "${card.meaning}"`;
+                    quizFeedback.textContent = `❌ Wrong! The correct answer is "${currentCard.meaning}"`;
                 }
                 quizScoreElement.textContent = `Score: ${score}`;
                 nextQuestionBtn.style.display = "inline-block";
@@ -314,15 +323,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function displayLeaderboard() {
-        const leaderboardEl = document.getElementById("flashcard-leaderboard");
-        const listEl = document.getElementById("flashcard-leaderboard-list");
-        leaderboardEl.style.display = "block";
-        listEl.innerHTML = "";
-        leaderboard.getLeaderboard().forEach(entry => {
-            const li = document.createElement("li");
-            li.textContent = `${entry.name} - ${entry.score}`;
-            listEl.appendChild(li);
-        });
+        const leaderboardEl = document.getElementById('flashcard-leaderboard');
+        const listEl = document.getElementById('flashcard-leaderboard-list');
+        leaderboardEl.style.display = 'block';
+        renderLeaderboard(listEl, leaderboard.getLeaderboard());
     }
 
     startQuizButton.addEventListener("click", startQuiz);
