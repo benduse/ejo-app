@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    initDailyDiscovery();
+    // initDailyDiscovery(); // Replaced by narrative mission system
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -25,6 +25,7 @@ class GamificationUI {
                 <div style="display: flex; justify-content: space-between; font-size: 0.7rem;">
                     <span id="ejo-level-name"></span>
                     <span id="ejo-xp-text"></span>
+                    <span id="ejo-coins-text" style="margin-left: 10px; color: #FFD700;"></span>
                 </div>
                 <div class="xp-bar-outer">
                     <div class="xp-bar-inner" id="ejo-xp-bar"></div>
@@ -56,6 +57,7 @@ class GamificationUI {
         const levelName = document.getElementById('ejo-level-name');
         const xpText = document.getElementById('ejo-xp-text');
         const xpBar = document.getElementById('ejo-xp-bar');
+        const coinsText = document.getElementById('ejo-coins-text');
 
         if (levelIcon) {
             levelIcon.textContent = levelData.icon;
@@ -76,6 +78,10 @@ class GamificationUI {
                 xpText.textContent = `${data.xp} XP (Max Level)`;
                 xpBar.style.width = `100%`;
             }
+        }
+
+        if (coinsText) {
+            coinsText.innerHTML = `<i class="fas fa-coins"></i> ${data.coins || 0}`;
         }
     }
 
