@@ -20,6 +20,7 @@ class ProgressManager {
     constructor() {
         this.storageKey = 'ejo_progress';
         this.data = this.loadData();
+        this.updateStreak();
     }
 
     loadData() {
@@ -31,7 +32,8 @@ class ProgressManager {
             streak: 0,
             languagesTried: [],
             viewedFlashcardIds: [],
-            lastDailyDiscovery: null
+            lastDailyDiscovery: null,
+            lastVisitDate: null
         };
         try {
             const stored = localStorage.getItem(this.storageKey);
@@ -45,6 +47,39 @@ class ProgressManager {
         localStorage.setItem(this.storageKey, JSON.stringify(this.data));
         // Dispatch custom event for UI updates
         window.dispatchEvent(new CustomEvent('ejoProgressUpdated', { detail: this.data }));
+    }
+
+    updateStreak() {
+        const today = new Date();
+        const todayStr = today.toDateString();
+        const lastVisitStr = this.data.lastVisitDate;
+
+        if (lastVisitStr === todayStr) {
+            return; // Already visited today
+        }
+
+        let changed = false;
+
+        if (!lastVisitStr) {
+            this.data.streak = 1;
+            changed = true;
+        } else {
+            const lastVisit = new Date(lastVisitStr);
+            const yesterday = new Date(today);
+            yesterday.setDate(yesterday.getDate() - 1);
+
+            if (lastVisit.toDateString() === yesterday.toDateString()) {
+                this.data.streak += 1;
+                changed = true;
+            } else {
+                // More than a day gap
+                this.data.streak = 1;
+                changed = true;
+            }
+        }
+
+        this.data.lastVisitDate = todayStr;
+        this.saveData();
     }
 
     addXP(amount) {
