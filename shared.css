@@ -6,11 +6,16 @@
     --ejo-dark: #2A2A2A;
     --ejo-light: #F7F7F7;
     --ejo-gradient: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
-    --button: light-dark(var(--ejo-secondary), var(--ejo-primary));
-    --button-hover: light-dark(var(--ejo-primary), var(--ejo-accent));
-    --white: light-dark(#fff, #1a1a1a);
-    --black: light-dark(#1a1a1a, #fff);
-    --background: light-dark(var(--ejo-light), var(--ejo-dark));
+
+    /* Semantic Colors */
+    --text-primary: var(--ejo-dark);
+    --text-secondary: #666;
+    --white: #ffffff;
+    --black: #1a1a1a;
+    --background: var(--ejo-light);
+    --card-bg: #ffffff;
+    --button: var(--ejo-secondary);
+    --button-hover: var(--ejo-primary);
 }
 
 /* Themes */
@@ -20,9 +25,13 @@
     --ejo-accent: #CF6679;
     --ejo-dark: #121212;
     --ejo-light: #1E1E1E;
-    --white: #fff;
-    --black: #000;
+
+    --text-primary: #FFFFFF;
+    --text-secondary: #B0B0B0;
+    --white: #ffffff;
+    --black: #000000;
     --background: #121212;
+    --card-bg: #1e1e1e;
 }
 
 [data-theme="forest"] {
@@ -31,7 +40,11 @@
     --ejo-accent: #F1C40F;
     --ejo-dark: #1B5E20;
     --ejo-light: #E8F5E9;
+
+    --text-primary: #1B5E20;
+    --text-secondary: #2E7D32;
     --background: var(--ejo-light);
+    --card-bg: #ffffff;
 }
 
 [data-theme="sunset"] {
@@ -40,5 +53,9 @@
     --ejo-accent: #FFEB3B;
     --ejo-dark: #3E2723;
     --ejo-light: #FFF3E0;
+
+    --text-primary: #3E2723;
+    --text-secondary: #5D4037;
     --background: var(--ejo-light);
+    --card-bg: #ffffff;
 }

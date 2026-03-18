@@ -1,15 +1,4 @@
 /* Base Styles */
-:root {
-    --primary-color: #4a69bd;
-    --secondary-color: #f7b731;
-    --dark-color: #333333;
-    --light-color: #f5f5f5;
-    --white: #ffffff;
-    --border-radius: 8px;
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -19,8 +8,8 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: var(--dark-color);
-    background-color: var(--light-color);
+    color: var(--text-primary);
+    background-color: var(--background);
 }
 
 a {
@@ -36,50 +25,11 @@ img {
     max-width: 100%;
 }
 
-/* Header Styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    background-color: var(--white);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+/* Header Styles - Re-using components.css but with local tweaks if needed */
 
 .logo {
     height: 100px;
     width: auto;
-}
-
-.nav-links {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links li a {
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.nav-links li a:hover {
-    color: var(--primary-color);
-}
-
-.call-to-action-button {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 10px 20px;
-    border-radius: var(--border-radius);
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.call-to-action-button:hover {
-    background-color: #3a5199;
-    transform: translateY(-2px);
 }
 
 /* Hero Section */
@@ -88,7 +38,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 80px 5%;
-    background-color: var(--white);
+    background-color: var(--card-bg);
 }
 
 .hero-content {
@@ -97,16 +47,16 @@ header {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     line-height: 1.2;
     margin-bottom: 20px;
-    color: var(--dark-color);
+    color: var(--text-primary);
 }
 
 .hero p {
     font-size: 1.1rem;
     margin-bottom: 30px;
-    color: #666;
+    color: var(--text-secondary);
 }
 
 .hero-buttons {
@@ -115,31 +65,32 @@ header {
 }
 
 .primary-button {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: var(--ejo-primary);
+    color: white;
     padding: 12px 24px;
-    border-radius: var(--border-radius);
-    font-weight: 500;
-    transition: var(--transition);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .primary-button:hover {
-    background-color: #3a5199;
+    filter: brightness(1.1);
     transform: translateY(-2px);
 }
 
 .secondary-button {
     background-color: transparent;
-    color: var(--primary-color);
+    color: var(--ejo-primary);
     padding: 12px 24px;
-    border-radius: var(--border-radius);
-    font-weight: 500;
-    border: 1px solid var(--primary-color);
-    transition: var(--transition);
+    border-radius: 8px;
+    font-weight: 600;
+    border: 2px solid var(--ejo-primary);
+    transition: all 0.3s ease;
 }
 
 .secondary-button:hover {
-    background-color: rgba(74, 105, 189, 0.1);
+    background-color: rgba(255, 107, 107, 0.1);
     transform: translateY(-2px);
 }
 
@@ -152,20 +103,21 @@ header {
 
 .hero-image img {
     max-width: 90%;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* Features Section */
 .features {
     padding: 80px 5%;
-    background-color: var(--light-color);
+    background-color: var(--background);
     text-align: center;
 }
 
 .features h2 {
     margin-bottom: 50px;
     font-size: 2rem;
+    color: var(--text-primary);
 }
 
 .feature-cards {
@@ -176,19 +128,20 @@ header {
 }
 
 .feature-card {
-    background-color: var(--white);
+    background-color: var(--card-bg);
     padding: 30px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     flex: 1;
     min-width: 250px;
     max-width: 350px;
-    transition: var(--transition);
+    transition: all 0.3s ease;
+    color: var(--text-primary);
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .feature-icon {
@@ -198,18 +151,23 @@ header {
 
 .feature-card h3 {
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: var(--ejo-primary);
+}
+
+.feature-card p {
+    color: var(--text-secondary);
 }
 
 /* About Section */
 .about {
     padding: 80px 5%;
-    background-color: var(--white);
+    background-color: var(--card-bg);
 }
 
 .about-content {
     max-width: 800px;
     margin: 0 auto;
+    color: var(--text-primary);
 }
 
 .about h2 {
@@ -221,12 +179,13 @@ header {
 .about p {
     margin-bottom: 20px;
     font-size: 1.1rem;
+    color: var(--text-secondary);
 }
 
 /* Call to Action */
 .call-to-action{
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: var(--ejo-primary);
+    color: white;
     text-align: center;
     padding: 60px 5%;
 }
@@ -245,94 +204,26 @@ header {
 }
 
 .call-to-action .primary-button {
-    background-color: var(--secondary-color);
-    color: var(--dark-color);
+    background-color: var(--ejo-accent);
+    color: var(--ejo-dark);
 }
 
 .call-to-action .primary-button:hover {
-    background-color: #e5a82a;
+    filter: brightness(1.1);
 }
 
-/* Footer */
-footer {
-    background-color: var(--dark-color);
-    color: var(--white);
-    padding: 50px 5% 20px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-bottom: 30px;
-}
-
-.footer-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.footer-logo .logo {
-    height: 100px;
-    margin-bottom: 10px;
-}
-
-.footer-links h4, .footer-contact h4 {
-    margin-bottom: 15px;
-    color: var(--secondary-color);
-}
-
-.footer-links ul li {
-    margin-bottom: 10px;
-}
-
-.footer-links ul li a {
-    transition: var(--transition);
-}
-
-.footer-links ul li a:hover {
-    color: var(--secondary-color);
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.social-icon {
-    font-size: 1.5rem;
-    transition: var(--transition);
-}
-
-.social-icon:hover {
-    color: var(--secondary-color);
-}
-
-.copyright {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 0.9rem;
+/* Footer overrides */
+.app-footer {
+    color: white;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .nav-links {
-        margin: 15px 0;
-    }
-    
     .hero {
         flex-direction: column;
         text-align: center;
         gap: 40px;
+        padding: 40px 5%;
     }
     
     .hero-content {
@@ -345,16 +236,6 @@ footer {
     
     .feature-cards {
         flex-direction: column;
-        align-items: center;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .footer-logo {
         align-items: center;
     }
 }
