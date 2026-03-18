@@ -329,10 +329,11 @@ document.addEventListener("DOMContentLoaded", () => {
         quizQuestion.textContent = `What does "${currentCard.kinyarwandaWord}" mean?`;
 
         let answerOptions = [currentCard.meaning];
-        while (answerOptions.length < 4) {
-            const randomCard = allFlashcards[Math.floor(Math.random() * allFlashcards.length)];
-            if (!answerOptions.includes(randomCard.meaning)) {
-                answerOptions.push(randomCard.meaning);
+        const uniqueMeanings = [...new Set(allFlashcards.map(c => c.meaning))];
+        while (answerOptions.length < Math.min(4, uniqueMeanings.length)) {
+            const randomMeaning = uniqueMeanings[Math.floor(Math.random() * uniqueMeanings.length)];
+            if (!answerOptions.includes(randomMeaning)) {
+                answerOptions.push(randomMeaning);
             }
         }
         answerOptions = answerOptions.sort(() => Math.random() - 0.5);
@@ -346,11 +347,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.querySelectorAll(".quiz-option").forEach(btn => {
             btn.addEventListener("click", () => {
+                // Disable all options after selection
+                document.querySelectorAll(".quiz-option").forEach(b => b.disabled = true);
+
                 if (btn.textContent === currentCard.meaning) {
                     quizFeedback.textContent = "✅ Correct!";
+                    quizFeedback.style.color = "green";
+                    btn.style.backgroundColor = "#c8e6c9";
                     score++;
                 } else {
                     quizFeedback.textContent = `❌ Wrong! The correct answer is "${currentCard.meaning}"`;
+                    quizFeedback.style.color = "red";
+                    btn.style.backgroundColor = "#ffcdd2";
+                    // Highlight the correct one
+                    document.querySelectorAll(".quiz-option").forEach(b => {
+                        if (b.textContent === currentCard.meaning) b.style.backgroundColor = "#c8e6c9";
+                    });
                 }
                 quizScoreElement.textContent = `Score: ${score}`;
                 nextQuestionBtn.style.display = "inline-block";

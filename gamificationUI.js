@@ -120,11 +120,17 @@ class GamificationUI {
     }
 
     toggleShop() {
-        let shopModal = document.getElementById('ejo-shop-modal');
+        const shopModal = document.getElementById('ejo-shop-modal');
         if (shopModal) {
             shopModal.remove();
-            return;
+        } else {
+            this.renderShop();
         }
+    }
+
+    renderShop() {
+        let shopModal = document.getElementById('ejo-shop-modal');
+        if (shopModal) shopModal.remove();
 
         const data = progressManager.getProgressData();
         const themes = [
@@ -174,15 +180,16 @@ class GamificationUI {
             btn.addEventListener('click', () => {
                 const themeId = btn.dataset.themeId;
                 const cost = parseInt(btn.dataset.cost);
-                const isUnlocked = data.unlockedThemes.includes(themeId);
+                const currentData = progressManager.getProgressData();
+                const isUnlocked = currentData.unlockedThemes.includes(themeId);
 
                 if (isUnlocked) {
                     progressManager.setActiveTheme(themeId);
-                    this.toggleShop(); // Re-render
+                    this.renderShop(); // Correctly re-render without closing
                 } else {
                     if (progressManager.unlockTheme(themeId, cost)) {
                         progressManager.setActiveTheme(themeId);
-                        this.toggleShop(); // Re-render
+                        this.renderShop(); // Correctly re-render without closing
                     } else {
                         alert("Not enough coins!");
                     }
