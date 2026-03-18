@@ -1,5 +1,6 @@
 import LeaderboardManager from '../quiz/leaderboardManager.js';
 import { shuffleArray, fetchJSON, renderLeaderboard } from '../utils.js';
+import progressManager from '../progressManager.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     let flashcards = [];
@@ -54,7 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentCard = flashcards[currentCardIndex];
 
         // Track as viewed
-        viewedCards.add(currentCard.id);
+        if (!viewedCards.has(currentCard.id)) {
+            viewedCards.add(currentCard.id);
+            progressManager.recordFlashcardView(currentCard.id);
+        }
 
         const wordEl = document.createElement('p');
         wordEl.className = 'word';
@@ -303,6 +307,8 @@ document.addEventListener("DOMContentLoaded", () => {
         quizOptions.innerHTML = "";
         quizFeedback.textContent = `Final Score: ${score} / ${quizCards.length}`;
         nextQuestionBtn.style.display = "none";
+
+        progressManager.recordQuizResult(score, quizCards.length, 0);
 
         leaderboard.addScore(score);
         displayLeaderboard();
