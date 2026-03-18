@@ -158,6 +158,40 @@ button:hover {
     margin-bottom: 20px;
     color: #666;
     font-weight: bolder;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.mastery-btn {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 0;
+}
+
+.mastery-btn.is-mastered {
+    color: #4CAF50;
+}
+
+.filter-controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#category-filter {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: white;
 }
 
 #quiz-container {

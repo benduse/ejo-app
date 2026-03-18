@@ -190,6 +190,51 @@
     }
 }
 
+/* Bottom Navigation */
+.bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    justify-content: space-around;
+    padding: 10px 0;
+    z-index: 1001;
+}
+
+.bottom-nav a {
+    color: var(--black);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75rem;
+    gap: 4px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.bottom-nav a i {
+    font-size: 1.25rem;
+}
+
+.bottom-nav a.active {
+    opacity: 1;
+    color: var(--ejo-primary);
+}
+
+@media (max-width: 768px) {
+    .bottom-nav {
+        display: flex;
+    }
+
+    .app-footer {
+        padding-bottom: 80px; /* Space for bottom nav */
+    }
+}
+
 /* Gamification Components */
 .user-progress-widget {
     display: flex;
@@ -241,8 +286,8 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: white;
-    color: var(--ejo-dark);
+    background: var(--white);
+    color: var(--black);
     padding: 1rem 1.5rem;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -282,6 +327,76 @@
     border-radius: 12px;
     margin-top: 1rem;
     text-align: center;
+}
+
+/* Modals */
+.ejo-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.modal-content {
+    background: var(--background);
+    color: var(--black);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.theme-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.theme-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+
+.theme-item.active {
+    border-color: var(--ejo-primary);
+}
+
+.theme-icon {
+    font-size: 1.5rem;
+}
+
+.theme-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.theme-info span {
+    font-size: 0.8rem;
+    color: #FFD700;
 }
 
 .daily-card h3 {

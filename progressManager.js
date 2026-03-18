@@ -32,6 +32,9 @@ class ProgressManager {
             streak: 0,
             languagesTried: [],
             viewedFlashcardIds: [],
+            masteredFlashcardIds: [],
+            unlockedThemes: ['default'],
+            activeTheme: 'default',
             lastDailyDiscovery: null,
             lastVisitDate: null
         };
@@ -124,6 +127,37 @@ class ProgressManager {
             window.dispatchEvent(new CustomEvent('ejoAchievementUnlocked', { detail: achievement }));
             this.saveData();
         }
+    }
+
+    toggleFlashcardMastery(id) {
+        const index = this.data.masteredFlashcardIds.indexOf(id);
+        if (index === -1) {
+            this.data.masteredFlashcardIds.push(id);
+            this.addXP(10); // Reward for mastering
+        } else {
+            this.data.masteredFlashcardIds.splice(index, 1);
+        }
+        this.saveData();
+        return this.data.masteredFlashcardIds.includes(id);
+    }
+
+    unlockTheme(themeId, cost) {
+        if (this.data.coins >= cost && !this.data.unlockedThemes.includes(themeId)) {
+            this.data.coins -= cost;
+            this.data.unlockedThemes.push(themeId);
+            this.saveData();
+            return true;
+        }
+        return false;
+    }
+
+    setActiveTheme(themeId) {
+        if (this.data.unlockedThemes.includes(themeId)) {
+            this.data.activeTheme = themeId;
+            this.saveData();
+            return true;
+        }
+        return false;
     }
 
     recordLanguageTry(lang) {
