@@ -11,6 +11,25 @@ class MissionManager {
 
     init() {
         this.checkDailyReset();
+        this.syncWithProgress();
+        window.addEventListener('ejoProgressUpdated', (e) => {
+            this.syncWithProgress(e.detail);
+        });
+    }
+
+    syncWithProgress(progressData) {
+        const pd = progressData || progressManager.getProgressData();
+        const streak = pd.streak || 0;
+        let changed = false;
+        this.data.weeklyChallenge.tasks.forEach(task => {
+            if (task.type === 'streak_days') {
+                if (task.progress !== streak) {
+                    task.progress = streak;
+                    changed = true;
+                }
+            }
+        });
+        if (changed) this.saveData();
     }
 
     loadData() {
@@ -81,28 +100,28 @@ class MissionManager {
     }
 
     updateTaskProgress(type, amount, meta = {}) {
-        if (!this.data.currentMission || this.data.currentMission.completed) return;
-
         let changed = false;
 
         // Update daily mission tasks
-        this.data.currentMission.tasks.forEach(task => {
-            if (task.type === type) {
-                if (type === 'accuracy') {
-                    // For accuracy, we might take the best or latest
-                    task.progress = Math.max(task.progress, amount);
-                } else {
-                    task.progress += amount;
+        if (this.data.currentMission && !this.data.currentMission.completed) {
+            this.data.currentMission.tasks.forEach(task => {
+                if (task.type === type) {
+                    if (type === 'accuracy') {
+                        // For accuracy, we might take the best or latest
+                        task.progress = Math.max(task.progress, amount);
+                    } else {
+                        task.progress += amount;
+                    }
+                    changed = true;
                 }
+            });
+
+            // Check for completion
+            const allTasksDone = this.data.currentMission.tasks.every(task => task.progress >= task.target);
+            if (allTasksDone && !this.data.currentMission.completed) {
+                this.data.currentMission.completed = true;
                 changed = true;
             }
-        });
-
-        // Check for completion
-        const allTasksDone = this.data.currentMission.tasks.every(task => task.progress >= task.target);
-        if (allTasksDone && !this.data.currentMission.completed) {
-            this.data.currentMission.completed = true;
-            changed = true;
         }
 
         // Update weekly challenge

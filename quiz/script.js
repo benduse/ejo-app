@@ -159,11 +159,6 @@ class QuizApp {
             this.score += 5;
             this.correctCount++;
             this.streak = (this.streak || 0) + 1;
-            if (this.streak >= 10) {
-                import('../progressManager.js').then(({ ACHIEVEMENTS }) => {
-                    progressManager.unlockAchievement(ACHIEVEMENTS.BRAINIAC);
-                });
-            }
             progressManager.addXP(10);
         } else {
             this.streak = 0;
@@ -190,7 +185,7 @@ class QuizApp {
         this.finalScoreEl.textContent = `${this.score} out of ${this.questions.length * 5}${earlyEndMessage}`;
 
         if (!earlyEnd && !this.endedEarly) {
-            progressManager.recordQuizResult(this.correctCount, this.questions.length, 0); // Streak handled real-time now
+            progressManager.recordQuizResult(this.correctCount, this.questions.length, this.streak || 0);
             missionManager.updateTaskProgress('quizzes', 1);
             missionManager.updateTaskProgress('accuracy', Math.round((this.correctCount / this.questions.length) * 100));
         }

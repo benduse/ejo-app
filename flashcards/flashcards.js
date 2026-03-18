@@ -6,7 +6,8 @@ import missionManager from '../missionManager.js';
 document.addEventListener("DOMContentLoaded", () => {
     let flashcards = [];
     let currentCardIndex = 0;
-    let viewedCards = new Set(); // ✅ Track viewed cards
+    // ✅ Initialize from persistent state
+    let viewedCards = new Set(progressManager.getProgressData().viewedFlashcardIds || []);
 
     // DOM elements
     const flashcardElement = document.getElementById("flashcard");
@@ -311,6 +312,8 @@ document.addEventListener("DOMContentLoaded", () => {
         nextQuestionBtn.style.display = "none";
 
         progressManager.recordQuizResult(score, quizCards.length, 0);
+        missionManager.updateTaskProgress('quizzes', 1);
+        missionManager.updateTaskProgress('accuracy', Math.round((score / quizCards.length) * 100));
 
         leaderboard.addScore(score);
         displayLeaderboard();
