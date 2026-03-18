@@ -1,6 +1,7 @@
 import { shuffleArray, fetchJSON, renderLeaderboard, launchConfetti } from '../utils.js';
 import LeaderboardManager from './leaderboardManager.js';
 import progressManager from '../progressManager.js';
+import missionManager from '../missionManager.js';
 
 class QuizApp {
     constructor() {
@@ -159,8 +160,9 @@ class QuizApp {
             this.correctCount++;
             this.streak = (this.streak || 0) + 1;
             if (this.streak >= 10) {
-                const { ACHIEVEMENTS } = await import('../progressManager.js');
-                progressManager.unlockAchievement(ACHIEVEMENTS.BRAINIAC);
+                import('../progressManager.js').then(({ ACHIEVEMENTS }) => {
+                    progressManager.unlockAchievement(ACHIEVEMENTS.BRAINIAC);
+                });
             }
             progressManager.addXP(10);
         } else {
@@ -189,6 +191,8 @@ class QuizApp {
 
         if (!earlyEnd && !this.endedEarly) {
             progressManager.recordQuizResult(this.correctCount, this.questions.length, 0); // Streak handled real-time now
+            missionManager.updateTaskProgress('quizzes', 1);
+            missionManager.updateTaskProgress('accuracy', Math.round((this.correctCount / this.questions.length) * 100));
         }
 
         this.leaderboardManager.addScore(this.score);
@@ -218,4 +222,4 @@ class QuizApp {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => new QuizApp());
+document.addEventListener('DOMContentLoaded', () => { window.quizApp = new QuizApp(); });

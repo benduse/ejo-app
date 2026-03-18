@@ -298,3 +298,155 @@
     margin: 1rem 0;
     display: inline-block;
 }
+
+/* Mission System Styles */
+.narrative-intro {
+    text-align: center;
+    border-top: 5px solid var(--ejo-accent);
+}
+
+.story-text {
+    font-style: italic;
+    color: var(--ejo-dark);
+    margin: 1.5rem 0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.difficulty-options {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.difficulty-btn {
+    flex: 1;
+    min-width: 150px;
+    padding: 1rem;
+}
+
+.difficulty-btn small {
+    display: block;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+    font-weight: normal;
+}
+
+.tier-easy { background: #4caf50; color: white; }
+.tier-medium { background: #ff9800; color: white; }
+.tier-hard { background: #f44336; color: white; }
+
+.mission-card {
+    border-left: 8px solid var(--ejo-primary);
+    position: relative;
+}
+
+.mission-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.mission-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.reset-timer {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.task-list {
+    margin: 2rem 0;
+}
+
+.task-item {
+    margin-bottom: 1.5rem;
+}
+
+.task-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.task-progress-bar {
+    height: 10px;
+    background: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.task-progress-fill {
+    height: 100%;
+    background: var(--ejo-secondary);
+    transition: width 0.4s ease-out;
+}
+
+.task-item.done .task-progress-fill {
+    background: #4caf50;
+}
+
+.mission-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+}
+
+.mission-rewards {
+    display: flex;
+    gap: 1.5rem;
+    font-weight: bold;
+    color: var(--ejo-primary);
+}
+
+/* Weekly Card */
+.weekly-card {
+    background: #f9f9f9;
+    border: 2px dashed #ddd;
+}
+
+.overall-progress {
+    margin: 1.5rem 0;
+}
+
+.progress-label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.weekly-tasks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.weekly-task-mini {
+    background: white;
+    padding: 0.75rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.weekly-task-mini.done {
+    border-left: 4px solid #4caf50;
+}
+
+.weekly-reward {
+    font-size: 0.9rem;
+    color: #444;
+}

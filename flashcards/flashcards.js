@@ -1,6 +1,7 @@
 import LeaderboardManager from '../quiz/leaderboardManager.js';
 import { shuffleArray, fetchJSON, renderLeaderboard } from '../utils.js';
 import progressManager from '../progressManager.js';
+import missionManager from '../missionManager.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     let flashcards = [];
@@ -58,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!viewedCards.has(currentCard.id)) {
             viewedCards.add(currentCard.id);
             progressManager.recordFlashcardView(currentCard.id);
+            missionManager.updateTaskProgress('flashcards', 1);
         }
 
         const wordEl = document.createElement('p');

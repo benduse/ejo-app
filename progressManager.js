@@ -26,6 +26,7 @@ class ProgressManager {
         const defaults = {
             xp: 0,
             level: 1,
+            coins: 0,
             achievements: [],
             streak: 0,
             languagesTried: [],
@@ -74,6 +75,12 @@ class ProgressManager {
             this.data.level = newLevel;
             window.dispatchEvent(new CustomEvent('ejoLevelUp', { detail: { level: newLevel, levelData: LEVEL_DATA[newLevel - 1] } }));
         }
+    }
+
+    addCoins(amount) {
+        if (amount <= 0) return;
+        this.data.coins += amount;
+        this.saveData();
     }
 
     unlockAchievement(achievement) {
