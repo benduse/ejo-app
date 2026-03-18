@@ -13,6 +13,7 @@ class QuizApp {
         this.endedEarly = false;
         this.timerEnabled = false;
         this.timer = null;
+        this.streak = 0;
         this.leaderboardManager = new LeaderboardManager('ejo_leaderboard', 'ejo_player_name');
         this.init();
     }
@@ -207,6 +208,7 @@ class QuizApp {
         this.score = 0;
         this.correctCount = 0;
         this.wrongCount = 0;
+        this.streak = 0;
         this.endedEarly = false;
         if (this.timer) clearInterval(this.timer);
         this.quizContainer.classList.remove('hide');
