@@ -4,7 +4,8 @@ import progressManager from '../progressManager.js';
 import missionManager from '../missionManager.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-    let flashcards = [];
+    let allFlashcards = [];
+    let filteredFlashcards = [];
     let currentCardIndex = 0;
     // ✅ Initialize from persistent state
     let viewedCards = new Set(progressManager.getProgressData().viewedFlashcardIds || []);
@@ -41,20 +42,52 @@ document.addEventListener("DOMContentLoaded", () => {
     function loadFlashcards() {
         fetchJSON('./flashcards.json')
             .then(data => {
-                flashcards = data.flashcards;
-                totalCardsElement.textContent = flashcards.length;
-                updateCard();
+                allFlashcards = data.flashcards;
+                populateCategories();
+                applyFilters();
             })
             .catch(() => {
                 frontContent.innerHTML = `<p class="error">Failed to load flashcards. Please try again later.</p>`;
             });
     }
 
+    function populateCategories() {
+        const categories = [...new Set(allFlashcards.map(c => c.category))].filter(Boolean);
+        const filterEl = document.getElementById('category-filter');
+        categories.sort().forEach(cat => {
+            const opt = document.createElement('option');
+            opt.value = cat;
+            opt.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+            filterEl.appendChild(opt);
+        });
+    }
+
+    function applyFilters() {
+        const category = document.getElementById('category-filter').value;
+        const hideMastered = document.getElementById('hide-mastered').checked;
+        const masteredIds = progressManager.getProgressData().masteredFlashcardIds || [];
+
+        filteredFlashcards = allFlashcards.filter(card => {
+            const catMatch = category === 'all' || card.category === category;
+            const masteryMatch = !hideMastered || !masteredIds.includes(card.id);
+            return catMatch && masteryMatch;
+        });
+
+        currentCardIndex = 0;
+        updateCard();
+    }
+
     // ✅ Update card content
     function updateCard() {
-        if (flashcards.length === 0) return;
+        if (filteredFlashcards.length === 0) {
+            frontContent.innerHTML = `<p>No flashcards found matching the criteria.</p>`;
+            backContent.innerHTML = ``;
+            totalCardsElement.textContent = '0';
+            currentCardElement.textContent = '0';
+            return;
+        }
 
-        const currentCard = flashcards[currentCardIndex];
+        const currentCard = filteredFlashcards[currentCardIndex];
 
         // Track as viewed
         if (!viewedCards.has(currentCard.id)) {
@@ -84,14 +117,24 @@ document.addEventListener("DOMContentLoaded", () => {
         backContent.replaceChildren(exampleEl);
 
         currentCardElement.textContent = currentCardIndex + 1;
+        totalCardsElement.textContent = filteredFlashcards.length;
         flashcardElement.classList.remove("flipped");
+
+        const masteredIds = progressManager.getProgressData().masteredFlashcardIds || [];
+        const isMastered = masteredIds.includes(currentCard.id);
+        const masteryBtn = document.getElementById('mastered-toggle');
+        if (masteryBtn) {
+            masteryBtn.innerHTML = isMastered ? '<i class="fas fa-check-circle"></i>' : '<i class="far fa-check-circle"></i>';
+            masteryBtn.classList.toggle('is-mastered', isMastered);
+        }
+
         updateNavButtons();
     }
 
     // ✅ Update navigation button states
     function updateNavButtons() {
-        prevButton.disabled = currentCardIndex === 0;
-        nextButton.disabled = currentCardIndex === flashcards.length - 1;
+        prevButton.disabled = currentCardIndex <= 0;
+        nextButton.disabled = currentCardIndex >= filteredFlashcards.length - 1;
     }
 
     // ✅ Navigation helpers
@@ -103,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function showNextCard() {
-        if (currentCardIndex < flashcards.length - 1) {
+        if (currentCardIndex < filteredFlashcards.length - 1) {
             currentCardIndex++;
             updateCard();
         }
@@ -136,10 +179,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Skip to a random card
     function skipCard() {
-        if (flashcards.length <= 1) return;
+        if (filteredFlashcards.length <= 1) return;
         const currentIndex = currentCardIndex;
         do {
-            currentCardIndex = Math.floor(Math.random() * flashcards.length);
+            currentCardIndex = Math.floor(Math.random() * filteredFlashcards.length);
         } while (currentCardIndex === currentIndex);
         updateCard();
     }
@@ -152,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        const matchingCards = flashcards.filter((card) => {
+        const matchingCards = allFlashcards.filter((card) => {
             const searchString = `${card.kinyarwandaWord} ${card.meaning} ${card.phonetics || ''} ${card.example || ''}`.toLowerCase();
             return searchString.includes(query.toLowerCase());
         });
@@ -168,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
             searchResults.appendChild(noMatch);
         } else {
             matchingCards.forEach((card) => {
-                const cardIndex = flashcards.findIndex(flashcard => flashcard === card);
+                const cardIndex = allFlashcards.findIndex(flashcard => flashcard === card);
                 const resultDiv = document.createElement('div');
                 resultDiv.className = 'search-result';
                 resultDiv.dataset.index = cardIndex;
@@ -184,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function goToCard(cardNumber) {
         const cardIndex = cardNumber - 1;
-        if (cardIndex >= 0 && cardIndex < flashcards.length) {
+        if (cardIndex >= 0 && cardIndex < filteredFlashcards.length) {
             currentCardIndex = cardIndex;
             updateCard();
             return true;
@@ -194,6 +237,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Additional event listeners
     skipButton.addEventListener("click", skipCard);
+
+    document.getElementById('category-filter').addEventListener('change', applyFilters);
+    document.getElementById('hide-mastered').addEventListener('change', applyFilters);
+
+    document.getElementById('mastered-toggle').addEventListener('click', () => {
+        if (filteredFlashcards.length === 0) return;
+        const currentCard = filteredFlashcards[currentCardIndex];
+        progressManager.toggleFlashcardMastery(currentCard.id);
+        updateCard();
+    });
 
     searchInput.addEventListener("input", (e) => {
         searchFlashcards(e.target.value);
@@ -245,7 +298,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ✅ QUIZ MODE FUNCTIONS
     function startQuiz() {
-        const viewedFlashcards = flashcards.filter(card => viewedCards.has(card.id));
+        const viewedFlashcards = allFlashcards.filter(card => viewedCards.has(card.id));
 
         if (viewedFlashcards.length === 0) {
             alert("Please view some flashcards before starting the quiz!");
@@ -277,7 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let answerOptions = [currentCard.meaning];
         while (answerOptions.length < 4) {
-            const randomCard = flashcards[Math.floor(Math.random() * flashcards.length)];
+            const randomCard = allFlashcards[Math.floor(Math.random() * allFlashcards.length)];
             if (!answerOptions.includes(randomCard.meaning)) {
                 answerOptions.push(randomCard.meaning);
             }

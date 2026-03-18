@@ -49,7 +49,18 @@
     
     <div class="progress-container">
       <span id="current-card">1</span> out of <span id="total-cards">10</span>
+      <button id="mastered-toggle" class="mastery-btn" title="Mark as Mastered"><i class="far fa-check-circle"></i></button>
     </div>
+
+    <div class="filter-controls">
+        <select id="category-filter">
+            <option value="all">All Categories</option>
+        </select>
+        <label>
+            <input type="checkbox" id="hide-mastered"> Hide Mastered
+        </label>
+    </div>
+
     <button id="prev-flashcard" type="button">Previous</button>
     <button id="flip-flashcard" type="button">Flip</button>
     <button id="next-flashcard" type="button">Next</button>
@@ -81,6 +92,13 @@
     </div>
   </main>
     
+  <nav class="bottom-nav">
+    <a href="../index.html"><i class="fas fa-home"></i>Home</a>
+    <a href="flashcards.html" class="active"><i class="fas fa-layer-group"></i>Cards</a>
+    <a href="../quiz/quiz.html"><i class="fas fa-vial"></i>Quiz</a>
+    <a href="../survey/survey.html"><i class="fas fa-comment"></i>Feedback</a>
+  </nav>
+
   <footer class="app-footer">
     <div class="social-links">
       <a href="../documentation.html" style="color: white; text-decoration: underline;">Documentation</a>
