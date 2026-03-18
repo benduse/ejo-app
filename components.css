@@ -44,11 +44,13 @@
     margin: 2rem auto;
     padding: 0 5%;
     min-height: calc(100vh - 200px);
+    background: var(--background);
 }
 
 /* Card Component */
 .app-card {
-    background: white;
+    background: var(--card-bg);
+    color: var(--text-primary);
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     padding: 2rem;
@@ -91,9 +93,14 @@
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s ease;
     display: inline-block;
     text-decoration: none;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
 }
 
 .btn-primary {
@@ -101,19 +108,9 @@
     color: white;
 }
 
-.btn-primary:hover {
-    background: #e55a5a;
-    transform: translateY(-2px);
-}
-
 .btn-secondary {
     background: var(--ejo-secondary);
     color: white;
-}
-
-.btn-secondary:hover {
-    background: #45b7aa;
-    transform: translateY(-2px);
 }
 
 /* Responsive Navigation */
@@ -129,12 +126,19 @@
 /* Responsive Breakpoints */
 @media (max-width: 768px) {
     .app-header {
-        flex-wrap: wrap;
+        flex-direction: column;
         padding: 1rem 3%;
+        gap: 1rem;
     }
 
     .app-header .logo {
         height: 60px;
+    }
+
+    .app-header .user-progress-widget {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 400px;
     }
 
     .app-header nav {
@@ -142,7 +146,6 @@
         width: 100%;
         flex-direction: column;
         gap: 0.5rem;
-        margin-top: 1rem;
     }
 
     .app-header nav.active {
@@ -151,6 +154,9 @@
 
     .nav-toggle {
         display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1.5rem;
     }
 
     .app-main {
@@ -286,8 +292,8 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: var(--white);
-    color: var(--black);
+    background: var(--card-bg);
+    color: var(--text-primary);
     padding: 1rem 1.5rem;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -344,8 +350,8 @@
 }
 
 .modal-content {
-    background: var(--background);
-    color: var(--black);
+    background: var(--card-bg);
+    color: var(--text-primary);
     padding: 2rem;
     border-radius: 15px;
     width: 90%;
@@ -422,7 +428,7 @@
 
 .story-text {
     font-style: italic;
-    color: var(--ejo-dark);
+    color: var(--text-primary);
     margin: 1.5rem 0;
     line-height: 1.6;
     font-size: 1.1rem;
@@ -474,7 +480,7 @@
 
 .reset-timer {
     font-size: 0.85rem;
-    color: #666;
+    color: var(--text-secondary);
 }
 
 .task-list {
@@ -494,7 +500,7 @@
 
 .task-progress-bar {
     height: 10px;
-    background: #eee;
+    background: rgba(0,0,0,0.1);
     border-radius: 5px;
     overflow: hidden;
 }
@@ -513,7 +519,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #eee;
+    border-top: 1px solid rgba(0,0,0,0.1);
     padding-top: 1.5rem;
 }
 
@@ -526,8 +532,8 @@
 
 /* Weekly Card */
 .weekly-card {
-    background: #f9f9f9;
-    border: 2px dashed #ddd;
+    background: var(--card-bg);
+    border: 2px dashed var(--ejo-secondary);
 }
 
 .overall-progress {
@@ -548,7 +554,7 @@
 }
 
 .weekly-task-mini {
-    background: white;
+    background: rgba(0,0,0,0.05);
     padding: 0.75rem;
     border-radius: 8px;
     display: flex;
@@ -563,5 +569,5 @@
 
 .weekly-reward {
     font-size: 0.9rem;
-    color: #444;
+    color: var(--text-secondary);
 }

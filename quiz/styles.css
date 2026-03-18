@@ -11,28 +11,29 @@ html {
 
 body {
     background-color: var(--background);
-    color: var(--black);
+    color: var(--text-primary);
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 #quiz-container {
     background: var(--ejo-gradient);
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 12px;
+    padding: 2rem;
     text-align: center;
 }
 
 #question-container {
     padding: 2rem;
-    border-radius: 10px;
-    margin-bottom: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    background: var(--card-bg);
 }
 
 #progress-bar {
     height: 10px;
     background: var(--ejo-secondary);
-    width: 0;
+    width: 0%;
     border-radius: 5px;
     margin-bottom: 1.5rem;
     transition: width 0.3s ease;
@@ -40,8 +41,8 @@ body {
 
 #question {
     margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-    color: #2A2A2A;
+    font-size: 1.4rem;
+    color: var(--text-primary);
     font-weight: 600;
 }
 
@@ -49,15 +50,15 @@ body {
     text-align: center;
     margin: 1rem 0;
     font-size: 1.1rem;
-    color: #2A2A2A;
-    background: #fff3cd;
+    color: var(--ejo-dark);
+    background: var(--ejo-accent);
     padding: 0.75rem;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 #timer {
     font-weight: bold;
-    color: #FF6B6B;
+    color: var(--ejo-primary);
     font-size: 1.3rem;
 }
 
@@ -85,8 +86,10 @@ body {
 }
 
 #leaderboard-container {
-    background: white;
-    border: 1px solid #ddd;
+    background: var(--card-bg);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
 }
 
 #leaderboard-container h3 {
@@ -94,12 +97,11 @@ body {
 }
 
 #leaderboard-list li {
-    color: var(--ejo-dark);
-    background: var(--ejo-light);
-}
-
-#leaderboard-list li:hover {
-    background: var(--ejo-);
+    color: var(--text-primary);
+    background: rgba(0,0,0,0.05);
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
 }
 
 /* Responsive Design */
@@ -153,32 +155,6 @@ body {
     }
 }
 
-/* Animations */
-@keyframes pulse {
-    0% { 
-        box-shadow: 0 0 0 0 rgba(78, 205, 196, 0.7); 
-    }
-    70% { 
-        box-shadow: 0 0 0 15px rgba(78, 205, 196, 0); 
-    }
-    100% { 
-        box-shadow: 0 0 0 0 rgba(78, 205, 196, 0); 
-    }
-}
-
-/* Additional Ejo Branding Effects */
-@keyframes gradient-shift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 /* Apply gradient animation to header */
 header {
     background: var(--ejo-gradient);
@@ -186,17 +162,17 @@ header {
     animation: gradient-shift 15s ease infinite;
 }
 
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 /* Success animation */
 @keyframes success-bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
 }
 
 .choice-btn.correct {
@@ -216,47 +192,6 @@ button:focus,
     outline-offset: 2px;
 }
 
-/* Dark mode adjustments */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --ejo-light: #1a1a1a;
-        --ejo-dark: #f7f7f7;
-    }
-    
-    main,
-    .board,
-    #leaderboard-container {
-        background: var(--ejo-dark);
-        color: #f7f7f7;
-    }
-    
-    .choice-btn {
-        background: #7d89b6;
-        color: #f7f7f7;
-        border-color: rgba(78,205,196,0.3);
-    }
-    
-    #leaderboard-list li {
-        background: #526cae;
-        color: #f7f7f7;
-    }
-}
-
-/* Print styles */
-@media print {
-    header,
-    .footer,
-    #end-quiz-container,
-    #download-btn {
-        display: none;
-    }
-    
-    main {
-        box-shadow: none;
-        border: 1px solid #ddd;
-    }
-}
-
 /* Quiz-specific styles */
 .quiz-controls {
     display: flex;
@@ -264,9 +199,14 @@ button:focus,
     gap: 1rem;
     margin-bottom: 2rem;
 }
+
 .languageSelect, .difficultySelect {
     color: var(--ejo-secondary);
-    padding: 0.5rem;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: var(--card-bg);
+    font-family: inherit;
 }
 
 
@@ -305,24 +245,24 @@ button:focus,
 }
 
 .choice-btn {
-    padding: 1rem;
+    padding: 1.2rem;
     background: var(--ejo-secondary);
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
     color: white;
     font-weight: 500;
 }
 
 .choice-btn:hover:not(:disabled) {
-    background: var(--ejo-primary);
+    filter: brightness(1.1);
     transform: translateY(-2px);
 }
 
 .choice-btn.correct {
-    background: var(--ejo-secondary);
+    background: #4caf50;
     color: white;
 }
 
@@ -348,11 +288,6 @@ button:focus,
 #end-quiz-container {
     display: flex;
     justify-content: center;
+    gap: 1rem;
     margin-top: 1.5rem;
-}
-
-@media (max-width: 768px) {
-    .choices-grid {
-        grid-template-columns: 1fr;
-    }
 }
