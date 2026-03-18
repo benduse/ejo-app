@@ -30,6 +30,7 @@
       <!-- flashcards-->
       <section id="flashcards-section">
   <div id="flashcard-container">
+    <button id="prev-flashcard" type="button" aria-label="Previous Flashcard"><i class="fas fa-chevron-left"></i></button>
     <div class="flashcard-scene">
       <div class="flashcard" id="flashcard">
         <div class="card-face card-front">
@@ -44,11 +45,12 @@
         </div>
       </div>
     </div>
+    <button id="next-flashcard" type="button" aria-label="Next Flashcard"><i class="fas fa-chevron-right"></i></button>
   </div>
   <div class="flashcard-controls">
     
     <div class="progress-container">
-      <span id="current-card">1</span> out of <span id="total-cards">10</span>
+      <span class="card-count-text"><span id="current-card">1</span> out of <span id="total-cards">10</span></span>
       <button id="mastered-toggle" class="mastery-btn" title="Mark as Mastered"><i class="far fa-check-circle"></i></button>
     </div>
 
@@ -61,9 +63,7 @@
         </label>
     </div>
 
-    <button id="prev-flashcard" type="button">Previous</button>
     <button id="flip-flashcard" type="button">Flip</button>
-    <button id="next-flashcard" type="button">Next</button>
     <button id="skip-flashcard">Skip</button>
 
 
