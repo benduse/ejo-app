@@ -68,6 +68,11 @@
         </div>
     </section>
 
+    <!-- Daily Discovery Section -->
+    <section id="daily-discovery" class="app-main">
+        <div id="daily-container"></div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="about">
         <div class="about-content">
@@ -104,7 +109,8 @@
         <p>&copy; 2025 ejo Flashcards. All rights reserved.</p>
     </footer>
 
-    <script src="landing.js"></script>
+    <script src="landing.js" type="module"></script>
+    <script src="gamificationUI.js" type="module"></script>
     <script>
         document.querySelector('.nav-toggle')?.addEventListener('click', () => {
             document.querySelector('.app-header nav').classList.toggle('active');

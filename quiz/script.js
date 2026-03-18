@@ -1,5 +1,6 @@
 import { shuffleArray, fetchJSON, renderLeaderboard, launchConfetti } from '../utils.js';
 import LeaderboardManager from './leaderboardManager.js';
+import progressManager from '../progressManager.js';
 
 class QuizApp {
     constructor() {
@@ -40,6 +41,7 @@ class QuizApp {
         document.getElementById('end-quiz-btn').addEventListener('click', () => this.endQuiz());
 
         await this.loadQuestions();
+        progressManager.recordLanguageTry(this.languageSelect.value);
         this.showQuestion();
     }
 
@@ -75,6 +77,7 @@ class QuizApp {
 
     async handleLanguageChange() {
         await this.loadQuestions();
+        progressManager.recordLanguageTry(this.languageSelect.value);
         this.restartQuiz();
         this.difficultyBadge.className = 'difficulty-badge difficulty-easy';
     }
@@ -150,10 +153,18 @@ class QuizApp {
 
         if (timedOut) {
             this.wrongCount++;
+            this.streak = 0;
         } else if (isCorrect) {
             this.score += 5;
             this.correctCount++;
+            this.streak = (this.streak || 0) + 1;
+            if (this.streak >= 10) {
+                const { ACHIEVEMENTS } = await import('../progressManager.js');
+                progressManager.unlockAchievement(ACHIEVEMENTS.BRAINIAC);
+            }
+            progressManager.addXP(10);
         } else {
+            this.streak = 0;
             this.score -= 1;
             this.wrongCount++;
         }
@@ -175,6 +186,10 @@ class QuizApp {
             : this.endedEarly ? ' (Quiz ended by user)' : '';
 
         this.finalScoreEl.textContent = `${this.score} out of ${this.questions.length * 5}${earlyEndMessage}`;
+
+        if (!earlyEnd && !this.endedEarly) {
+            progressManager.recordQuizResult(this.correctCount, this.questions.length, 0); // Streak handled real-time now
+        }
 
         this.leaderboardManager.addScore(this.score);
         this.leaderboardContainer.classList.remove('hide');
