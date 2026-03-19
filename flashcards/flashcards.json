@@ -1495,6 +1495,30 @@
       "category": "food",
       "phonetics": "oo-boo-raw",
       "example": "Uburo bugira ifu inoze. (Millet flour is very fine)"       
+    },
+    {
+      "id": 188,
+      "kinyarwandaWord": "Amabara",
+      "meaning": "Colors",
+      "category": "communication",
+      "phonetics": "a-ma-ba-ra",
+      "example": "Nzi amabara menshi. (I know many colors)"
+    },
+    {
+      "id": 189,
+      "kinyarwandaWord": "Guhumeka",
+      "meaning": "To breathe",
+      "category": "verbs",
+      "phonetics": "gu-hu-me-ka",
+      "example": "Guhumeka umwuka mwiza. (Breathing fresh air)"
+    },
+    {
+      "id": 190,
+      "kinyarwandaWord": "Kuvuga",
+      "meaning": "To speak",
+      "category": "verbs",
+      "phonetics": "ku-vu-ga",
+      "example": "Kuvuga neza ni byiza mu itumanaho. (Speaking well is good for communication)"
     }
   ]
 }
