@@ -1,0 +1,16 @@
+{
+  "name": "ejo-app",
+  "version": "1.0.0",
+  "description": "Learning Kinyarwanda, French, and Spanish",
+  "type": "module",
+  "scripts": {
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "vitest": "^1.0.0",
+    "jsdom": "^23.0.0",
+    "serve": "^14.2.1"
+  }
+}
