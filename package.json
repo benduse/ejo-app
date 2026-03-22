@@ -1,0 +1,30 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "A modern web-based app for learning Kinyarwanda, French, and Spanish through quizzes and flashcards. The app features instant feedback, scoring, and a beautiful, responsive UI. No backend required—all data is local.",
+  "main": "gamificationUI.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "serve": "npx serve . -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benduse/ejo-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/benduse/ejo-app/issues"
+  },
+  "homepage": "https://github.com/benduse/ejo-app#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@vitest/ui": "^4.1.0",
+    "jsdom": "^29.0.1",
+    "vitest": "^4.1.0"
+  }
+}
